@@ -1,7 +1,7 @@
 # PRESENSEA Project
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/presensea/presensea.github.io/main/assets/logo-hero.svg" alt="PRESENSEA Logo" width="200">
+  <img src="https://raw.githubusercontent.com/teleone/presensea.github.io/main/assets/logo-hero.svg" alt="PRESENSEA Logo" width="200">
 </p>
 
 <h3 align="center">PREssure SENsor based SEA monitoring</h3>
