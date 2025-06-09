@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags for Blog Post -->
+    <title>The Baltic Cocktail Party: Stirred by science, served with smarts - PRESENSEA Project</title>
+    <meta id="meta-description" name="description" content="Welcome to the Baltic Cocktail Party — where the guests are often invisible, and the real conversations happen under pressure. Discover how PRESENSEA is listening to the sea.">
+    <meta name="keywords" content="Baltic Sea, PRESENSEA, underwater monitoring, pressure sensors, oceanography, signal processing, marine technology, TalTech, blog">
+    <meta name="author" content="Elizaveta Dubrovinskaya, PRESENSEA Project">
+
+    <!-- Language Alternates for SEO -->
+    <link rel="alternate" hreflang="en" href="https://presensea.github.io/blog/baltic-cocktail-party.html#en" />
+    <link rel="alternate" hreflang="et" href="https://presensea.github.io/blog/baltic-cocktail-party.html#et" />
+    <link rel="alternate" hreflang="ru" href="https://presensea.github.io/blog/baltic-cocktail-party.html#ru" />
+    <link rel="alternate" hreflang="x-default" href="https://presensea.github.io/blog/baltic-cocktail-party.html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2025-06-09T12:00:00+03:00" />
+    <meta property="article:author" content="Elizaveta Dubrovinskaya" />
+    <meta property="og:url" content="https://presensea.github.io/blog/baltic-cocktail-party.html">
+    <meta property="og:title" content="The Baltic Cocktail Party: Stirred by science, served with smarts - PRESENSEA Project">
+    <meta property="og:description" content="Welcome to the Baltic Cocktail Party — where the guests are often invisible, and the real conversations happen under pressure. Discover how PRESENSEA is listening to the sea.">
+    <meta property="og:image" content="https://placehold.co/1200x630/0A2F51/FFFFFF?text=The+Baltic+Cocktail+Party"> <!-- Replace with a real preview image URL -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://presensea.github.io/blog/baltic-cocktail-party.html">
+    <meta property="twitter:title" content="The Baltic Cocktail Party: Stirred by science, served with smarts - PRESENSEA Project">
+    <meta property="twitter:description" content="Welcome to the Baltic Cocktail Party — where the guests are often invisible, and the real conversations happen under pressure. Discover how PRESENSEA is listening to the sea.">
+    <meta property="twitter:image" content="https://placehold.co/1200x630/0A2F51/FFFFFF?text=The+Baltic+Cocktail+Party"> <!-- Replace with a real preview image URL -->
+
+    <!-- Scripts and Styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FAF8F7; /* sandy-shore */
+            color: #0A2F51; /* deep-sea-blue */
+        }
+        .font-bree {
+            font-family: 'Bree Serif', serif;
+        }
+        .hero-bg {
+            background-color: #0A2F51; /* deep-sea-blue */
+            color: #FAF8F7; /* sandy-shore */
+        }
+        .accent-teal {
+            color: #00BBD6; /* ocean-teal */
+        }
+        /* Language switcher styles */
+        .lang-switcher a {
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .lang-switcher a.active {
+            color: #00BBD6; /* ocean-teal */
+            font-weight: 600;
+        }
+        /* Article styles */
+        .article-content h2 {
+            font-family: 'Bree Serif', serif;
+            font-size: 1.5rem; /* 24px */
+            line-height: 2rem; /* 32px */
+            margin-top: 2rem; /* 32px */
+            margin-bottom: 1rem; /* 16px */
+            color: #0A2F51;
+        }
+        .article-content p {
+            margin-bottom: 1.25rem; /* 20px */
+            line-height: 1.75;
+            color: #4B5563; /* gulf-stream-gray */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="hero-bg sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo SVG -->
+            <a href="https://presensea.github.io" class="flex items-center space-x-3">
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" class="h-8 w-auto" role="img" aria-labelledby="logo-title" style="enable-background:new 0 0 72.61 60.79" viewBox="0 0 72.6 60.8">
+                    <title id="logo-title">PRESENSEA Project Logo</title>
+                    <path d="m30 47-3-1C9 34 25 6 44 15l2 1h1c9 8 0 23-11 19l-2-1c-2-3 1-7 4-6h1c4 3 8-3 3-6-12-6-22 10-11 18l3 1c19 8 34-20 16-31l-3-1C19-4-2 37 24 52l3 2c5 2 8-4 3-7z" style="fill:#00bbd6"/>
+                </svg>
+                <span class="font-bree text-2xl tracking-wide text-white">PRESENSEA</span>
+            </a>
+            <div class="flex items-center space-x-8">
+                <nav class="hidden md:flex space-x-8 text-white">
+                    <a href="https://presensea.github.io#about" class="hover:text-cyan-300 transition-colors" data-translate="navHome">Home</a>
+                </nav>
+                <!-- Language Switcher -->
+                <div class="lang-switcher flex space-x-2 text-sm text-white">
+                    <a data-lang="en" class="active">EN</a>
+                    <span>|</span>
+                    <a data-lang="et">ET</a>
+                    <span>|</span>
+                    <a data-lang="ru">RU</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <article class="bg-white py-12 sm:py-16">
+            <div class="container mx-auto max-w-3xl px-6 lg:px-8">
+                <div class="text-center">
+                    <p class="font-semibold accent-teal" data-translate="blogCategory">Project Insights</p>
+                    <h1 class="mt-2 text-3xl font-bold tracking-tight sm:text-4xl font-bree" data-translate="blogTitle">The Baltic Cocktail Party: Stirred by science, served with smarts</h1>
+                    <p class="mt-6 text-lg leading-8 text-gray-600" data-translate="blogLead">Welcome to the Baltic Cocktail Party — where the guests are often invisible, and the real conversations happen under pressure.</p>
+                    <div class="mt-6 flex items-center justify-center gap-x-4 text-xs">
+                        <time datetime="2025-06-09" class="text-gray-500">June 9, 2025</time>
+                        <span class="text-gray-500">by Elizaveta Dubrovinskaya</span>
+                    </div>
+                </div>
+
+                <div class="mt-10 article-content">
+                    <p data-translate="p1"></p>
+                    <p data-translate="p2"></p>
+                    <h2 data-translate="h2_1"></h2>
+                    <p data-translate="p3"></p>
+                    <p data-translate="p4"></p>
+                    <p data-translate="p5"></p>
+                    <h2 data-translate="h2_2"></h2>
+                    <p data-translate="p6"></p>
+                    <p data-translate="p7"></p>
+                    <h2 data-translate="h2_3"></h2>
+                    <p data-translate="p8"></p>
+                    <p data-translate="p9"></p>
+                    <h2 data-translate="h2_4"></h2>
+                    <p data-translate="p10"></p>
+                    <p data-translate="p11"></p>
+                    <h2 data-translate="h2_5"></h2>
+                    <p data-translate="p12"></p>
+                    
+                    <!-- Translation Credits -->
+                    <p data-translate="translationCredit" class="text-sm italic text-gray-500 mt-8"></p>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="hero-bg py-10 px-6">
+        <div class="container mx-auto text-center text-gray-300">
+            <p data-translate="copyright">&copy; 2025 PRESENSEA Project | Tallinn University of Technology</p>
+            <p class="text-sm mt-2" data-translate="fundingInfo">This project has received funding from the Estonian Research Council under the Mobilitas Pluss programme (Grant no. MOB3JD1212).</p>
+        </div>
+    </footer>
+    
+    <script>
+        // --- Simplified Translations Object ---
+        const translations = {
+            en: {
+                navHome: 'Home',
+                blogCategory: 'Project Insights',
+                blogTitle: 'The Baltic Cocktail Party: Stirred by science, served with smarts',
+                blogLead: 'Welcome to the Baltic Cocktail Party — where the guests are often invisible, and the real conversations happen under pressure.',
+                p1: 'This isn’t your average party. Picture an underwater world buzzing with activity: ships passing overhead like party guests, currents swirling like shaken drinks, and hidden signals mixing together like overlapping voices in a crowded room. Now imagine trying to pick out just one voice — or one signal — from all the noise. That’s the “cocktail party effect,” but this time, it’s happening beneath the waves.',
+                p2: 'To truly understand what’s going on at the bottom of the Baltic Sea, we need more than just a snorkel and a deep breath. We need smart tools, fresh ideas, and a new way to dive into data — not with fins, but with pressure sensors that help us listen closely to the sea.',
+                h2_1: 'The Baltic Sea: Shallow on Depth, But Deep on Drama',
+                p3: 'The Baltic Sea is not just any sea. It’s a unique body of water — relatively shallow, with brackish water that is saltier than lakes but much less salty than the open sea. This makes its ecosystem especially delicate. Species like the Baltic flounder, that adapted to these special conditions, can easily thrown off balance. Others remain simply under-researched, swimming in mystery. Fast cruise ships, giant cargo vessels, and fishing boats all cross its waters — in short, it\'s never quiet. But this activity comes at a cost: the Baltic faces a whole menu of environmental challenges — from pollution to the effects of climate change.',
+                p4: 'And yes, while we love to complain about bad weather, storms with high, short waves take a real toll on coastal zones — eroding shores, creating new sandbanks, and making equipment installation difficult. All of this makes studying the sea especially challenging — though fascinating. We already have lots of tools for exploration: we can map the seafloor, measure water temperature, salinity and other parameters, and listen to the underwater world through hydrophones. But these methods often only give us "snapshot" views, and we can\'t keep floundering in the dark with just these glimpses. Can we catch pollution red-handed, the moment it strikes? And how do we tune in to the real impact of underwater noise on marine life?',
+                p5: 'That’s where science, tech, and AI come together like the perfect party mixer. We’re diving deeper — not just physically, but digitally — with a fresh approach: underwater “listening” through pressure signals. It’s time to turn up the volume on the Baltic’s best-kept secrets.',
+                h2_2: 'From Wrist to Waves: Pressure Sensors Crack the Sea’s Code',
+                p6: 'You might be surprised to learn that the key to unlocking underwater secrets is literally on your wrist! Pressure sensors are common everyday companions — they\'re in smartwatches, weather stations, or cars. They’re cheap, reliable, and have been around for years. In the sea, they\'re usually used to measure depth or wave height. But in reality, even the smallest changes in pressure can tell us so much more.',
+                p7: 'For example, a passing ship creates its own unique "pressure footprint," which we can use to identify it. The ebb and flow of surface waves and the swirl of underwater currents cause subtle shifts in pressure. A discharge of wastewater, sometimes invisible from space, can alter local currents or create distinct pressure changes. If we learn how to interpret these signals correctly, we don’t just get a picture — we get a moving film of the underwater world.',
+                h2_3: 'Our Underwater Detectives: Meet Hydromast, DPSS, and Smart Sensing',
+                p8: 'In our Centre for Biorobotics, we explore how ordinary pressure sensors can become powerful tools for sea monitoring. Hydromast acts like a super-sensitive "whisker" anchored to the seafloor. It’s a specially designed mast that vibrates with water flow. By measuring those vibrations using magnets, pressure and other specialized sensors, we gather data about currents and forces right at the bottom. This helps us understand how sandbanks form, how underwater structures are affected by currents, and even observe natural phenomena like upwelling where on a warm summer day, the water near shore suddenly turns icy cold. Now you’ll know what hit you next time you head to the beach!',
+                p9: 'DPSS stands for Differential Pressure Sensor Speedometer. It’s a compact and affordable device that measures the difference in pressure between two points. Mounted on an underwater robot, it allows the robot to "feel" the speed of surrounding water flow — helping it navigate and monitor its environment. We\'ve also used arrays of these sensors to locate hidden mixing zones — places where freshwater rivers meet the salty sea. These zones are ecologically vital but nearly invisible to the naked eye. Yet our sensors were able to detect tiny, high-frequency pressure fluctuations caused by turbulent mixing. In other words, we “saw” a boundary that no eye could see. This was successfully tested in Norway’s Trondheim Fjord — proving just how sensitive these systems can be.',
+                h2_4: 'Why focus on pressure?',
+                p10: 'Our big idea is to create and deploy low-cost, easy-to-install pressure sensors across different parts of the Baltic Sea. This isn’t just about dipping our toes in the water to collect more data; we\'re diving headfirst into smarter data, enabling fast and accurate responses. Because the Baltic sea has its own unique "pressure signature" — shaped by its shallowness, specific wave and current patterns, and strong human activity. You could say it’s got waves of personality. And the best part? Pressure sensors are cheap, reliable, and ready to roll — like the unsung heroes of sea monitoring. They work quietly alongside existing tools like hydrophones and CTDs, not here to steal the spotlight, just to fill in the gaps.',
+                p11: 'A distributed sensor network could help us catch polluters red-handed, identifying ships illegally dumping waste by their distinct marine "fingerprint” — no gloves can hide this crime! This system could also give us a pulse on coastal health by measuring how ship wakes and shifting currents chip away at shorelines. We could track sediment movement like underwater investigators chasing clues in the current — revealing where the sand goes after it’s been swept off its feet. This is crucial intel for coastal cities trying to keep their beautiful sea promenades from floating away, and for ports aiming to keep their ships firmly on water — not on sandbars.',
+                h2_5: 'Dive In With Us!',
+                p12: 'The challenges of understanding and protecting the Baltic Sea may be deep, but the opportunities for discovery and innovation run even deeper. We’re on a mission to uncover what lies beneath — and we could use more bright, curious minds to take the plunge with us. If you’ve ever wanted to get hands-on with underwater robotics, decode the signals hidden in the sea, train AI to become Earth’s best friend, or tackle the real-world mysteries of the Baltic, we want to hear from you. Whether it’s for a research project, a Master’s thesis, or an idea that ferments in your mind, we’re all ears, offering feedback in constructive sips to help your ideas mature. So let’s not wave goodbye to curiosity — grab your gear, ride the current, and join us in exploring the unseen Baltic. Together, we’ll make waves where it matters most.',
+                translationCredit: '', // English version has no credit
+                copyright: '&copy; 2025 PRESENSEA Project | Tallinn University of Technology',
+                fundingInfo: 'This project has received funding from the Estonian Research Council under the Mobilitas Pluss programme (Grant no. MOB3JD1212).'
+            },
+            et: {
+                navHome: 'Avaleht',
+                blogCategory: 'Projekti ülevaated',
+                blogTitle: 'Balti kokteilipidu: teaduse poolt segatud, nutikalt serveeritud',
+                blogLead: 'Tere tulemast Balti kokteilipeole – kus külalised on tihti nähtamatud ja tõelised vestlused toimuvad surve all.',
+                p1: 'See ei ole tavaline pidu. Kujutage ette veealust maailma, mis kihab tegevusest: laevad mööduvad pea kohal nagu peokülalised, hoovused keerlevad kui loksutatud joogid ja peidetud signaalid segunevad nagu üksteisest üle kostvad hääled rahvarohkes toas. Proovige nüüd kogu sellest mürast välja noppida vaid üht häält – või üht signaali.',
+                p2: 'Et tõeliselt mõista, mis Läänemere põhjas toimub, vajame enamat kui tarvikuid ja sügav hingetõmme. Vajame nutikaid tööriistu, värskeid ideid ja uusi viise kuidas andmetesse söösta. Selleks võtsime kasutusele mitte uimed, vaid rõhuandurid, mis aitavad meil merd tähelepanelikult kuulata.',
+                h2_1: 'Läänemeri: madal sügavuselt, kuid sügav draamalt',
+                p3: 'Läänemeri ei ole lihtsalt suvaline meri. See on ainulaadne veekogu – suhteliselt madal, riimveeline, mis on soolasem kui järved, kuid palju magedam kui ookeanivesi. See muudab selle ökosüsteemi eriti hapraks. Me teame, et nende eriliste tingimustega kohanenud liigid, nagu näiteks Läänemere lest, on muutustele eriti tundlikud. Paljud teised on lihtsalt väheuuritud ja ujuvad siiani saladuste voogudes. Kiired kruiisilaevad, hiiglaslikud kaubalaevad ja kalapaadid künnavad merd. Ühesõnaga, seal pole kunagi vaikne. Kuid sellel tegevusel on oma hind: Läänemeri seisab silmitsi mitmete keskonnaprobleemidega,alates reostusest kuni kliimamuutuste mõjudeni.',
+                p4: 'Aina tihedamini aset leidvad tormid aitavad meid seltskonnas välja viisakus vestluse teemadega. Aga Läänemere rannikualadel mõjuvad kõrgete lühikeste lainetega tormid rängalt, erodeerides kaldaid, tekitades uusi liivavalle ja muutes seadmete paigaldamise keeruliseks. Kõik see muudab mere uurimise eriti vaevarikaks, kuid siiski paeluvaks.',
+                p5: 'Meil on palju uurimisvahendeid: saame kaardistada merepõhja, mõõta vee temperatuuri, soolsust ja teisi parameetreid ning kuulata veealust maailma mikrofonide abil. Kuid need meetodid annavad meile sageli vaid hetkepilte. Kas reostus toimub just sellel hetkel kui me vaatame ja selles kohas mida me vaatame? Kuidas mõjutab veealune müra tegelikult mereelustikku? Just siin saavad teadus, tehnoloogia ja tehisintellekt kokku. Me sukeldume sügavamale, mitte ainult füüsiliselt, vaid ka digitaalselt. Me „kuulame“ veealust maailma rõhusignaalide kaudu, keerates selle uudse lähenemisega Läänemere hästi hoitud saladustel heli valjemaks.',
+                h2_2: 'Randmelt lainetesse: rõhuandurid murravad lahti mere koodi',
+                p6: 'Võite olla üllatunud, kui kuulete, et veealuste saladuste avamise võti on sõna otseses mõttes teie randmel! Rõhuandurid on meie igapäevased kaaslased, neid leidub nutikellades, ilmajaamades ja autodes. Need on odavad, töökindlad ja kasutuses olnud juba aastaid. Ookeanis kasutatakse neid tavaliselt sügavuse või lainekõrguse mõõtmiseks. Kuid tegelikult võivad isegi kõige väiksemad rõhumuutused meile palju rohkem rääkida.',
+                p7: 'Näiteks mööduv laev tekitab oma unikaalse „rõhujälje“, mille abil saame seda tuvastada. Pindlainete tõus ja mõõn ning veealuste hoovuste keerised põhjustavad peeneid rõhumuutusi. Reoveeheide, mis on mõnikord nähtamatu, võib muuta kohalikke hoovusi või tekitada selgeid rõhumuutusi. Kui õpime neid signaale õigesti tõlgendama, ei saa me mitte ainult pildi, vaid liikuva filmi veealusest maailmast.',
+                h2_3: 'Meie veealused detektiivid: saage tuttavaks Hüdromast ja DPSS',
+                p8: 'Biorobootika Keskuses uurime, kuidas tavalistest rõhuanduritest võivad saada võimsad tööriistad ookeaniseireks. Hüdromast toimib kui ülitundlik merepõhja ankurdatud „vurrukarv“. See on spetsiaalselt disainitud mast, mis võngub koos veevooluga. Mõõtes neid vibratsioone kogume andmeid hoovuste ja jõudude kohta merepõhjas. See aitab meil mõista kuidas tekivad liivavallid ja kuidas hoovused mõjutavad veealuseid struktuure. Lisaks saame vaadelda ainulaadseid loodusnähtusi nagu süvaveekerge, kus soojal suvepäeval muutub kaldalähedane vesi äkitselt jääkülmaks. Nüüd teate, mis teid tabas, kui järgmine kord randa lähete ja külm ära tahab võtta!',
+                p9: 'DPSS (ingl Differential Pressure Sensor Speedometer) on rõhuanduriga kiirusmõõdik. See on kompaktne ja taskukohane seade, mis mõõdab rõhuerinevust kahe punkti vahel. Veealusele robotile paigaldatuna võimaldab see robotil „tunda“ ümbritsevat veevoolu kiirust, aidates tal navigeerida ja oma keskkonda hoomata. Oleme kasutanud nende andurite võrgustikke ka peidetud segunemisvööndite, kohtade kus mageveelised jõed saavad kokku soolase merega, leidmiseks. Need vööndid on ökoloogiliselt üliolulised, kuid palja silmaga peaaegu nähtamatud. Ometi suutsid meie andurid tuvastada turbulentse segunemise põhjustatud pisikesed kõrgsageduslikud rõhukõikumised. Teisisõnu, me „nägime“ seda piiri, mida ükski silm ei näinud. Seda süsteemi katsetati edukalt Norras Trondheimi fjordis, seal tõestasime, kui tundlikud need süsteemid võivad olla.',
+                h2_4: 'Miks keskenduda rõhule?',
+                p10: 'Biorobootika keskuse eesmärk on luua odavaid, kergesti paigaldatavaid rõhuandureid ja seada need üles Läänemere eri osadesse tekitades sellega andurivõrgu. See ei tähenda ainult varvaste vette pistmist, et rohkem andmeid koguda; me sukeldume pea ees nutikamatesse andmetesse. Läänemerel on oma ainulaadne „rõhutunnus“ mida kujundavad selle madalus, spetsiifilised laine- ja hoovusmustrid ning aktiivne inimtegevus. Läänemere lainetes peitub iseloom, ja mis veel parem, rõhuandurid on odavad, töökindlad ja kasutusvalmis. Nagu mereseire avastamata pärl töötavad nad kõrvuti olemasolevate vahenditega. Nad ei tõmba endale tähelebanu, vaid täidavad vaikselt olulisi lünki.',
+                p11: 'Selline andurivõrk aitab saastajad teolt tabada, tuvastades ebaseaduslikult jäätmeid merre laskvad laevad nende selge merelise „sõrmejälje“ järgi, mida ükski kinnas ei suuda varjata! Nende anduritega ei leiuta me jalgratast uuesti vaid kasutame seda effektiivsemalt. See süsteem aitab meil hoida kätt pulsil ranniku tervisel, mõõtes, kuidas laevade kiiluveed ja muutuvad hoovused kaldaid kulutavad. Me saame jälgida setete liikumist nagu veealused uurijad, kes ajavad hoovustes vihjeid taga, paljastades, kuhu liiv kaob, pärast seda, kui see on jalge alt pühitud. See on ülioluline teave rannikulinnadele, mis püüavad säilitada oma kauneid mereäärseid promenaade, ja sadamatele, mille eesmärk on hoida oma laevad kindlalt vees ja mitte liivavallidel.',
+                h2_5: 'Sukeldu koos meiega!',
+                p12: 'Läänemere mõistmise ja kaitsmise väljakutsed on sügavad, kuid avastamis- ja uuendusvõimalused ulatuvad veelgi sügavamale. Meie missiooniks on paljastada, mis peitub seal põhjas. Meile kuluksid ära nutikad ja uudishimulikud pead, kes koos meiega vette sukelduksid. Kui oled kunagi tahtnud tegeleda veealuse robootikaga, dekodeerida merre peidetud signaale, õpetada tehisintellekti Maa parimaks sõbraks või avastada Läänemere tegelikke mõistatusi, siis ootame sinult kirja. Olgu see siis uurimisprojekt, magistritöö või lihtsalt idee, mis ei anna rahu– oleme üks suur kõrv, pakkudes konstruktiivset tagasisidet, et aidata su ideedel küpseda. Haara kaasa oma varustus ja uudishimu, lase end hoovusel kanda ning tule avastama nähtamatut Läänemerd. Koos lööme laineid seal, kus see kõige olulisem on.',
+                translationCredit: 'Tänu abi eest tõlkimisel: Helena Carmen Udu ja Laura Piho',
+                copyright: '&copy; 2025 PRESENSEA Projekt | Tallinna Tehnikaülikool',
+                fundingInfo: 'Seda projekti on rahastanud Eesti Teadusagentuur Mobilitas Pluss programmi raames (Grant nr MOB3JD1212).'
+            },
+            ru: {
+                navHome: 'Главная',
+                blogCategory: 'Новости проекта',
+                blogTitle: 'Балтийская коктейльная вечеринка: смешано наукой, подано с умом',
+                blogLead: 'Добро пожаловать на Балтийскую коктейльную вечеринку, где гости часто невидимы, а настоящие разговоры происходят под давлением.',
+                p1: 'Это не обычная вечеринка. Представьте себе подводный мир, кипящий жизнью: корабли проходят над головой, словно гости на вечеринке; течения закручиваются, как взболтанные напитки; а скрытые сигналы смешиваются, как перекрывающиеся голоса в переполненной комнате. Теперь попробуйте выделить из всего этого шума один-единственный голос или сигнал.',
+                p2: 'Чтобы по-настоящему понять, что происходит на дне Балтийского моря, нам нужно нечто большее, чем просто трубка для снорклинга и глубокий вдох. Нам нужны умные инструменты, свежие идеи и новые способы погружения в данные. Для этого мы используем не ласты, а датчики давления, которые помогают нам внимательно слушать море.',
+                h2_1: 'Балтийское море: мелкое по глубине, но глубокое по драме',
+                p3: 'Балтийское море — не просто море. Это уникальный водоем — относительно мелкий, с солоноватой водой, которая более соленая, чем в озерах, но гораздо менее соленая, чем в океане. Это делает его экосистему особенно хрупкой. Мы знаем, что виды, приспособившиеся к этим особым условиям, такие как балтийская камбала, особенно чувствительны к изменениям. Многие другие виды просто мало изучены и до сих пор плавают в водах тайн. Быстрые круизные лайнеры, гигантские грузовые суда и рыболовецкие лодки бороздят его воды. Одним словом, здесь никогда не бывает тихо. Но у этой деятельности есть своя цена: Балтийское море сталкивается с целым рядом экологических проблем, от загрязнения до последствий изменения климата.',
+                p4: 'Все чаще случающиеся штормы помогают нам в светской беседе темами для разговоров. Но на прибрежных зонах Балтийского моря штормы с высокими короткими волнами наносят серьезный ущерб, разрушая берега, создавая новые песчаные отмели и затрудняя установку оборудования. Все это делает изучение моря особенно трудным, но, тем не менее, увлекательным.',
+                p5: 'У нас есть много инструментов для исследований: мы можем картировать морское дно, измерять температуру воды, соленость и другие параметры, а также слушать подводный мир с помощью микрофонов. Но эти методы часто дают нам лишь моментальные снимки. Происходит ли загрязнение именно в тот момент, когда мы смотрим, и в том месте, которое мы наблюдаем? Как подводный шум на самом деле влияет на морскую жизнь? Именно здесь наука, технологии и искусственный интеллект объединяются. Мы погружаемся глубже, не только физически, но и в цифровом виде. Мы «слушаем» подводный мир через сигналы давления, делая звук хорошо хранимых секретов Балтийского моря громче с помощью этого нового подхода.',
+                h2_2: 'От запястья до волн: датчики давления взламывают код моря',
+                p6: 'Вы можете удивиться, узнав, что ключ к разгадке подводных тайн находится буквально у вас на запястье! Датчики давления — наши повседневные спутники, их можно найти в умных часах, метеостанциях и автомобилях. Они дешевы, надежны и используются уже много лет. В океане их обычно используют для измерения глубины или высоты волн. Но на самом деле даже самые незначительные изменения давления могут рассказать нам гораздо больше.',
+                p7: 'Например, проходящее судно создает свой уникальный «отпечаток давления», по которому мы можем его идентифицировать. Приливы и отливы поверхностных волн, а также вихри подводных течений вызывают незначительные изменения давления. Сброс сточных вод, иногда невидимый, может изменить местные течения или создать отчетливые изменения давления. Если мы научимся правильно интерпретировать эти сигналы, мы получим не просто картину, а движущийся фильм о подводном мире.',
+                h2_3: 'Наши подводные детективы: знакомьтесь с Hydromast и DPSS',
+                p8: 'В Центре биоробототехники мы исследуем, как обычные датчики давления могут стать мощными инструментами для мониторинга океана. Hydromast действует как сверхчувствительный «ус», прикрепленный к морскому дну. Это специально разработанная мачта, которая вибрирует вместе с потоком воды. Измеряя эти вибрации, мы собираем данные о течениях и силах на морском дне. Это помогает нам понять, как образуются песчаные отмели и как течения влияют на подводные сооружения. Кроме того, мы можем наблюдать уникальные природные явления, такие как апвеллинг, когда в теплый летний день вода у берега внезапно становится ледяной. Теперь вы будете знать, что вас поразило, когда в следующий раз пойдете на пляж и вас чуть не унесет холод!',
+                p9: 'DPSS (Differential Pressure Sensor Speedometer) — это спидометр с датчиком давления. Это компактное и доступное устройство, которое измеряет разницу давлений между двумя точками. Установленный на подводном роботе, он позволяет роботу «ощущать» скорость окружающего потока воды, помогая ему ориентироваться и контролировать окружающую среду. Мы также использовали массивы этих датчиков для обнаружения скрытых зон смешения, мест, где пресноводные реки встречаются с соленым морем. Эти зоны экологически жизненно важны, но почти невидимы невооруженным глазом. Тем не менее, наши датчики смогли обнаружить крошечные высокочастотные колебания давления, вызванные турбулентным смешением. Другими словами, мы «увидели» границу, которую не мог увидеть ни один глаз. Эта система была успешно протестирована в норвежском Тронхеймс-фьорде, где мы доказали, насколько чувствительными могут быть эти системы.',
+                h2_4: 'Почему именно давление?',
+                p10: 'Цель Центра биоробототехники — создавать недорогие, простые в установке датчики давления и размещать их в разных частях Балтийского моря, создавая таким образом сенсорную сеть. Это не просто «проба пера», чтобы собрать больше данных; мы с головой уходим в более умные данные. У Балтийского моря есть своя уникальная «сигнатура давления», формируемая его мелководьем, специфическими волновыми и теченческими паттернами, а также активной человеческой деятельностью. В волнах Балтики есть характер, и что еще лучше, датчики давления дешевы, надежны и готовы к использованию. Как неоткрытая жемчужина морского мониторинга, они работают бок о бок с существующими инструментами. Они не привлекают к себе внимания, а тихо заполняют важные пробелы.',
+                p11: 'Такая сенсорная сеть поможет ловить загрязнителей с поличным, идентифицируя суда, незаконно сбрасывающие отходы в море, по их отчетливому морскому «отпечатку пальца», который не скрыть никакими перчатками! С этими датчиками мы не изобретаем велосипед, а используем его более эффективно. Эта система поможет нам держать руку на пульсе здоровья побережья, измеряя, как кильватерные следы судов и меняющиеся течения разрушают берега. Мы можем отслеживать движение осадков, как подводные следователи, идущие по следу улик в течении, раскрывая, куда уходит песок после того, как его унесло из-под ног. Это жизненно важная информация для прибрежных городов, которые пытаются сохранить свои прекрасные набережные, и для портов, стремящихся держать свои корабли на плаву, а не на песчаных отмелях.',
+                h2_5: 'Погружайтесь вместе с нами!',
+                p12: 'Проблемы понимания и защиты Балтийского моря могут быть глубокими, но возможности для открытий и инноваций еще глубже. Наша миссия — раскрыть то, что скрывается на дне. Нам пригодятся умные и любознательные умы, которые погрузятся в воду вместе с нами. Если вы когда-нибудь хотели заняться подводной робототехникой, расшифровать скрытые в море сигналы, научить искусственный интеллект быть лучшим другом Земли или разгадать настоящие тайны Балтики, мы ждем вашего письма. Будь то исследовательский проект, магистерская диссертация или просто идея, которая не дает покоя, — мы во все уши, предлагая конструктивную обратную связь, чтобы помочь вашим идеям созреть. Хватайте свое снаряжение и любопытство, ловите течение и присоединяйтесь к нам в исследовании невидимой Балтики. Вместе мы поднимем волну там, где это важнее всего.',
+                translationCredit: '', // Russian version has no credit
+                copyright: '&copy; 2025 Проект PRESENSEA | Таллиннский технический университет',
+                fundingInfo: 'Этот проект получил финансирование от Эстонского исследовательского совета в рамках программы Mobilitas Pluss (грант № MOB3JD1212).'
+            }
+        };
+
+        // --- Language Switching Logic ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const langSwitcher = document.querySelector('.lang-switcher');
+            const langLinks = langSwitcher.querySelectorAll('a[data-lang]');
+            
+            const changeLanguage = (lang) => {
+                langLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('data-lang') === lang) {
+                        link.classList.add('active');
+                    }
+                });
+
+                document.querySelectorAll('[data-translate]').forEach(element => {
+                    const key = element.getAttribute('data-translate');
+                    if (translations[lang] && translations[lang][key]) {
+                        element.innerHTML = translations[lang][key];
+                    }
+                });
+                
+                document.documentElement.lang = lang;
+            };
+
+            langSwitcher.addEventListener('click', (event) => {
+                event.preventDefault(); 
+                const lang = event.target.getAttribute('data-lang');
+                if (lang) {
+                    changeLanguage(lang);
+                }
+            });
+
+            // Set initial language based on URL hash or default to 'en'
+            const initialLang = window.location.hash.substring(1) || 'en';
+            changeLanguage(initialLang);
+
+            // Update language if hash changes
+            window.addEventListener('hashchange', () => {
+                const lang = window.location.hash.substring(1) || 'en';
+                changeLanguage(lang);
+            });
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>PRESENSEA Project - Underwater Sea Monitoring with Pressure Sensors</title>
+    <meta id="meta-description" name="description" content="Discover PRESENSEA, a research project developing innovative underwater monitoring solutions for the Baltic Sea using passive pressure sensors to solve the 'cocktail party problem' of the sea.">
+    <meta name="keywords" content="PRESENSEA, underwater monitoring, pressure sensors, Baltic Sea, oceanography, signal processing, source separation, cocktail party problem, marine technology, TalTech, Estonian Research Council">
+    <meta name="author" content="PRESENSEA Project, Tallinn University of Technology">
+
+    <!-- Language Alternates for SEO -->
+    <link rel="alternate" hreflang="en" href="https://presensea.github.io#en" />
+    <link rel="alternate" hreflang="et" href="https://presensea.github.io#et" />
+    <link rel="alternate" hreflang="ru" href="https://presensea.github.io#ru" />
+    <link rel="alternate" hreflang="x-default" href="https://presensea.github.io" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://presensea.github.io">
+    <meta property="og:title" content="PRESENSEA Project - Underwater Sea Monitoring with Pressure Sensors">
+    <meta property="og:description" content="Innovative underwater monitoring using pressure sensors to untangle the sounds of the sea.">
+    <meta property="og:image" content="https://placehold.co/1200x630/0A2F51/FFFFFF?text=PRESENSEA"> <!-- Replace with a real preview image URL -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://presensea.github.io">
+    <meta property="twitter:title" content="PRESENSEA Project - Underwater Sea Monitoring with Pressure Sensors">
+    <meta property="twitter:description" content="Innovative underwater monitoring using pressure sensors to untangle the sounds of the sea.">
+    <meta property="twitter:image" content="https://placehold.co/1200x630/0A2F51/FFFFFF?text=PRESENSEA"> <!-- Replace with a real preview image URL -->
+
+    <!-- Scripts and Styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- 
+    ================================================================
+    Sea-Inspired Palette & Easter Eggs:
+    ----------------------------------------------------------------
+    --deep-sea-blue: #0A2F51;      (For text and dark elements)
+    --ocean-teal: #00BBD6;         (The primary accent, from the logo)
+    --sandy-shore: #FAF8F7;        (The calm, off-white background)
+    --sea-spray: #FFFFFF;          (Pure white for contrast)
+    --muted-coral: #E5E7EB;       (A soft gray for borders/dividers)
+    --gulf-stream-gray: #4B5563;  (For subheadings and secondary text)
+    ================================================================
+    -->
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FAF8F7; /* sandy-shore */
+            color: #0A2F51; /* deep-sea-blue */
+        }
+        .font-bree {
+            font-family: 'Bree Serif', serif;
+        }
+        .hero-bg {
+            background-color: #0A2F51; /* deep-sea-blue */
+            color: #FAF8F7; /* sandy-shore */
+            position: relative;
+            overflow: hidden;
+        }
+        .accent-teal {
+            color: #00BBD6; /* ocean-teal */
+        }
+        .bg-accent-teal {
+            background-color: #00BBD6; /* ocean-teal */
+        }
+        /* A little flourish for the headlines */
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #00BBD6; /* ocean-teal */
+            margin-top: 0.5rem;
+        }
+        .card {
+            background-color: #FFFFFF; /* sea-spray */
+            border: 1px solid #E5E7EB; /* muted-coral */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        /* Language switcher styles */
+        .lang-switcher a {
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .lang-switcher a.active {
+            color: #00BBD6; /* ocean-teal */
+            font-weight: 600;
+        }
+        
+        /* Animated Waves Styling */
+        .waves-container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px; /* Adjust height of wave area */
+        }
+        .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-repeat: repeat-x;
+            background-size: 2000px 100px; /* Width should be large */
+        }
+        .wave-1 {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 100" preserveAspectRatio="none"><path d="M0,50 C500,100 500,0 1000,50 S1500,100 2000,50 V100 H0 Z" fill="%23FAF8F7"/></svg>');
+            animation: wave-animation-1 20s linear infinite;
+            opacity: 0.5;
+        }
+        .wave-2 {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 100" preserveAspectRatio="none"><path d="M0,60 C400,20 600,100 1000,60 S1400,20 2000,60 V100 H0 Z" fill="%23FAF8F7"/></svg>');
+            animation: wave-animation-2 30s linear infinite;
+            opacity: 0.3;
+        }
+        @keyframes wave-animation-1 {
+            from { background-position-x: 0; }
+            to { background-position-x: 2000px; }
+        }
+        @keyframes wave-animation-2 {
+            from { background-position-x: 0; }
+            to { background-position-x: -2000px; }
+        }
+
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="hero-bg sticky top-0 z-50 shadow-lg">
+        <!-- A teal whisper -->
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo SVG -->
+            <a href="#" class="flex items-center space-x-3">
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" class="h-8 w-auto" role="img" aria-labelledby="logo-title" style="enable-background:new 0 0 72.61 60.79" viewBox="0 0 72.6 60.8">
+                    <title id="logo-title">PRESENSEA Project Logo</title>
+                    <path d="m30 47-3-1C9 34 25 6 44 15l2 1h1c9 8 0 23-11 19l-2-1c-2-3 1-7 4-6h1c4 3 8-3 3-6-12-6-22 10-11 18l3 1c19 8 34-20 16-31l-3-1C19-4-2 37 24 52l3 2c5 2 8-4 3-7z" style="fill:#00bbd6"/>
+                </svg>
+                <span class="font-bree text-2xl tracking-wide text-white">PRESENSEA</span>
+            </a>
+            <div class="flex items-center space-x-8">
+                <nav class="hidden md:flex space-x-8 text-white">
+                    <a href="#about" class="hover:text-cyan-300 transition-colors" data-translate="navAbout">About</a>
+                    <a href="#sensors" class="hover:text-cyan-300 transition-colors" data-translate="navSensors">Sensors</a>
+                    <a href="#objectives" class="hover:text-cyan-300 transition-colors" data-translate="navObjectives">Objectives</a>
+                    <a href="#team" class="hover:text-cyan-300 transition-colors" data-translate="navTeam">Team</a>
+                    <a href="#blog" class="hover:text-cyan-300 transition-colors" data-translate="navBlog">Blog</a>
+                </nav>
+                <!-- Language Switcher -->
+                <div class="lang-switcher flex space-x-2 text-sm text-white">
+                    <a data-lang="en" class="active">EN</a>
+                    <span>|</span>
+                    <a data-lang="et">ET</a>
+                    <span>|</span>
+                    <a data-lang="ru">RU</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg text-center py-20 md:py-32 px-6">
+            <div class="container mx-auto relative z-10">
+                <!-- Added Logo -->
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" class="h-24 w-auto mx-auto mb-8" role="img" aria-labelledby="hero-logo-title" style="enable-background:new 0 0 72.61 60.79" viewBox="0 0 72.6 60.8">
+                    <title id="hero-logo-title">PRESENSEA Project Logo</title>
+                    <path d="m30 47-3-1C9 34 25 6 44 15l2 1h1c9 8 0 23-11 19l-2-1c-2-3 1-7 4-6h1c4 3 8-3 3-6-12-6-22 10-11 18l3 1c19 8 34-20 16-31l-3-1C19-4-2 37 24 52l3 2c5 2 8-4 3-7z" style="fill:#00bbd6"/>
+                </svg>
+                <h1 class="font-bree text-4xl md:text-6xl font-bold mb-4" data-translate="heroTitle">Listening to the Sea's Whisper.</h1>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-300" data-translate="heroSubtitle">
+                    Innovative underwater monitoring using pressure sensors to untangle the sounds of the sea and protect our aquatic world.
+                </p>
+            </div>
+            <!-- Animated Waves -->
+            <div class="waves-container">
+                <div class="wave wave-1"></div>
+                <div class="wave wave-2"></div>
+            </div>
+        </section>
+
+        <!-- About the Project -->
+        <section id="about" class="py-20 px-6">
+            <div class="container mx-auto text-center max-w-4xl">
+                <h2 class="font-bree text-3xl md:text-4xl font-semibold inline-block mb-6" data-translate="aboutTitle">The Cocktail Party Problem of the Sea</h2>
+                <p class="text-lg text-gray-600 mb-12" data-translate="aboutText">
+                    The sea is full of pressure signals—from waves, currents, and marine life to passing ships. Isolating a faint, distant signal is like trying to hear a single voice in a crowded room. PRESENSEA is developing advanced algorithms to solve this "cocktail party problem," enabling us to listen to individual sources with unprecedented clarity.
+                </p>
+
+                <!-- Custom Icons Section -->
+                <div class="grid md:grid-cols-3 gap-10 text-center">
+                    <!-- Icon 1: Non-Invasive Sensors -->
+                    <div class="flex flex-col items-center">
+                        <svg class="h-16 w-16 mb-4" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="icon-title-1">
+                             <title id="icon-title-1">Non-Invasive Sensor Icon</title>
+                            <path d="M42 32C42 37.5228 37.5228 42 32 42C26.4772 42 22 37.5228 22 32C22 26.4772 26.4772 22 32 22C35.9387 22 39.2398 24.0666 41 27" stroke="#00BBD6" stroke-width="3" stroke-linecap="round"/>
+                            <path d="M54 32C54 44.1503 44.1503 54 32 54C19.8497 54 10 44.1503 10 32C10 19.8497 19.8497 10 32 10C44.1503 10 54 19.8497 54 32Z" stroke="#00BBD6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4"/>
+                        </svg>
+                        <h3 class="font-bree text-xl font-semibold mb-2" data-translate="icon1Title">Non-Invasive Sensors</h3>
+                        <p class="text-gray-600" data-translate="icon1Text">Using passive, energy-efficient pressure sensors that listen quietly without emitting signals or disturbing marine ecosystems.</p>
+                    </div>
+                    <!-- Icon 2: Source Separation -->
+                    <div class="flex flex-col items-center">
+                        <svg class="h-16 w-16 mb-4" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="icon-title-2">
+                             <title id="icon-title-2">Source Separation Icon</title>
+                            <path d="M16 18C26 26 26 38 16 46" stroke="#00BBD6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M48 18C38 26 38 38 48 46" stroke="#00BBD6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <h3 class="font-bree text-xl font-semibold mb-2" data-translate="icon2Title">Source Separation</h3>
+                        <p class="text-gray-600" data-translate="icon2Text">Applying machine learning to distinguish the subtle signature of a ship from the background noise of waves and currents.</p>
+                    </div>
+                     <!-- Icon 3: Open-Source Library -->
+                     <div class="flex flex-col items-center">
+                        <svg class="h-16 w-16 mb-4" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="icon-title-3">
+                            <title id="icon-title-3">Open-Source Library Icon</title>
+                            <path d="M32,54 C44.1503,54 54,44.1503 54,32 C54,19.8497 44.1503,10 32,10 C19.8497,10 10,19.8497 10,32 C10,38.8785 13.06,44.9048 18,48.6" stroke="#00BBD6" stroke-width="3" stroke-linecap="round" />
+                            <path d="M22 26L32 36L50 18" stroke="#00BBD6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <h3 class="font-bree text-xl font-semibold mb-2" data-translate="icon3Title">Open-Source Library</h3>
+                        <p class="text-gray-600" data-translate="icon3Text">Creating a documented, real-time algorithm library for low-cost platforms, accessible to the wider scientific community.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How Sensors Work Section -->
+        <section id="sensors" class="py-20 px-6 bg-white">
+            <div class="container mx-auto max-w-5xl">
+                <div class="text-center mb-12">
+                    <h2 class="font-bree text-3xl md:text-4xl font-semibold inline-block" data-translate="sensorsTitle">Decoding the Sea's Pressure Signature</h2>
+                    <p class="text-lg text-gray-600 mt-4 max-w-3xl mx-auto" data-translate="sensorsText">
+                        Any movement in a fluid creates a pressure change. The source of such changes can be natural phenomena like waves and currents, or human-induced dynamics like moving vessels. These pressure changes can be observed using sensors that are passive, non-invasive, and energy-efficient. They are not sensitive to common acoustic noise, allowing them to focus on hydrodynamic pressure signals.
+                    </p>
+                </div>
+
+                <!-- Restored Infographic -->
+                <div class="max-w-3xl mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-gray-700">
+                        <!-- Natural Sources -->
+                        <div class="text-center md:text-right">
+                            <h3 class="font-bree text-2xl mb-4" data-translate="infographicNatural">Natural Sources</h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-center justify-center md:justify-end">
+                                    <span class="mr-3" data-translate="infographicWaves">Waves</span>
+                                    <svg class="w-6 h-6 accent-teal" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                </li>
+                                <li class="flex items-center justify-center md:justify-end">
+                                    <span class="mr-3" data-translate="infographicCurrents">Currents</span>
+                                    <svg class="w-6 h-6 accent-teal" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                </li>
+                                <li class="flex items-center justify-center md:justify-end">
+                                    <span class="mr-3" data-translate="infographicIcebergs">Iceberg Calving</span>
+                                    <svg class="w-6 h-6 accent-teal" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Man-made Sources -->
+                        <div class="text-center md:text-left">
+                            <h3 class="font-bree text-2xl mb-4" data-translate="infographicManMade">Man-Made Sources</h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-center justify-center md:justify-start">
+                                    <svg class="w-6 h-6 accent-teal" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" /></svg>
+                                    <span class="ml-3" data-translate="infographicVessels">Moving Vessels</span>
+                                </li>
+                                <li class="flex items-center justify-center md:justify-start">
+                                    <svg class="w-6 h-6 accent-teal" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" /></svg>
+                                    <span class="ml-3" data-translate="infographicWastewater">Wastewater Release</span>
+                                </li>
+                                <li class="flex items-center justify-center md:justify-start">
+                                    <svg class="w-6 h-6 accent-teal" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" /></svg>
+                                    <span class="ml-3" data-translate="infographicUndConstr">Underwater constructions</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Central Element -->
+                    <div class="text-center mt-8">
+                        <svg class="h-12 w-12 mx-auto text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+                        </svg>
+                        <div class="mt-4 card rounded-lg p-6 max-w-md mx-auto">
+                            <h4 class="font-bree text-xl" data-translate="infographicResult">Passive Pressure Sensor</h4>
+                            <p class="text-gray-600" data-translate="infographicResultText">Detects all pressure changes to create a complete picture of the underwater environment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Objectives / Work Packages -->
+        <section id="objectives" class="py-20 px-6">
+            <div class="container mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="font-bree text-3xl md:text-4xl font-semibold inline-block" data-translate="objectivesTitle">Project Objectives</h2>
+                    <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto" data-translate="objectivesSubtitle">A four-step journey from data collection to real-world validation.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="card p-8 text-center rounded-lg">
+                        <div class="font-bree text-5xl font-bold accent-teal mb-4">01</div>
+                        <h3 class="text-xl font-semibold mb-2" data-translate="obj1Title">Dataset</h3>
+                        <p class="text-gray-600" data-translate="obj1Text">Collection of pressure sensor data in diverse scenarios and locations to build a robust foundation.</p>
+                    </div>
+                    <div class="card p-8 text-center rounded-lg">
+                        <div class="font-bree text-5xl font-bold accent-teal mb-4">02</div>
+                        <h3 class="text-xl font-semibold mb-2" data-translate="obj2Title">Model</h3>
+                        <p class="text-gray-600" data-translate="obj2Text">Simulation and emulation of hydrodynamic data based on physical models and experimental data.</p>
+                    </div>
+                    <div class="card p-8 text-center rounded-lg">
+                        <div class="font-bree text-5xl font-bold accent-teal mb-4">03</div>
+                        <h3 class="text-xl font-semibold mb-2" data-translate="obj3Title">Algorithm</h3>
+                        <p class="text-gray-600" data-translate="obj3Text">Design of a real-time algorithm library for detection, localization, and source separation.</p>
+                    </div>
+                    <div class="card p-8 text-center rounded-lg">
+                        <div class="font-bree text-5xl font-bold accent-teal mb-4">04</div>
+                        <h3 class="text-xl font-semibold mb-2" data-translate="obj4Title">Validation</h3>
+                        <p class="text-gray-600" data-translate="obj4Text">Demonstration of the developed algorithms in at least two different real-world sea environments.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="py-20 px-6 bg-white">
+            <div class="container mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="font-bree text-3xl md:text-4xl font-semibold inline-block" data-translate="teamTitle">The Team</h2>
+                     <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto" data-translate="teamSubtitle">Combining expertise in signal processing and hydrodynamic hardware design.</p>
+                </div>
+                <div class="flex flex-wrap justify-center gap-10">
+                    <div class="card text-center p-8 rounded-lg max-w-sm">
+                        <h3 class="font-bree text-2xl font-semibold" data-translate="teamMember1Name">Elizaveta Dubrovinskaya</h3>
+                        <p class="accent-teal font-semibold mb-2" data-translate="teamMember1Role">Researcher</p>
+                        <p class="text-gray-600" data-translate="teamMember1Desc">Bringing in-depth knowledge of acoustic signal propagation, processing, and underwater localization.</p>
+                    </div>
+                    <div class="card text-center p-8 rounded-lg max-w-sm">
+                        <h3 class="font-bree text-2xl font-semibold" data-translate="teamMember2Name">Maarja Kruusmaa</h3>
+                        <p class="accent-teal font-semibold mb-2" data-translate="teamMember2Role">Supervisor</p>
+                        <p class="text-gray-600" data-translate="teamMember2Desc">Leading the Centre for Biorobotics with vast experience in marine robotics and hydrodynamic sensors.</p>
+                    </div>
+                </div>
+                 <div class="text-center mt-10">
+                     <p class="text-gray-700 text-lg" data-translate="hostedAt">Hosted at the</p>
+                     <p class="font-bree text-2xl font-semibold" data-translate="hostInstitution">Centre for Biorobotics, Tallinn University of Technology</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="py-20 px-6">
+            <div class="container mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="font-bree text-3xl md:text-4xl font-semibold inline-block" data-translate="blogTitle">Project Updates</h2>
+                    <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto" data-translate="blogSubtitle">Follow our journey as we deploy, test, and share our findings.</p>
+                </div>
+                <div class="flex justify-center">
+                    <div class="card rounded-lg overflow-hidden max-w-2xl">
+                        <div class="p-8">
+                            <p class="text-sm text-gray-500 mb-2">June 9, 2025</p>
+                            <h3 class="text-2xl font-semibold mb-3" data-translate="blogPostTitle">The Baltic Cocktail Party: Stirred by science, served with smarts</h3>
+                            <p class="text-gray-600 mb-4" data-translate="blogPostSnippet">
+                                Welcome to the Baltic Cocktail Party — where the guests are often invisible, and the real conversations happen under pressure. This isn’t your average party. Picture an underwater world buzzing with activity: ships passing overhead like party guests, currents swirling like shaken drinks, and hidden signals mixing together like overlapping voices in a crowded room. Now imagine trying to pick out just one voice — or one signal — from all the noise. That’s the “cocktail party effect,” but this time, it’s happening beneath the waves.
+                            </p>
+                            <a href="blog/baltic-cocktail-party.html" class="font-semibold accent-teal hover:underline" data-translate="readMore">Read More &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="hero-bg py-10 px-6">
+        <div class="container mx-auto text-center text-gray-300">
+            <!-- Final code comment: Just keep swimming -->
+            <p data-translate="copyright">&copy; 2025 PRESENSEA Project | Tallinn University of Technology</p>
+            <p class="text-sm mt-2" data-translate="fundingInfo">This project has received funding from the Estonian Research Council under the Mobilitas Pluss programme (Grant no. MOB3JD1212).</p>
+        </div>
+    </footer>
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ResearchProject",
+      "name": "PRESENSEA - PREssure SENsor based SEA monitoring",
+      "description": "An innovative research project focused on underwater sea monitoring using passive pressure sensors to separate and identify various hydrodynamic signals in the Baltic Sea, akin to solving the 'cocktail party problem' underwater.",
+      "url": "https://presensea.github.io",
+      "funder": {
+        "@type": "Organization",
+        "name": "Estonian Research Council (ETAg)",
+        "url": "https://www.etag.ee/en/"
+      },
+       "principalInvestigator": {
+        "@type": "Person",
+        "name": "Elizaveta Dubrovinskaya"
+      },
+      "author": {
+         "@type": "Person",
+         "name": "Elizaveta Dubrovinskaya"
+      }
+    }
+    </script>
+    
+    <script>
+        // --- Translations Object ---
+        const translations = {
+            metaDescription: {
+                en: "Discover PRESENSEA, a research project developing innovative underwater monitoring solutions for the Baltic Sea using passive pressure sensors to solve the 'cocktail party problem' of the sea.",
+                et: "Avastage PRESENSEA, uurimisprojekt, mis arendab uuenduslikke veealuse seire lahendusi Läänemerele, kasutades passiivseid rõhuandureid, et lahendada mere 'kokteilipeo probleemi'.",
+                ru: "Откройте для себя PRESENSEA — исследовательский проект, разрабатывающий инновационные решения для подводного мониторинга Балтийского моря с использованием пассивных датчиков давления для решения 'проблемы коктейльной вечеринки' в море."
+            },
+            navAbout: { en: 'About', et: 'Projektist', ru: 'О проекте' },
+            navSensors: { en: 'Sensors', et: 'Andurid', ru: 'Датчики' },
+            navObjectives: { en: 'Objectives', et: 'Eesmärgid', ru: 'Цели' },
+            navTeam: { en: 'Team', et: 'Meeskond', ru: 'Команда' },
+            navBlog: { en: 'Blog', et: 'Blogi', ru: 'Блог' },
+            heroTitle: { en: "Listening to the Sea's Whisper.", et: 'Kuulates mere sosinat.', ru: 'Слушая шепот моря.' },
+            heroSubtitle: { en: 'Innovative underwater monitoring using pressure sensors to untangle the sounds of the sea and protect our aquatic world.', et: 'Uuenduslik veealune seire rõhuandurite abil, et harutada lahti merehelid ja kaitsta meie veemaailma.', ru: 'Инновационный подводный мониторинг с использованием датчиков давления для расшифровки звуков моря и защиты нашего водного мира.' },
+            aboutTitle: { en: 'The Cocktail Party Problem of the Sea', et: 'Mere kokteilipeo probleem', ru: 'Проблема морской коктейльной вечеринки' },
+            aboutText: { en: 'The sea is full of pressure signals—from waves, currents, and marine life to passing ships. Isolating a faint, distant signal is like trying to hear a single voice in a crowded room. PRESENSEA is developing advanced algorithms to solve this "cocktail party problem," enabling us to listen to individual sources with unprecedented clarity.', et: 'Meri on täis rõhusignaale – lainetest, hoovustest ja mereelustikust mööduvate laevadeni. Nõrga, kauge signaali eraldamine on nagu prooviks kuulda üht häält rahvarohkes toas. PRESENSEA arendab täiustatud algoritme selle "kokteilipeo probleemi" lahendamiseks, võimaldades meil kuulata üksikuid allikaid enneolematu selgusega.', ru: 'Море полно сигналов давления — от волн, течений и морских обитателей до проходящих кораблей. Выделить слабый, далекий сигнал — все равно что пытаться расслышать один голос в переполненной комнате. PRESENSEA разрабатывает передовые алгоритмы для решения этой "проблемы коктейльной вечеринки", позволяя нам слушать отдельные источники с беспрецедентной четкостью.' },
+            icon1Title: { en: 'Non-Invasive Sensors', et: 'Mitteinvasiivsed andurid', ru: 'Неинвазивные датчики' },
+            icon1Text: { en: 'Using passive, energy-efficient pressure sensors that listen quietly without emitting signals or disturbing marine ecosystems.', et: 'Kasutades passiivseid, energiatõhusaid rõhuandureid, mis kuulavad vaikselt ilma signaale kiirgamata ega mere ökosüsteeme häirimata.', ru: 'Использование пассивных, энергоэффективных датчиков давления, которые тихо слушают, не излучая сигналов и не нарушая морские экосистемы.' },
+            icon2Title: { en: 'Source Separation', et: 'Allikate eraldamine', ru: 'Разделение источников' },
+            icon2Text: { en: 'Applying machine learning to distinguish the subtle signature of a ship from the background noise of waves and currents.', et: 'Rakendades masinõpet, et eristada laeva peent signatuuri lainete ja hoovuste taustmürast.', ru: 'Применение машинного обучения для отличения тонкой сигнатуры корабля от фонового шума волн и течений.' },
+            icon3Title: { en: 'Open-Source Library', et: 'Avatud lähtekoodiga teek', ru: 'Библиотека с открытым кодом' },
+            icon3Text: { en: 'Creating a documented, real-time algorithm library for low-cost platforms, accessible to the wider scientific community.', et: 'Luues dokumenteeritud reaalajas algoritmiteegi odavatele platvormidele, mis on kättesaadav laiemale teadlaskonnale.', ru: 'Создание документированной библиотеки алгоритмов реального времени для недорогих платформ, доступной широкому научному сообществу.' },
+            sensorsTitle: { en: "Decoding the Sea's Pressure Signature", et: 'Mere rõhusignatuuri dekodeerimine', ru: 'Расшифровка сигнатуры давления моря' },
+            sensorsText: { en: 'Any movement in a fluid creates a pressure change. The source of such changes can be natural phenomena like waves and currents, or human-induced dynamics like moving vessels. These pressure changes can be observed using sensors that are passive, non-invasive, and energy-efficient. They are not sensitive to common acoustic noise, allowing them to focus on hydrodynamic pressure signals.', et: 'Igasugune liikumine vedelikus tekitab rõhumuutuse. Selliste muutuste allikaks võivad olla loodusnähtused nagu lained ja hoovused või inimtekkelised dünaamikad nagu liikuvad laevad. Neid rõhumuutusi saab jälgida anduritega, mis on passiivsed, mitteinvasiivsed ja energiatõhusad. Nad ei ole tundlikud tavalisele akustilisele mürale, mis võimaldab neil keskenduda hüdrodünaamilistele rõhusignaalidele.', ru: 'Любое движение в жидкости создает изменение давления. Источником таких изменений могут быть природные явления, такие как волны и течения, или антропогенная динамика, например, движущиеся суда. Эти изменения давления можно наблюдать с помощью датчиков, которые являются пассивными, неинвазивными и энергоэффективными. Они не чувствительны к обычному акустическому шуму, что позволяет им сосредоточиться на гидродинамических сигналах давления.' },
+            infographicNatural: { en: 'Natural Sources', et: 'Looduslikud allikad', ru: 'Природные источники' },
+            infographicWaves: { en: 'Waves', et: 'Lained', ru: 'Волны' },
+            infographicCurrents: { en: 'Currents', et: 'Hoovused', ru: 'Течения' },
+            infographicIcebergs: { en: 'Iceberg Calving', et: 'Jäämägede poegimine', ru: 'Откол айсбергов' },
+            infographicManMade: { en: 'Man-Made Sources', et: 'Inimtekkelised allikad', ru: 'Антропогенные источники' },
+            infographicVessels: { en: 'Moving Vessels', et: 'Liikuvad laevad', ru: 'Движущиеся суда' },
+            infographicWastewater: { en: 'Wastewater Release', et: 'Heitvee väljalaskmine', ru: 'Сброс сточных вод' },
+            infographicUndConstr: { en: 'Underwater constructions', et: 'Veealused ehitustööd', ru: 'Строительные работы под водой' },
+            infographicResult: { en: 'Passive Pressure Sensor', et: 'Passiivne rõhuandur', ru: 'Пассивный датчик давления' },
+            infographicResultText: { en: 'Detects all pressure changes to create a complete picture of the underwater environment.', et: 'Tuvastab kõik rõhumuutused, et luua täielik pilt veealusest keskkonnast.', ru: 'Обнаруживает все изменения давления для создания полной картины подводной среды.' },
+            objectivesTitle: { en: 'Project Objectives', et: 'Projekti eesmärgid', ru: 'Цели проекта' },
+            objectivesSubtitle: { en: 'A four-step journey from data collection to real-world validation.', et: 'Neljaastmeline teekond andmete kogumisest reaalse valideerimiseni.', ru: 'Четырехэтапный путь от сбора данных до проверки в реальных условиях.' },
+            obj1Title: { en: 'Dataset', et: 'Andmestik', ru: 'Набор данных' },
+            obj1Text: { en: 'Collection of pressure sensor data in diverse scenarios and locations to build a robust foundation.', et: 'Rõhuandurite andmete kogumine erinevates stsenaariumides ja asukohtades tugeva aluse loomiseks.', ru: 'Сбор данных с датчиков давления в различных сценариях и местах для создания надежной основы.' },
+            obj2Title: { en: 'Model', et: 'Mudel', ru: 'Модель' },
+            obj2Text: { en: 'Simulation and emulation of hydrodynamic data based on physical models and experimental data.', et: 'Hüdrodünaamiliste andmete simuleerimine ja emuleerimine füüsikaliste mudelite ja katseandmete põhjal.', ru: 'Моделирование и эмуляция гидродинамических данных на основе физических моделей и экспериментальных данных.' },
+            obj3Title: { en: 'Algorithm', et: 'Algoritm', ru: 'Алгоритм' },
+            obj3Text: { en: 'Design of a real-time algorithm library for detection, localization, and source separation.', et: 'Reaalajas algoritmiteegi kavandamine tuvastamiseks, lokaliseerimiseks ja allikate eraldamiseks.', ru: 'Разработка библиотеки алгоритмов реального времени для обнаружения, локализации и разделения источников.' },
+            obj4Title: { en: 'Validation', et: 'Valideerimine', ru: 'Проверка' },
+            obj4Text: { en: 'Demonstration of the developed algorithms in at least two different real-world sea environments.', et: 'Arendatud algoritmide demonstreerimine vähemalt kahes erinevas reaalses merekeskkonnas.', ru: 'Демонстрация разработанных алгоритмов как минимум в двух различных реальных морских средах.' },
+            teamTitle: { en: 'The Team', et: 'Meeskond', ru: 'Команда' },
+            teamSubtitle: { en: 'Combining expertise in signal processing and hydrodynamic hardware design.', et: 'Ühendades signaalitöötluse ja hüdrodünaamilise riistvara disaini alaseid teadmisi.', ru: 'Объединяя опыт в обработке сигналов и проектировании гидродинамического оборудования.' },
+            teamMember1Name: { en: 'Elizaveta Dubrovinskaya', et: 'Elizaveta Dubrovinskaya', ru: 'Елизавета Дубровинская' },
+            teamMember1Role: { en: 'Principal Investigator', et: 'Juhtiv uurija', ru: 'Главный исследователь' },
+            teamMember1Desc: { en: 'Bringing in-depth knowledge of  signal propagation, processing, and underwater localization.', et: 'Tuues süvateadmisi  signaali leviku, töötlemise ja veealuse lokaliseerimise kohta.', ru: 'Обладает глубокими знаниями в области распространения и обработки  сигналов и подводной локализации.' },
+            teamMember2Name: { en: 'Maarja Kruusmaa', et: 'Maarja Kruusmaa', ru: 'Маарья Круусмаа' },
+            teamMember2Role: { en: 'Supervisor', et: 'Juhendaja', ru: 'Научный руководитель' },
+            teamMember2Desc: { en: 'Leading the Centre for Biorobotics with vast experience in marine robotics and hydrodynamic sensors.', et: 'Juhtides Biorobootika Keskust, omades laialdast kogemust mererobootikas ja hüdrodünaamilistes andurites.', ru: 'Руководит Центром биоробототехники, обладая обширным опытом в морской робототехнике и гидродинамических датчиках.' },
+            hostedAt: { en: 'Hosted at the', et: 'Asutus', ru: 'Проект базируется в' },
+            hostInstitution: { en: 'Centre for Biorobotics, Tallinn University of Technology', et: 'Biorobootika Keskus, Tallinna Tehnikaülikool', ru: 'Центр биоробототехники, Таллиннский технический университет' },
+            blogTitle: { en: 'Project Updates', et: 'Projekti uuendused', ru: 'Новости проекта' },
+            blogSubtitle: { en: 'Follow our journey as we deploy, test, and share our findings.', et: 'Jälgige meie teekonda, kui me paigaldame, testime ja jagame oma tulemusi.', ru: 'Следите за нашим путешествием, в ходе которого мы развертываем, тестируем и делимся нашими результатами.' },
+            blogPostTitle: { en: 'The Baltic Cocktail Party: Stirred by science, served with smarts', et: 'Läänemere kokteilipidu: teaduse poolt segatud, nutikalt serveeritud', ru: 'Балтийская коктейльная вечеринка: смешано наукой, подано с умом' },
+            blogPostSnippet: { en: "Welcome to the Baltic Cocktail Party — where the guests are often invisible, and the real conversations happen under pressure. This isn’t your average party. Picture an underwater world buzzing with activity: ships passing overhead like party guests, currents swirling like shaken drinks, and hidden signals mixing together like overlapping voices in a crowded room. Now imagine trying to pick out just one voice — or one signal — from all the noise. That’s the “cocktail party effect,” but this time, it’s happening beneath the waves.", et: "Tere tulemast Läänemere kokteilipeole – kus külalised on sageli nähtamatud ja tõelised vestlused toimuvad pinge all. See ei ole tavaline pidu. Kujutage ette veealust maailma, mis kihab tegevusest: laevad mööduvad pea kohal nagu peokülalised, hoovused keerlevad nagu loksutatud joogid ja varjatud signaalid segunevad nagu kattuvad hääled rahvarohkes toas. Nüüd kujutage ette, et proovite kogu mürast välja valida vaid ühe hääle – või ühe signaali. See ongi „kokteilipeo efekt“, kuid seekord toimub see lainete all.", ru: "Добро пожаловать на Балтийскую коктейльную вечеринку, где гости часто невидимы, а настоящие разговоры происходят под давлением. Это не обычная вечеринка. Представьте себе подводный мир, кипящий жизнью: корабли, проходящие над головой, словно гости на вечеринке; течения, закручивающиеся, как взболтанные напитки; и скрытые сигналы, смешивающиеся, как перекрывающиеся голоса в переполненной комнате. А теперь представьте, что вы пытаетесь выделить из всего этого шума один-единственный голос или сигнал. Это и есть «эффект коктейльной вечеринки», но на этот раз он происходит под волнами." },
+            readMore: { en: 'Read More &rarr;', et: 'Loe edasi &rarr;', ru: 'Читать далее &rarr;' },
+            copyright: { en: '&copy; 2025 PRESENSEA Project | Tallinn University of Technology', et: '&copy; 2025 PRESENSEA Projekt | Tallinna Tehnikaülikool', ru: '&copy; 2025 Проект PRESENSEA | Таллиннский технический университет' },
+            fundingInfo: { en: 'This project has received funding from the Estonian Research Council under the Mobilitas Pluss programme (Grant no. MOB3JD1212).', et: 'Seda projekti on rahastanud Eesti Teadusagentuur Mobilitas Pluss programmi raames (Grant nr MOB3JD1212).', ru: 'Этот проект получил финансирование от Эстонского исследовательского совета в рамках программы Mobilitas Pluss (грант № MOB3JD1212).' },
+        };
+
+        // --- Language Switching Logic ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const langSwitcher = document.querySelector('.lang-switcher');
+            const langLinks = langSwitcher.querySelectorAll('a[data-lang]');
+            const metaDescription = document.getElementById('meta-description');
+            
+            const changeLanguage = (lang) => {
+                // Set active class on the switcher
+                langLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('data-lang') === lang) {
+                        link.classList.add('active');
+                    }
+                });
+
+                // Find all elements with data-translate attribute and update their content
+                document.querySelectorAll('[data-translate]').forEach(element => {
+                    const key = element.getAttribute('data-translate');
+                    if (translations[key] && translations[key][lang]) {
+                        element.innerHTML = translations[key][lang];
+                    }
+                });
+                
+                // Update meta description
+                if(translations.metaDescription[lang]) {
+                    metaDescription.setAttribute('content', translations.metaDescription[lang]);
+                }
+
+                 // Set the html lang attribute
+                document.documentElement.lang = lang;
+            };
+
+            langSwitcher.addEventListener('click', (event) => {
+                event.preventDefault(); // Prevent page jump
+                const lang = event.target.getAttribute('data-lang');
+                if (lang) {
+                    changeLanguage(lang);
+                }
+            });
+
+            // Set initial language (optional, defaults to EN in HTML)
+            changeLanguage('en');
+        });
+
+    </script>
+</body>
+</html>
