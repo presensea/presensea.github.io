@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags for Blog Post -->
+    <title>Feeling the Pressure? A Deep Dive into Low-Cost Underwater Sensors - PRESENSEA Project</title>
+    <meta name="description" content="A practical guide to selecting, waterproofing, and deploying low-cost COTS pressure sensors for underwater applications, from DIY projects to professional research.">
+    <meta name="keywords" content="underwater pressure sensor, COTS sensors, MEMS, piezoresistive, capacitive, waterproofing, conformal coating, potting, oceanography, marine technology, PRESENSEA, TalTech, blog">
+    <meta name="author" content="Elizaveta Dubrovinskaya, PRESENSEA Project">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2025-06-12T12:00:00+03:00" />
+    <meta property="article:author" content="Elizaveta Dubrovinskaya" />
+    <meta property="og:url" content="https://presensea.github.io/blog/002-choosing-sensor.html">
+    <meta property="og:title" content="Feeling the Pressure? A Deep Dive into Low-Cost Underwater Sensors - PRESENSEA Project">
+    <meta property="og:description" content="A practical guide to selecting, waterproofing, and deploying low-cost COTS pressure sensors for underwater applications, from DIY projects to professional research.">
+    <meta property="og:image" content="https://placehold.co/1200x630/0A2F51/FFFFFF?text=Feeling+the+Pressure?">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://presensea.github.io/blog/002-choosing-sensor.html">
+    <meta property="twitter:title" content="Feeling the Pressure? A Deep Dive into Low-Cost Underwater Sensors - PRESENSEA Project">
+    <meta property="twitter:description" content="A practical guide to selecting, waterproofing, and deploying low-cost COTS pressure sensors for underwater applications, from DIY projects to professional research.">
+    <meta property="twitter:image" content="https://placehold.co/1200x630/0A2F51/FFFFFF?text=Feeling+the+Pressure?">
+
+    <!-- Scripts and Styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FAF8F7; /* sandy-shore */
+            color: #0A2F51; /* deep-sea-blue */
+        }
+        .font-bree {
+            font-family: 'Bree Serif', serif;
+        }
+        .hero-bg {
+            background-color: #0A2F51; /* deep-sea-blue */
+            color: #FAF8F7; /* sandy-shore */
+        }
+        .accent-teal {
+            color: #00BBD6; /* ocean-teal */
+        }
+        /* Article styles */
+        .article-content h3 {
+            font-family: 'Bree Serif', serif;
+            font-size: 1.5rem; /* 24px */
+            line-height: 2rem; /* 32px */
+            margin-top: 2.5rem; /* 40px */
+            margin-bottom: 1rem; /* 16px */
+            padding-bottom: 0.25rem;
+            border-bottom: 2px solid #e0e0e0;
+            color: #0A2F51;
+        }
+         .article-content h4 {
+            font-family: 'Bree Serif', serif;
+            font-size: 1.25rem; /* 20px */
+            line-height: 1.75rem; /* 28px */
+            margin-top: 2rem; /* 32px */
+            margin-bottom: 1rem; /* 16px */
+            color: #1F2937;
+        }
+        .article-content p, .article-content li {
+            margin-bottom: 1.25rem; /* 20px */
+            line-height: 1.75;
+            color: #4B5563; /* gulf-stream-gray */
+        }
+        .article-content ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+        }
+        .article-content a {
+            color: #00BBD6;
+            text-decoration: underline;
+            transition: color 0.2s;
+        }
+        .article-content a:hover {
+            color: #008f9e;
+        }
+        /* Table styles */
+        .article-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            font-size: 0.9em;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            overflow-x: auto;
+            display: block;
+        }
+        .article-content th, .article-content td {
+            padding: 12px 15px;
+            text-align: left;
+            border: 1px solid #ddd;
+            white-space: nowrap;
+        }
+        .article-content th {
+            background-color: #f2f2f2;
+            font-weight: 600;
+            color: #374151;
+        }
+        .article-content tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+        /* References Style */
+        .references {
+            margin-top: 3rem;
+            font-size: 0.8em;
+            color: #6B7280;
+        }
+        .references li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="hero-bg sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="https://presensea.github.io" class="flex items-center space-x-3">
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" class="h-8 w-auto" role="img" aria-labelledby="logo-title" style="enable-background:new 0 0 72.61 60.79" viewBox="0 0 72.6 60.8">
+                    <title id="logo-title">PRESENSEA Project Logo</title>
+                    <path d="m30 47-3-1C9 34 25 6 44 15l2 1h1c9 8 0 23-11 19l-2-1c-2-3 1-7 4-6h1c4 3 8-3 3-6-12-6-22 10-11 18l3 1c19 8 34-20 16-31l-3-1C19-4-2 37 24 52l3 2c5 2 8-4 3-7z" style="fill:#00bbd6"/>
+                </svg>
+                <span class="font-bree text-2xl tracking-wide text-white">PRESENSEA</span>
+            </a>
+            <div class="flex items-center space-x-8">
+                <nav class="hidden md:flex space-x-8 text-white">
+                    <a href="https://presensea.github.io#about" class="hover:text-cyan-300 transition-colors">Home</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <article class="bg-white py-12 sm:py-16">
+            <div class="container mx-auto max-w-4xl px-6 lg:px-8">
+                <div class="text-center">
+                    <h1 class="mt-2 text-3xl font-bold tracking-tight sm:text-4xl font-bree">Feeling the Pressure? A Deep Dive into Low-Cost Underwater Sensors</h1>
+                    <div class="mt-6 flex items-center justify-center gap-x-4 text-xs">
+                        <time datetime="2025-06-12" class="text-gray-500">June 12, 2025</time>
+                        <span class="text-gray-500">by Elizaveta Dubrovinskaya</span>
+                    </div>
+                </div>
+
+                <div class="mt-10 article-content">
+                    <h3>Make vs. Buy: Cost-Effective Underwater Pressure Sensors for DIY & Research Projects</h3>
+                    <p>When you need to measure pressure underwater, the first question is always: Do you build it yourself, or buy a ready-made solution? Sure, companies like Blue Robotics, Keller, or Impact Sea sell pre-sealed, high-reliability sensors. But if your project operates under tight budget constraints—or prioritizes hands-on prototyping for research and development—buying off-the-shelf solutions might leave you high and dry. Let’s explore your options and dive into practical alternatives!</p>
+                    <p>Some MEMS shops like <a href="https://www.mouser.ee/c/sensors/pressure-sensors/" target="_blank">Mouser</a> or DigiKey offer a comprehensive characteristic filter for choosing between thousands of different sensors. Let’s chart a course through the options and avoid drowning in complexity.</p>
+
+                    <h4>How to Choose Underwater Pressure Sensors: Key Questions for Accurate Data Collection</h4>
+                    <p>The choice is obviously defined by specific application, in research it can be very different. But at this point let’s ask the right questions.</p>
+                    <ul>
+                        <li><strong>What is the data?</strong> Hydrostatic that is dependent on the depth. Hydrodynamic – small fluctuations of the pressure that may come from moving pressure media (or vessel itself). Acoustic pressure is a whole another application which we will not consider in this post.</li>
+                        <li><strong>What are the environment requirements?</strong> Freshwater or saltwater? Will it face mechanical vibrations, EMI/RFI interference, or the wrath of Neptune himself?</li>
+                        <li><strong>What are the design requirements?</strong> how the sensor will be sealed? Will you use digital or analog signals? What connector works best?</li>
+                    </ul>
+
+                    <h3>What data do you want to measure?</h3>
+                    <p>While there is a lot of different sources for underwater pressure, there are always two components. Hydrostatic that is dependent on the depth. Hydrodynamic – small fluctuations of the pressure that may come from moving pressure media (or vessel itself). Acoustic pressure is a whole another source which we will not consider in this post.</p>
+                    <p>When it comes to how we measure, we can measure absolute pressure (relative to perfect vacuum), gauge (relative to some value e.g. ambient atmospheric pressure) and differential (difference between pressure in two points). For underwater environment, make sure that gauge sensors have properly sealed gauge port.</p>
+                    <p>Many sensors types are prone to temperature errors so many add temperature measurement and compensation [1]. Think of integration of additional sensors (e.g. conductivity or full AHRS) if needed.</p>
+
+                    <h3>Sensor Types Compared: Piezoresistive, Capacitive, and Fiber-Optic for Underwater Use</h3>
+                    <p>This should define the physical principle behind the sensor. Here is a table with some basic information.</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Type of sensor</th>
+                                <th>Principle</th>
+                                <th>Pro</th>
+                                <th>Contras</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Piezoresistive [1, 2]</td>
+                                <td>Electrical resistance of material is changed when exposed to pressure.</td>
+                                <td>Mature, Low cost, widely used, high sensitivity (sub-Pascal resolution)</td>
+                                <td>Sensitive to temperature induced errors, in harsh medias prone to long term drift and hysteresis.</td>
+                            </tr>
+                            <tr>
+                                <td>Capacitive [3, 4]</td>
+                                <td>Two parallel conductive plates, one of them is a flexible diaphragm that deforms under pressure and changes the capacitance</td>
+                                <td>Mature, no DC power, long-term and overpressure stability,</td>
+                                <td>Require complex low-noise interface and calibration algorithms, silicon components suffer from salt exposure</td>
+                            </tr>
+                            <tr>
+                                <td>Stain Gauge</td>
+                                <td>Like piezoresistive technology, but the resistance element is spring-like that deforms under pressure</td>
+                                <td>More suitable for long-term monitoring</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>Piezoelectric [6, 7]</td>
+                                <td>Ceramic or polymer material generates a charge under pressure</td>
+                                <td>Robust, no DC power, high sensitivity to fast small pressure pulses in MHz range</td>
+                                <td>Output charge leaks so can only measure dynamic (AC) pressure changes</td>
+                            </tr>
+                            <tr>
+                                <td>Fiber-optic [8]</td>
+                                <td>Measures strain-induced wavelength shift</td>
+                                <td>No DC power, Immune to electromagnetic interference, potentially tens of kHz response, naturally corrosion proof</td>
+                                <td>Emerging \ Requires costly laser interrogators</td>
+                            </tr>
+                            <tr>
+                                <td>Flexible polymer [9]</td>
+                                <td>Porous composites</td>
+                                <td>high sensitivity to constant pressure</td>
+                                <td>Emerging, slow (tens of Hz) due to viscoelasticity,</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>Environmental Challenges: Corrosion, Biofouling, and Pressure Protection for Sensors</h3>
+                    <p>Underwater environment is harsh. While some sensors offer waterproof capabilities out of the box, for critical applications, long-term deployments or deep ocean, any sensor may need pressure housing, oil filling or other types of encapsulation.</p>
+                    <p>Even if you need a non-critical and short term deployment, you still need to consider a design that will stand corrosion (especially in salty water) and leaking. When it comes to long term, the design should withstand not only pressure, but also biofouling and internal condensation. Organic materials of sensor membranes and sealing after long exposure may start leaking or giving wrong results.</p>
+                    <p><strong>Pressure equalization</strong>. Even for small depth air-tight seals when exposed to temperature and pressure change may be stressed and leaking. Consider pressure compensation elements (vent holes) for critical designs.</p>
+                    <p><strong>Corrosion</strong> and biofouling in salty water is particularly aggressive. Choose stainless steel alloys for sensor housing, and titanium for extra-long term and harsh conditions [2]. Protect connections (e.g. o-rings) using specialized polymer compounds (e.g. PVDF or PTFE), for extra protection using welded seals and all-metal design.</p>
+                    
+                    <h4>Sealing Techniques: Protecting Underwater Sensors from Leaks and Condensation</h4>
+                    <p>When safeguarding underwater sensors, conformal coatings like brush-on or sprayed acrylic or silicone offer a lightweight, removable shield for short-term deployments—a flexible solution for prototyping or temporary setups. For more permanent installations, epoxy or parylene encapsulation acts as a "suit of armor," providing robust, long-term defense against moisture and corrosion. However, always verify material compatibility : Ensure seals and coatings withstand curing temperatures, solvents, or mechanical stress during assembly. For rapid prototyping, consider unconventional methods like sealing sensors in balloons—a low-cost, DIY approach highlighted in projects like <a href="https://seagrant.mit.edu/seaperch2-pressure/" target="_blank">MIT SeaPerch’s</a> pressure-testing guide. Balancing protection, durability, and ease of implementation ensures your sensor survives both lab trials and real-world depths.</p>
+
+                    <h4>Analog vs. Digital Sensors: Signal Integrity for Underwater Pressure Monitoring</h4>
+                    <p>Analog signal (e.g. voltage or current loop) is continuous which may be crucial for some real-time applications. However analog voltage signal is prone to noise especially in long cables. It also may require extra analog-to-digital conversion and signal processing units. Digital sensors already include A2D conversion and often some basic signal processing units [11]. However the output is quantized which may be an issue when sensor is intended for high depth and exact low depth values are needed.</p>
+
+                    <h3>Top Low-Cost Underwater Sensors: Depth Range, Accuracy & Compatibility Guide</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Sensor</th>
+                                <th>Protection type</th>
+                                <th>Depth range</th>
+                                <th>Output</th>
+                                <th>Size</th>
+                                <th>Price (EUR)</th>
+                                <th>Datasheet</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Bosch Sensortec BMP384</td>
+                                <td>Gel-filled</td>
+                                <td>Barometric (~2.5m)</td>
+                                <td>Digital (I2C/SPI)</td>
+                                <td>2.0 x 2.0 x 1.0 mm</td>
+                                <td>2-4</td>
+                                <td><a href="https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmp384-ds001.pdf" target="_blank">Link</a></td>
+                            </tr>
+                            <tr>
+                                <td>STMicroelectronics LPS27HHTW</td>
+                                <td>WR package, potting gel, o-ring compatible</td>
+                                <td>Barometric (~2.6m)</td>
+                                <td>Digital (I2C/SPI/I3C)</td>
+                                <td>2.5 x 2.5 x 1.1 mm</td>
+                                <td>3-6</td>
+                                <td><a href="https://www.st.com/resource/en/datasheet/lps27hhtw.pdf" target="_blank">Link</a></td>
+                            </tr>
+                            <tr>
+                                <td>STMicroelectronics ILPS28QSWTR</td>
+                                <td>WR package, potting gel, Qvar</td>
+                                <td>Up to 40m</td>
+                                <td>Digital (I2C, 24 bit)</td>
+                                <td>2.8 x 2.8 x 1.95 mm</td>
+                                <td>5-7</td>
+                                <td><a href="https://www.st.com/resource/en/datasheet/ilps28qsw.pdf" target="_blank">Link</a></td>
+                            </tr>
+                            <tr>
+                                <td>TE Connectivity MS5837</td>
+                                <td>Gel-filled, protective cap</td>
+                                <td>Up to 300m</td>
+                                <td>Digital (I2C, 24 bit)</td>
+                                <td>3.3 x 3.3 x 2.75 mm</td>
+                                <td>10-15</td>
+                                <td><a href="https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Data+Sheet%7FMS5837-30BA%7FB3%7Fpdf%7FEnglish%7FENG_DS_MS5837-30BA_B3.pdf%7FCAT-BLPS0036" target="_blank">Link</a></td>
+                            </tr>
+                            <tr>
+                                <td>TE Connectivity EPB-PW</td>
+                                <td>Titanium housing, sealed gauge</td>
+                                <td>High pressure</td>
+                                <td>Analog (mV/V)</td>
+                                <td>6.4mm x 11.4mm</td>
+                                <td>~200</td>
+                                <td><a href="https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Data+Sheet%7FEPB-PW%7FB%7Fpdf%7FEnglish%7FENG_DS_EPB-PW_B.pdf%7FCAT-PTT0004" target="_blank">Link</a></td>
+                            </tr>
+                            <tr>
+                                <td>TE Connectivity AST4530</td>
+                                <td>Stainless steel housing, sealed</td>
+                                <td>Up to 700m</td>
+                                <td>Analog (V, mA)</td>
+                                <td>~25.4mm diameter</td>
+                                <td>150-400</td>
+                                <td><a href="https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Data+Sheet%7FAST4530%7FE%7Fpdf%7FEnglish%7FENG_DS_AST4530_E.pdf%7F11108534-00" target="_blank">Link</a></td>
+                            </tr>
+                            <tr>
+                                <td>Honeywell HSC/SSC (liquid)</td>
+                                <td>Liquid media option</td>
+                                <td>Up to 100m</td>
+                                <td>Analog, Digital</td>
+                                <td>~10 x 10 mm</td>
+                                <td>20-70</td>
+                                <td><a href="https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/siot/en-us/products/sensors/pressure-sensors/board-mount-pressure-sensors/trustability-hsc-series/documents/sps-siot-trustability-hsc-series-high-accuracy-datasheet-32300898-ciid-150252.pdf" target="_blank">Link</a></td>
+                            </tr>
+                            <tr>
+                                <td>Honeywell SPT series</td>
+                                <td>Stainless steel wetted part</td>
+                                <td>Up to 3450m</td>
+                                <td>Analog (mV, V, mA)</td>
+                                <td>~22mm diameter</td>
+                                <td>70-200</td>
+                                <td><a href="https://www.farnell.com/datasheets/1562902.pdf" target="_blank">Link</a></td>
+                            </tr>
+                            <tr>
+                                <td>Honeywell MIP series</td>
+                                <td>Stainless steel, Sealed (IP67)</td>
+                                <td>Up to 600m</td>
+                                <td>Analog, Digital (SENT)</td>
+                                <td>~27mm hex body</td>
+                                <td>80-250</td>
+                                <td><a href="https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/siot/en-us/products/sensors/pressure-sensors/media-isolated-pressure-sensors/mip-series/documents/sps-siot-mip-series-datasheet-008230-6-en-ciid-150247.pdf" target="_blank">Link</a></td>
+                            </tr>
+                            <tr>
+                                <td>Honeywell PX2 series</td>
+                                <td>Stainless steel, Sealed (IP69K)</td>
+                                <td>Up to 700m</td>
+                                <td>Analog, Digital (CAN)</td>
+                                <td>~25mm hex body</td>
+                                <td>100-300</td>
+                                <td><a href="https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/siot/en-us/products/sensors/pressure-sensors/heavy-duty-pressure-transducers/px2-series/documents/sps-siot-px2-series-datasheet-32328127-d-en-ciid-150249.pdf" target="_blank">Link</a></td>
+                            </tr>
+                            <tr>
+                                <td>NXP NBP 8/9X</td>
+                                <td>Chemical resistant gel</td>
+                                <td>Barometric (not for depth)</td>
+                                <td>Digital (SPI, PWM)</td>
+                                <td>4 x 4 mm</td>
+                                <td>10-25</td>
+                                <td><a href="https://www.nxp.com/docs/en/data-sheet/NBP8-9X.pdf" target="_blank">Link</a></td>
+                            </tr>
+                            <tr>
+                                <td>Adafruit LPS28DFW</td>
+                                <td>WR pkg (board needs sealing)</td>
+                                <td>Up to 40m</td>
+                                <td>Digital (I2C)</td>
+                                <td>25.4 x 17.8 mm</td>
+                                <td>12-15</td>
+                                <td><a href="https://www.adafruit.com/product/6067" target="_blank">Link</a></td>
+                            </tr>
+                            <tr>
+                                <td>Adafruit LPS33HW</td>
+                                <td>WR pkg (board needs sealing)</td>
+                                <td>Up to 2.5m</td>
+                                <td>Digital (I2C/SPI)</td>
+                                <td>25.4 x 17.8 mm</td>
+                                <td>12-15</td>
+                                <td><a href="https://www.adafruit.com/product/4414" target="_blank">Link</a></td>
+                            </tr>
+                            <tr>
+                                <td>Blue Robotics Bar30</td>
+                                <td>Sealed unit, o-ring mount</td>
+                                <td>Up to 300m</td>
+                                <td>Digital (I2C)</td>
+                                <td>20mm dia, 26mm len</td>
+                                <td>80-100</td>
+                                <td><a href="https://bluerobotics.com/wp-content/uploads/2021/10/Bar30-Datasheet-Rev4.pdf" target="_blank">Link</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="note">*Prices are valid as of 12.06.25</p>
+                </div>
+                
+                <div class="references">
+                    <h3>References</h3>
+                    <ol>
+                        <li>Vardanyan, Y., & Pyo, S. (2024). Emerging MEMS sensors for ocean physics: Principles, materials, and applications. <em>APL Machine Learning, 2</em>(2), 020901.</li>
+                        <li>Barlian, A. A., et al. (2007). Review: Semiconductor Piezoresistance for Microsystems. <em>Proceedings of the IEEE, 97</em>(3), 513-552.</li>
+                        <li>Ko, W. H., & Wang, Q. (1998). Touch mode capacitive pressure sensors. <em>Sensors and Actuators A: Physical, 75</em>(3), 242-251.</li>
+                        <li>Fraden, J. (2016). <em>Handbook of Modern Sensors: Physics, Designs, and Applications.</em> Springer.</li>
+                        <li>Puers, R. (2010). Linking capacitive sensors to the digital world. <em>Procedia Engineering, 5</em>, 68-75.</li>
+                        <li>Avnet Abacus. "Capacitive vs Piezoresistive vs Piezoelectric Pressure Sensors." URL: &lt;https://my.avnet.com/abacus/solutions/technologies/sensors/pressure-sensors/core-technologies/capacitive-vs-piezoresistive-vs-piezoelectric/&gt;</li>
+                        <li>PCB Piezotronics. "Introduction to Piezoelectric Pressure Sensors." URL: &lt;https://www.pcb.com/resources/technical-information/introduction-to-pressure-sensors&gt;</li>
+                        <li>Bai, W., et al. (2022). Submarine Optical Fiber Sensing System for the Real-Time Monitoring of Depth, Vibration, and Temperature. <em>Frontiers in Marine Science, 9</em>.</li>
+                         <li>Lee, H., et al. (2015). Development of a porous piezoresistive material and its applications to underwater pressure sensors and tactile sensors. <em>2015 IEEE SENSORS</em>.</li>
+                        <li>ELEPCB. "The Ultimate Guide to Conformal Coating for Circuit Boards." URL: &lt;https://www.elepcb.com/blog/choose-the-right-pcb-conformal-coating/&gt;</li>
+                        <li>xidibei. "Is A Pressure Sensor Analog Or Digital?" URL: &lt;https://www.xidibei.com/blogs/news/is-a-pressure-sensor-analog-or-digital&gt;</li>
+                    </ol>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="hero-bg py-10 px-6">
+        <div class="container mx-auto text-center text-gray-300">
+            <p>&copy; 2025 PRESENSEA Project | Tallinn University of Technology</p>
+            <p class="text-sm mt-2">This project has received funding from the Estonian Research Council under the Mobilitas Pluss programme (Grant no. MOB3JD1212).</p>
+        </div>
+    </footer>
+
+</body>
+</html>
