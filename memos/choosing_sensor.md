@@ -48,11 +48,13 @@ Even if you need a non-critical and short term deployment, you still need to con
 
 **Pressure equalization**. Even for small depth air-tight seals when exposed to temperature and pressure change may be stressed and leaking. Consider pressure compensation elements (vent holes) for critical designs.
 
-**Corrosion** and biofouling in salty water is particularly aggressive. Choose stainless steel alloys for sensor housing, and titanium for extra-long term and harsh conditions \[2\]. Protect connections (e.g. o-rings) using specialized polymer compounds (e.g. PVDF or PTFE), for extra protection using welded seals and all-metal design. The board and other MEMS components are recommended to cover with conformal coating or some encapsulation (make sure the ports are still exposed to pressure media). For fast prototyping acrylic or silicon coating can be brushed or sprayed over (and removed if needed). Epoxy/Parylene dipping can offer a longer protection \[10\].
+**Corrosion** and biofouling in salty water is particularly aggressive. Choose stainless steel alloys for sensor housing, and titanium for extra-long term and harsh conditions \[2\]. Protect connections (e.g. o-rings) using specialized polymer compounds (e.g. PVDF or PTFE), for extra protection using welded seals and all-metal design. 
+#### **Sealing Techniques: Protecting Underwater Sensors from Leaks and Condensation**
 
-When you want to seal your sensor on your own, make sure the sensor and it’s components is able to withstand any associated process (solvents in conformal coatings, curing temperature of putting compounds etc.) Also make sure that the sensing element (or port) is properly
+When safeguarding underwater sensors, conformal coatings like brush-on or sprayed acrylic or silicone offer a lightweight, removable shield for short-term deployments—a flexible solution for prototyping or temporary setups. For more permanent installations, epoxy or parylene encapsulation acts as a "suit of armor," providing robust, long-term defense against moisture and corrosion. However, always verify material compatibility : Ensure seals and coatings withstand curing temperatures, solvents, or mechanical stress during assembly. For rapid prototyping, consider unconventional methods like sealing sensors in balloons—a low-cost, DIY approach highlighted in projects like [MIT SeaPerch’](https://seagrant.mit.edu/seaperch2-pressure/)s pressure-testing guide . Balancing protection, durability, and ease of implementation ensures your sensor survives both lab trials and real-world depths.
 
-Analog vs. Digital Sensors: Signal Integrity for Underwater Pressure Monitoring
+
+#### **Analog vs. Digital Sensors: Signal Integrity for Underwater Pressure Monitoring **
 
 Analog signal (e.g. voltage or current loop) is continuous which may be crucial for some real-time applications. However analog voltage signal is prone to noise especially in long cables. It also may require extra analog-to-digital conversion and signal processing units. Digital sensors already include A2D conversion and often some basic signal processing units \[11\]. However the output is quantized which may be an issue when sensor is intended for high depth and exact low depth values are needed.
 
@@ -77,9 +79,6 @@ Analog signal (e.g. voltage or current loop) is continuous which may be crucial 
 
 \*Prices are valid as of 12.06.25
 
-### **Sealing Techniques: Protecting Underwater Sensors from Leaks and Condensation**
-
-When safeguarding underwater sensors, conformal coatings like brush-on or sprayed acrylic or silicone offer a lightweight, removable shield for short-term deployments—a flexible solution for prototyping or temporary setups. For more permanent installations, epoxy or parylene encapsulation acts as a "suit of armor," providing robust, long-term defense against moisture and corrosion. However, always verify material compatibility : Ensure seals and coatings withstand curing temperatures, solvents, or mechanical stress during assembly. For rapid prototyping, consider unconventional methods like sealing sensors in balloons—a low-cost, DIY approach highlighted in projects like [MIT SeaPerch’](https://seagrant.mit.edu/seaperch2-pressure/)s pressure-testing guide . Balancing protection, durability, and ease of implementation ensures your sensor survives both lab trials and real-world depths.
 
 ### References
 
