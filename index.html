@@ -367,14 +367,30 @@
                     <h2 class="font-bree text-3xl md:text-4xl font-semibold inline-block" data-translate="blogTitle">Project Updates</h2>
                     <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto" data-translate="blogSubtitle">Follow our journey as we deploy, test, and share our findings.</p>
                 </div>
-                <div class="flex justify-center">
-                    <div class="card rounded-lg overflow-hidden max-w-2xl">
-                        <div class="p-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    <!-- New Blog Post -->
+                    <div class="card rounded-lg overflow-hidden flex flex-col">
+                        <div class="p-8 flex-grow">
+                            <p class="text-sm text-gray-500 mb-2">June 12, 2025</p>
+                            <h3 class="text-2xl font-semibold mb-3">Feeling the Pressure? A Guide to Underwater Sensors</h3>
+                            <p class="text-gray-600 mb-4">
+                                A practical guide to selecting, waterproofing, and deploying low-cost COTS pressure sensors for underwater applications, from DIY projects to professional research.
+                            </p>
+                        </div>
+                        <div class="p-8 pt-0">
+                             <a href="blog/002-choosing-sensor.html" class="font-semibold accent-teal hover:underline">Read More &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Existing Blog Post -->
+                    <div class="card rounded-lg overflow-hidden flex flex-col">
+                        <div class="p-8 flex-grow">
                             <p class="text-sm text-gray-500 mb-2">June 9, 2025</p>
                             <h3 class="text-2xl font-semibold mb-3" data-translate="blogPostTitle">The Baltic Cocktail Party: Stirred by science, served with smarts</h3>
                             <p class="text-gray-600 mb-4" data-translate="blogPostSnippet">
                                 Welcome to the Baltic Cocktail Party — where the guests are often invisible, and the real conversations happen under pressure. This isn’t your average party. Picture an underwater world buzzing with activity: ships passing overhead like party guests, currents swirling like shaken drinks, and hidden signals mixing together like overlapping voices in a crowded room. Now imagine trying to pick out just one voice — or one signal — from all the noise. That’s the “cocktail party effect,” but this time, it’s happening beneath the waves.
                             </p>
+                        </div>
+                         <div class="p-8 pt-0">
                             <a href="blog/baltic-cocktail-party.html" class="font-semibold accent-teal hover:underline" data-translate="readMore">Read More &rarr;</a>
                         </div>
                     </div>
@@ -419,7 +435,6 @@
     
     <script>
         // --- Translations Object ---
-                // --- Translations Object ---
         const translations = {
             metaDescription: {
                 en: "Discover PRESENSEA, a research project developing innovative underwater monitoring solutions for the Baltic Sea using passive pressure sensors to solve the 'cocktail party problem' of the sea.",
