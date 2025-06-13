@@ -87,29 +87,35 @@
         .article-content a:hover {
             color: #008f9e;
         }
-        /* Table styles */
+        /* Responsive Table Container */
+        .table-container {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            border: 1px solid #E5E7EB;
+            border-radius: 0.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
         .article-content table {
             width: 100%;
             border-collapse: collapse;
-            margin: 2rem 0;
             font-size: 0.9em;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            overflow-x: auto;
-            display: block;
+            min-width: 600px; /* Forces scrollbar on smaller screens */
         }
         .article-content th, .article-content td {
             padding: 12px 15px;
             text-align: left;
-            border: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
             white-space: nowrap;
+        }
+        .article-content td {
+             white-space: normal; /* Allow cell content to wrap */
         }
         .article-content th {
             background-color: #f2f2f2;
             font-weight: 600;
             color: #374151;
-        }
-        .article-content tr:nth-child(even) {
-            background-color: #fafafa;
+            white-space: nowrap;
         }
         /* References Style */
         .references {
@@ -127,7 +133,7 @@
     <!-- Header & Navigation -->
     <header class="hero-bg sticky top-0 z-50 shadow-lg">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="https://presensea.github.io" class="flex items-center space-x-3">
+            <a href="../index.html" class="flex items-center space-x-3">
                 <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" class="h-8 w-auto" role="img" aria-labelledby="logo-title" style="enable-background:new 0 0 72.61 60.79" viewBox="0 0 72.6 60.8">
                     <title id="logo-title">PRESENSEA Project Logo</title>
                     <path d="m30 47-3-1C9 34 25 6 44 15l2 1h1c9 8 0 23-11 19l-2-1c-2-3 1-7 4-6h1c4 3 8-3 3-6-12-6-22 10-11 18l3 1c19 8 34-20 16-31l-3-1C19-4-2 37 24 52l3 2c5 2 8-4 3-7z" style="fill:#00bbd6"/>
@@ -136,7 +142,7 @@
             </a>
             <div class="flex items-center space-x-8">
                 <nav class="hidden md:flex space-x-8 text-white">
-                    <a href="https://presensea.github.io#about" class="hover:text-cyan-300 transition-colors">Home</a>
+                    <a href="../index.html#about" class="hover:text-cyan-300 transition-colors">Home</a>
                 </nav>
             </div>
         </div>
@@ -170,57 +176,60 @@
                     <p>While there is a lot of different sources for underwater pressure, there are always two components. Hydrostatic that is dependent on the depth. Hydrodynamic – small fluctuations of the pressure that may come from moving pressure media (or vessel itself). Acoustic pressure is a whole another source which we will not consider in this post.</p>
                     <p>When it comes to how we measure, we can measure absolute pressure (relative to perfect vacuum), gauge (relative to some value e.g. ambient atmospheric pressure) and differential (difference between pressure in two points). For underwater environment, make sure that gauge sensors have properly sealed gauge port.</p>
                     <p>Many sensors types are prone to temperature errors so many add temperature measurement and compensation [1]. Think of integration of additional sensors (e.g. conductivity or full AHRS) if needed.</p>
+                    <p>How accurate and frequent we want the data to be?</p>
 
                     <h3>Sensor Types Compared: Piezoresistive, Capacitive, and Fiber-Optic for Underwater Use</h3>
                     <p>This should define the physical principle behind the sensor. Here is a table with some basic information.</p>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Type of sensor</th>
-                                <th>Principle</th>
-                                <th>Pro</th>
-                                <th>Contras</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Piezoresistive [1, 2]</td>
-                                <td>Electrical resistance of material is changed when exposed to pressure.</td>
-                                <td>Mature, Low cost, widely used, high sensitivity (sub-Pascal resolution)</td>
-                                <td>Sensitive to temperature induced errors, in harsh medias prone to long term drift and hysteresis.</td>
-                            </tr>
-                            <tr>
-                                <td>Capacitive [3, 4]</td>
-                                <td>Two parallel conductive plates, one of them is a flexible diaphragm that deforms under pressure and changes the capacitance</td>
-                                <td>Mature, no DC power, long-term and overpressure stability,</td>
-                                <td>Require complex low-noise interface and calibration algorithms, silicon components suffer from salt exposure</td>
-                            </tr>
-                            <tr>
-                                <td>Stain Gauge</td>
-                                <td>Like piezoresistive technology, but the resistance element is spring-like that deforms under pressure</td>
-                                <td>More suitable for long-term monitoring</td>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td>Piezoelectric [6, 7]</td>
-                                <td>Ceramic or polymer material generates a charge under pressure</td>
-                                <td>Robust, no DC power, high sensitivity to fast small pressure pulses in MHz range</td>
-                                <td>Output charge leaks so can only measure dynamic (AC) pressure changes</td>
-                            </tr>
-                            <tr>
-                                <td>Fiber-optic [8]</td>
-                                <td>Measures strain-induced wavelength shift</td>
-                                <td>No DC power, Immune to electromagnetic interference, potentially tens of kHz response, naturally corrosion proof</td>
-                                <td>Emerging \ Requires costly laser interrogators</td>
-                            </tr>
-                            <tr>
-                                <td>Flexible polymer [9]</td>
-                                <td>Porous composites</td>
-                                <td>high sensitivity to constant pressure</td>
-                                <td>Emerging, slow (tens of Hz) due to viscoelasticity,</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Type of sensor</th>
+                                    <th>Principle</th>
+                                    <th>Pro</th>
+                                    <th>Contras</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Piezoresistive [1, 2]</td>
+                                    <td>Electrical resistance of material is changed when exposed to pressure.</td>
+                                    <td>Mature, Low cost, widely used, high sensitivity (sub-Pascal resolution)</td>
+                                    <td>Sensitive to temperature induced errors, in harsh medias prone to long term drift and hysteresis.</td>
+                                </tr>
+                                <tr>
+                                    <td>Capacitive [3, 4]</td>
+                                    <td>Two parallel conductive plates, one of them is a flexible diaphragm that deforms under pressure and changes the capacitance</td>
+                                    <td>Mature, no DC power, long-term and overpressure stability,</td>
+                                    <td>Require complex low-noise interface and calibration algorithms, silicon components suffer from salt exposure</td>
+                                </tr>
+                                <tr>
+                                    <td>Stain Gauge</td>
+                                    <td>Like piezoresistive technology, but the resistance element is spring-like that deforms under pressure</td>
+                                    <td>More suitable for long-term monitoring</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Piezoelectric [6, 7]</td>
+                                    <td>Ceramic or polymer material generates a charge under pressure</td>
+                                    <td>Robust, no DC power, high sensitivity to fast small pressure pulses in MHz range</td>
+                                    <td>Output charge leaks so can only measure dynamic (AC) pressure changes</td>
+                                </tr>
+                                <tr>
+                                    <td>Fiber-optic [8]</td>
+                                    <td>Measures strain-induced wavelength shift</td>
+                                    <td>No DC power, Immune to electromagnetic interference, potentially tens of kHz response, naturally corrosion proof</td>
+                                    <td>Emerging \ Requires costly laser interrogators</td>
+                                </tr>
+                                <tr>
+                                    <td>Flexible polymer [9]</td>
+                                    <td>Porous composites</td>
+                                    <td>high sensitivity to constant pressure</td>
+                                    <td>Emerging, slow (tens of Hz) due to viscoelasticity,</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
                     <h3>Environmental Challenges: Corrosion, Biofouling, and Pressure Protection for Sensors</h3>
                     <p>Underwater environment is harsh. While some sensors offer waterproof capabilities out of the box, for critical applications, long-term deployments or deep ocean, any sensor may need pressure housing, oil filling or other types of encapsulation.</p>
@@ -235,148 +244,150 @@
                     <p>Analog signal (e.g. voltage or current loop) is continuous which may be crucial for some real-time applications. However analog voltage signal is prone to noise especially in long cables. It also may require extra analog-to-digital conversion and signal processing units. Digital sensors already include A2D conversion and often some basic signal processing units [11]. However the output is quantized which may be an issue when sensor is intended for high depth and exact low depth values are needed.</p>
 
                     <h3>Top Low-Cost Underwater Sensors: Depth Range, Accuracy & Compatibility Guide</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Sensor</th>
-                                <th>Protection type</th>
-                                <th>Depth range</th>
-                                <th>Output</th>
-                                <th>Size</th>
-                                <th>Price (EUR)</th>
-                                <th>Datasheet</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Bosch Sensortec BMP384</td>
-                                <td>Gel-filled</td>
-                                <td>Barometric (~2.5m)</td>
-                                <td>Digital (I2C/SPI)</td>
-                                <td>2.0 x 2.0 x 1.0 mm</td>
-                                <td>2-4</td>
-                                <td><a href="https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmp384-ds001.pdf" target="_blank">Link</a></td>
-                            </tr>
-                            <tr>
-                                <td>STMicroelectronics LPS27HHTW</td>
-                                <td>WR package, potting gel, o-ring compatible</td>
-                                <td>Barometric (~2.6m)</td>
-                                <td>Digital (I2C/SPI/I3C)</td>
-                                <td>2.5 x 2.5 x 1.1 mm</td>
-                                <td>3-6</td>
-                                <td><a href="https://www.st.com/resource/en/datasheet/lps27hhtw.pdf" target="_blank">Link</a></td>
-                            </tr>
-                            <tr>
-                                <td>STMicroelectronics ILPS28QSWTR</td>
-                                <td>WR package, potting gel, Qvar</td>
-                                <td>Up to 40m</td>
-                                <td>Digital (I2C, 24 bit)</td>
-                                <td>2.8 x 2.8 x 1.95 mm</td>
-                                <td>5-7</td>
-                                <td><a href="https://www.st.com/resource/en/datasheet/ilps28qsw.pdf" target="_blank">Link</a></td>
-                            </tr>
-                            <tr>
-                                <td>TE Connectivity MS5837</td>
-                                <td>Gel-filled, protective cap</td>
-                                <td>Up to 300m</td>
-                                <td>Digital (I2C, 24 bit)</td>
-                                <td>3.3 x 3.3 x 2.75 mm</td>
-                                <td>10-15</td>
-                                <td><a href="https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Data+Sheet%7FMS5837-30BA%7FB3%7Fpdf%7FEnglish%7FENG_DS_MS5837-30BA_B3.pdf%7FCAT-BLPS0036" target="_blank">Link</a></td>
-                            </tr>
-                            <tr>
-                                <td>TE Connectivity EPB-PW</td>
-                                <td>Titanium housing, sealed gauge</td>
-                                <td>High pressure</td>
-                                <td>Analog (mV/V)</td>
-                                <td>6.4mm x 11.4mm</td>
-                                <td>~200</td>
-                                <td><a href="https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Data+Sheet%7FEPB-PW%7FB%7Fpdf%7FEnglish%7FENG_DS_EPB-PW_B.pdf%7FCAT-PTT0004" target="_blank">Link</a></td>
-                            </tr>
-                            <tr>
-                                <td>TE Connectivity AST4530</td>
-                                <td>Stainless steel housing, sealed</td>
-                                <td>Up to 700m</td>
-                                <td>Analog (V, mA)</td>
-                                <td>~25.4mm diameter</td>
-                                <td>150-400</td>
-                                <td><a href="https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Data+Sheet%7FAST4530%7FE%7Fpdf%7FEnglish%7FENG_DS_AST4530_E.pdf%7F11108534-00" target="_blank">Link</a></td>
-                            </tr>
-                            <tr>
-                                <td>Honeywell HSC/SSC (liquid)</td>
-                                <td>Liquid media option</td>
-                                <td>Up to 100m</td>
-                                <td>Analog, Digital</td>
-                                <td>~10 x 10 mm</td>
-                                <td>20-70</td>
-                                <td><a href="https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/siot/en-us/products/sensors/pressure-sensors/board-mount-pressure-sensors/trustability-hsc-series/documents/sps-siot-trustability-hsc-series-high-accuracy-datasheet-32300898-ciid-150252.pdf" target="_blank">Link</a></td>
-                            </tr>
-                            <tr>
-                                <td>Honeywell SPT series</td>
-                                <td>Stainless steel wetted part</td>
-                                <td>Up to 3450m</td>
-                                <td>Analog (mV, V, mA)</td>
-                                <td>~22mm diameter</td>
-                                <td>70-200</td>
-                                <td><a href="https://www.farnell.com/datasheets/1562902.pdf" target="_blank">Link</a></td>
-                            </tr>
-                            <tr>
-                                <td>Honeywell MIP series</td>
-                                <td>Stainless steel, Sealed (IP67)</td>
-                                <td>Up to 600m</td>
-                                <td>Analog, Digital (SENT)</td>
-                                <td>~27mm hex body</td>
-                                <td>80-250</td>
-                                <td><a href="https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/siot/en-us/products/sensors/pressure-sensors/media-isolated-pressure-sensors/mip-series/documents/sps-siot-mip-series-datasheet-008230-6-en-ciid-150247.pdf" target="_blank">Link</a></td>
-                            </tr>
-                            <tr>
-                                <td>Honeywell PX2 series</td>
-                                <td>Stainless steel, Sealed (IP69K)</td>
-                                <td>Up to 700m</td>
-                                <td>Analog, Digital (CAN)</td>
-                                <td>~25mm hex body</td>
-                                <td>100-300</td>
-                                <td><a href="https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/siot/en-us/products/sensors/pressure-sensors/heavy-duty-pressure-transducers/px2-series/documents/sps-siot-px2-series-datasheet-32328127-d-en-ciid-150249.pdf" target="_blank">Link</a></td>
-                            </tr>
-                            <tr>
-                                <td>NXP NBP 8/9X</td>
-                                <td>Chemical resistant gel</td>
-                                <td>Barometric (not for depth)</td>
-                                <td>Digital (SPI, PWM)</td>
-                                <td>4 x 4 mm</td>
-                                <td>10-25</td>
-                                <td><a href="https://www.nxp.com/docs/en/data-sheet/NBP8-9X.pdf" target="_blank">Link</a></td>
-                            </tr>
-                            <tr>
-                                <td>Adafruit LPS28DFW</td>
-                                <td>WR pkg (board needs sealing)</td>
-                                <td>Up to 40m</td>
-                                <td>Digital (I2C)</td>
-                                <td>25.4 x 17.8 mm</td>
-                                <td>12-15</td>
-                                <td><a href="https://www.adafruit.com/product/6067" target="_blank">Link</a></td>
-                            </tr>
-                            <tr>
-                                <td>Adafruit LPS33HW</td>
-                                <td>WR pkg (board needs sealing)</td>
-                                <td>Up to 2.5m</td>
-                                <td>Digital (I2C/SPI)</td>
-                                <td>25.4 x 17.8 mm</td>
-                                <td>12-15</td>
-                                <td><a href="https://www.adafruit.com/product/4414" target="_blank">Link</a></td>
-                            </tr>
-                            <tr>
-                                <td>Blue Robotics Bar30</td>
-                                <td>Sealed unit, o-ring mount</td>
-                                <td>Up to 300m</td>
-                                <td>Digital (I2C)</td>
-                                <td>20mm dia, 26mm len</td>
-                                <td>80-100</td>
-                                <td><a href="https://bluerobotics.com/wp-content/uploads/2021/10/Bar30-Datasheet-Rev4.pdf" target="_blank">Link</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p class="note">*Prices are valid as of 12.06.25</p>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Sensor</th>
+                                    <th>Protection type</th>
+                                    <th>Depth range</th>
+                                    <th>Output</th>
+                                    <th>Size</th>
+                                    <th>Price (EUR)</th>
+                                    <th>Datasheet</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Bosch Sensortec BMP384</td>
+                                    <td>Gel-filled</td>
+                                    <td>Barometric (~2.5m)</td>
+                                    <td>Digital (I2C/SPI)</td>
+                                    <td>2.0 x 2.0 x 1.0 mm</td>
+                                    <td>2-4</td>
+                                    <td><a href="https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmp384-ds001.pdf" target="_blank">Link</a></td>
+                                </tr>
+                                <tr>
+                                    <td>STMicroelectronics LPS27HHTW</td>
+                                    <td>WR package, potting gel, o-ring compatible</td>
+                                    <td>Barometric (~2.6m)</td>
+                                    <td>Digital (I2C/SPI/I3C)</td>
+                                    <td>2.5 x 2.5 x 1.1 mm</td>
+                                    <td>3-6</td>
+                                    <td><a href="https://www.st.com/resource/en/datasheet/lps27hhtw.pdf" target="_blank">Link</a></td>
+                                </tr>
+                                <tr>
+                                    <td>STMicroelectronics ILPS28QSWTR</td>
+                                    <td>WR package, potting gel, Qvar</td>
+                                    <td>Up to 40m</td>
+                                    <td>Digital (I2C, 24 bit)</td>
+                                    <td>2.8 x 2.8 x 1.95 mm</td>
+                                    <td>5-7</td>
+                                    <td><a href="https://www.st.com/resource/en/datasheet/ilps28qsw.pdf" target="_blank">Link</a></td>
+                                </tr>
+                                <tr>
+                                    <td>TE Connectivity MS5837</td>
+                                    <td>Gel-filled, protective cap</td>
+                                    <td>Up to 300m</td>
+                                    <td>Digital (I2C, 24 bit)</td>
+                                    <td>3.3 x 3.3 x 2.75 mm</td>
+                                    <td>10-15</td>
+                                    <td><a href="https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Data+Sheet%7FMS5837-30BA%7FB3%7Fpdf%7FEnglish%7FENG_DS_MS5837-30BA_B3.pdf%7FCAT-BLPS0036" target="_blank">Link</a></td>
+                                </tr>
+                                <tr>
+                                    <td>TE Connectivity EPB-PW</td>
+                                    <td>Titanium housing, sealed gauge</td>
+                                    <td>High pressure</td>
+                                    <td>Analog (mV/V)</td>
+                                    <td>6.4mm x 11.4mm</td>
+                                    <td>~200</td>
+                                    <td><a href="https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Data+Sheet%7FEPB-PW%7FB%7Fpdf%7FEnglish%7FENG_DS_EPB-PW_B.pdf%7FCAT-PTT0004" target="_blank">Link</a></td>
+                                </tr>
+                                <tr>
+                                    <td>TE Connectivity AST4530</td>
+                                    <td>Stainless steel housing, sealed</td>
+                                    <td>Up to 700m</td>
+                                    <td>Analog (V, mA)</td>
+                                    <td>~25.4mm diameter</td>
+                                    <td>150-400</td>
+                                    <td><a href="https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Data+Sheet%7FAST4530%7FE%7Fpdf%7FEnglish%7FENG_DS_AST4530_E.pdf%7F11108534-00" target="_blank">Link</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Honeywell HSC/SSC (liquid)</td>
+                                    <td>Liquid media option</td>
+                                    <td>Up to 100m</td>
+                                    <td>Analog, Digital</td>
+                                    <td>~10 x 10 mm</td>
+                                    <td>20-70</td>
+                                    <td><a href="https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/siot/en-us/products/sensors/pressure-sensors/board-mount-pressure-sensors/trustability-hsc-series/documents/sps-siot-trustability-hsc-series-high-accuracy-datasheet-32300898-ciid-150252.pdf" target="_blank">Link</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Honeywell SPT series</td>
+                                    <td>Stainless steel wetted part</td>
+                                    <td>Up to 3450m</td>
+                                    <td>Analog (mV, V, mA)</td>
+                                    <td>~22mm diameter</td>
+                                    <td>70-200</td>
+                                    <td><a href="https://www.farnell.com/datasheets/1562902.pdf" target="_blank">Link</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Honeywell MIP series</td>
+                                    <td>Stainless steel, Sealed (IP67)</td>
+                                    <td>Up to 600m</td>
+                                    <td>Analog, Digital (SENT)</td>
+                                    <td>~27mm hex body</td>
+                                    <td>80-250</td>
+                                    <td><a href="https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/siot/en-us/products/sensors/pressure-sensors/media-isolated-pressure-sensors/mip-series/documents/sps-siot-mip-series-datasheet-008230-6-en-ciid-150247.pdf" target="_blank">Link</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Honeywell PX2 series</td>
+                                    <td>Stainless steel, Sealed (IP69K)</td>
+                                    <td>Up to 700m</td>
+                                    <td>Analog, Digital (CAN)</td>
+                                    <td>~25mm hex body</td>
+                                    <td>100-300</td>
+                                    <td><a href="https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/siot/en-us/products/sensors/pressure-sensors/heavy-duty-pressure-transducers/px2-series/documents/sps-siot-px2-series-datasheet-32328127-d-en-ciid-150249.pdf" target="_blank">Link</a></td>
+                                </tr>
+                                <tr>
+                                    <td>NXP NBP 8/9X</td>
+                                    <td>Chemical resistant gel</td>
+                                    <td>Barometric (not for depth)</td>
+                                    <td>Digital (SPI, PWM)</td>
+                                    <td>4 x 4 mm</td>
+                                    <td>10-25</td>
+                                    <td><a href="https://www.nxp.com/docs/en/data-sheet/NBP8-9X.pdf" target="_blank">Link</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Adafruit LPS28DFW</td>
+                                    <td>WR pkg (board needs sealing)</td>
+                                    <td>Up to 40m</td>
+                                    <td>Digital (I2C)</td>
+                                    <td>25.4 x 17.8 mm</td>
+                                    <td>12-15</td>
+                                    <td><a href="https://www.adafruit.com/product/6067" target="_blank">Link</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Adafruit LPS33HW</td>
+                                    <td>WR pkg (board needs sealing)</td>
+                                    <td>Up to 2.5m</td>
+                                    <td>Digital (I2C/SPI)</td>
+                                    <td>25.4 x 17.8 mm</td>
+                                    <td>12-15</td>
+                                    <td><a href="https://www.adafruit.com/product/4414" target="_blank">Link</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Blue Robotics Bar30</td>
+                                    <td>Sealed unit, o-ring mount</td>
+                                    <td>Up to 300m</td>
+                                    <td>Digital (I2C)</td>
+                                    <td>20mm dia, 26mm len</td>
+                                    <td>50</td>
+                                    <td><a href="https://bluerobotics.com/wp-content/uploads/2021/10/Bar30-Datasheet-Rev4.pdf" target="_blank">Link</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="note">*Prices are valid as of 12.06.25. Feel free to contact me to update of correct the information. </p>
                 </div>
                 
                 <div class="references">
