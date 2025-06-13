@@ -70,22 +70,29 @@
             margin-bottom: 1rem; /* 16px */
             color: #1F2937;
         }
-        .article-content p, .article-content li {
+        .article-content p {
             margin-bottom: 1.25rem; /* 20px */
             line-height: 1.75;
+            color: #4B5563; /* gulf-stream-gray */
+        }
+        .article-content li {
+            margin-bottom: 0.5rem; /* Tighter spacing for list items */
+            line-height: 1.6; /* Slightly tighter line height for lists */
             color: #4B5563; /* gulf-stream-gray */
         }
         .article-content ul {
             list-style-type: disc;
             padding-left: 1.5rem;
+            margin-bottom: 1.25rem; /* Maintain bottom margin for the whole list */
         }
         .article-content a {
             color: #00BBD6;
-            text-decoration: underline;
+            text-decoration: none;
             transition: color 0.2s;
         }
         .article-content a:hover {
             color: #008f9e;
+            text-decoration: underline;
         }
         /* Responsive Table Container */
         .table-container {
@@ -124,7 +131,7 @@
             color: #6B7280;
         }
         .references li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.5em;
         }
     </style>
 </head>
@@ -160,11 +167,25 @@
                 </div>
 
                 <div class="mt-10 article-content">
-                    <h3>Make vs. Buy: Cost-Effective Underwater Pressure Sensors for DIY & Research Projects</h3>
+                    
+                    <div class="mt-12 p-6 bg-gray-50 rounded-lg border">
+                        <h4 class="font-bree text-lg mb-4">In this Guide:</h4>
+                        <ul>
+                            <li><a href="#make-vs-buy">Make vs. Buy: The First Big Decision</a></li>
+                            <li><a href="#what-to-measure">What Data Do You Want to Measure?</a></li>
+                            <li><a href="#sensor-types">Comparing Pressure Sensor Technologies</a></li>
+                            <li><a href="#environmental-challenges">Surviving the Deep: Environmental Challenges</a></li>
+                            <li><a href="#sealing-techniques">Sealing and Waterproofing Your Sensor</a></li>
+                            <li><a href="#analog-vs-digital">Analog vs. Digital Signals</a></li>
+                            <li><a href="#sensor-comparison-table">Comparing Low-Cost Sensor Models</a></li>
+                        </ul>
+                    </div>
+
+                    <h3 id="make-vs-buy">Make vs. Buy: Cost-Effective Underwater Pressure Sensors for DIY & Research Projects</h3>
                     <p>When you need to measure pressure underwater, the first question is always: Do you build it yourself, or buy a ready-made solution? Sure, companies like Blue Robotics, Keller, or Impact Sea sell pre-sealed, high-reliability sensors. But if your project operates under tight budget constraints—or prioritizes hands-on prototyping for research and development—buying off-the-shelf solutions might leave you high and dry. Let’s explore your options and dive into practical alternatives!</p>
                     <p>Some MEMS shops like <a href="https://www.mouser.ee/c/sensors/pressure-sensors/" target="_blank">Mouser</a> or DigiKey offer a comprehensive characteristic filter for choosing between thousands of different sensors. Let’s chart a course through the options and avoid drowning in complexity.</p>
 
-                    <h4>How to Choose Underwater Pressure Sensors: Key Questions for Accurate Data Collection</h4>
+                    <h4 id="key-questions">How to Choose Underwater Pressure Sensors: Key Questions for Accurate Data Collection</h4>
                     <p>The choice is obviously defined by specific application, in research it can be very different. But at this point let’s ask the right questions.</p>
                     <ul>
                         <li><strong>What is the data?</strong> Hydrostatic that is dependent on the depth. Hydrodynamic – small fluctuations of the pressure that may come from moving pressure media (or vessel itself). Acoustic pressure is a whole another application which we will not consider in this post.</li>
@@ -172,13 +193,13 @@
                         <li><strong>What are the design requirements?</strong> how the sensor will be sealed? Will you use digital or analog signals? What connector works best?</li>
                     </ul>
 
-                    <h3>What data do you want to measure?</h3>
+                    <h3 id="what-to-measure">What data do you want to measure?</h3>
                     <p>While there is a lot of different sources for underwater pressure, there are always two components. Hydrostatic that is dependent on the depth. Hydrodynamic – small fluctuations of the pressure that may come from moving pressure media (or vessel itself). Acoustic pressure is a whole another source which we will not consider in this post.</p>
                     <p>When it comes to how we measure, we can measure absolute pressure (relative to perfect vacuum), gauge (relative to some value e.g. ambient atmospheric pressure) and differential (difference between pressure in two points). For underwater environment, make sure that gauge sensors have properly sealed gauge port.</p>
                     <p>Many sensors types are prone to temperature errors so many add temperature measurement and compensation [1]. Think of integration of additional sensors (e.g. conductivity or full AHRS) if needed.</p>
                     <p>How accurate and frequent we want the data to be?</p>
 
-                    <h3>Sensor Types Compared: Piezoresistive, Capacitive, and Fiber-Optic for Underwater Use</h3>
+                    <h3 id="sensor-types">Sensor Types Compared: Piezoresistive, Capacitive, and Fiber-Optic for Underwater Use</h3>
                     <p>This should define the physical principle behind the sensor. Here is a table with some basic information.</p>
                     <div class="table-container">
                         <table>
@@ -231,19 +252,19 @@
                         </table>
                     </div>
 
-                    <h3>Environmental Challenges: Corrosion, Biofouling, and Pressure Protection for Sensors</h3>
+                    <h3 id="environmental-challenges">Environmental Challenges: Corrosion, Biofouling, and Pressure Protection for Sensors</h3>
                     <p>Underwater environment is harsh. While some sensors offer waterproof capabilities out of the box, for critical applications, long-term deployments or deep ocean, any sensor may need pressure housing, oil filling or other types of encapsulation.</p>
                     <p>Even if you need a non-critical and short term deployment, you still need to consider a design that will stand corrosion (especially in salty water) and leaking. When it comes to long term, the design should withstand not only pressure, but also biofouling and internal condensation. Organic materials of sensor membranes and sealing after long exposure may start leaking or giving wrong results.</p>
                     <p><strong>Pressure equalization</strong>. Even for small depth air-tight seals when exposed to temperature and pressure change may be stressed and leaking. Consider pressure compensation elements (vent holes) for critical designs.</p>
-                    <p><strong>Corrosion</strong> and biofouling in salty water is particularly aggressive. Choose stainless steel alloys for sensor housing, and titanium for extra-long term and harsh conditions [2]. Protect connections (e.g. o-rings) using specialized polymer compounds (e.g. PVDF or PTFE), for extra protection using welded seals and all-metal design.</p>
+                    <p><strong>Corrosion</strong> and biofouling in salty water is particularly aggressive. Choose stainless steel alloys for sensor housing, and titanium for extra-long term and harsh conditions (or chlorine water) [2]. Protect connections (e.g. o-rings) using specialized polymer compounds (e.g. PVDF or PTFE), for extra protection using welded seals and all-metal design.</p>
                     
-                    <h4>Sealing Techniques: Protecting Underwater Sensors from Leaks and Condensation</h4>
+                    <h4 id="sealing-techniques">Sealing Techniques: Protecting Underwater Sensors from Leaks and Condensation</h4>
                     <p>When safeguarding underwater sensors, conformal coatings like brush-on or sprayed acrylic or silicone offer a lightweight, removable shield for short-term deployments—a flexible solution for prototyping or temporary setups. For more permanent installations, epoxy or parylene encapsulation acts as a "suit of armor," providing robust, long-term defense against moisture and corrosion. However, always verify material compatibility : Ensure seals and coatings withstand curing temperatures, solvents, or mechanical stress during assembly. For rapid prototyping, consider unconventional methods like sealing sensors in balloons—a low-cost, DIY approach highlighted in projects like <a href="https://seagrant.mit.edu/seaperch2-pressure/" target="_blank">MIT SeaPerch’s</a> pressure-testing guide. Balancing protection, durability, and ease of implementation ensures your sensor survives both lab trials and real-world depths.</p>
 
-                    <h4>Analog vs. Digital Sensors: Signal Integrity for Underwater Pressure Monitoring</h4>
+                    <h4 id="analog-vs-digital">Analog vs. Digital Sensors: Signal Integrity for Underwater Pressure Monitoring</h4>
                     <p>Analog signal (e.g. voltage or current loop) is continuous which may be crucial for some real-time applications. However analog voltage signal is prone to noise especially in long cables. It also may require extra analog-to-digital conversion and signal processing units. Digital sensors already include A2D conversion and often some basic signal processing units [11]. However the output is quantized which may be an issue when sensor is intended for high depth and exact low depth values are needed.</p>
 
-                    <h3>Top Low-Cost Underwater Sensors: Depth Range, Accuracy & Compatibility Guide</h3>
+                    <h3 id="sensor-comparison-table">Top Low-Cost Underwater Sensors: Depth Range, Accuracy & Compatibility Guide</h3>
                     <div class="table-container">
                         <table>
                             <thead>
@@ -381,13 +402,13 @@
                                     <td>Up to 300m</td>
                                     <td>Digital (I2C)</td>
                                     <td>20mm dia, 26mm len</td>
-                                    <td>50</td>
+                                    <td>80-100</td>
                                     <td><a href="https://bluerobotics.com/wp-content/uploads/2021/10/Bar30-Datasheet-Rev4.pdf" target="_blank">Link</a></td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <p class="note">*Prices are valid as of 12.06.25. Feel free to contact me to update of correct the information. </p>
+                    <p class="note">*Prices are valid as of 12.06.25</p>
                 </div>
                 
                 <div class="references">
