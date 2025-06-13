@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{TITLE} - PRESENSEA Project</title>
+    
+    <!-- SEO Meta Tags for Blog Post -->
+    <meta name="description" content="A practical guide to selecting, waterproofing, and deploying low-cost COTS pressure sensors for underwater applications.">
+    <meta name="keywords" content="underwater pressure sensor, COTS sensors, MEMS, piezoresistive, capacitive, waterproofing, conformal coating, potting, oceanography, marine technology, PRESENSEA, TalTech, blog">
+    <meta name="author" content="{AUTHOR_NAME}, PRESENSEA Project">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="{ISO_DATE}" />
+    <meta property="article:author" content="{AUTHOR_NAME}" />
+    <meta property="og:title" content="{TITLE} - PRESENSEA Project">
+    <meta property="og:description" content="A practical guide to selecting, waterproofing, and deploying low-cost COTS pressure sensors for underwater applications.">
+    
+    <!-- Scripts and Styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FAF8F7; /* sandy-shore */
+            color: #0A2F51; /* deep-sea-blue */
+        }
+        .font-bree {
+            font-family: 'Bree Serif', serif;
+        }
+        .hero-bg {
+            background-color: #0A2F51; /* deep-sea-blue */
+            color: #FAF8F7; /* sandy-shore */
+        }
+        .accent-teal {
+            color: #00BBD6; /* ocean-teal */
+        }
+        /* Article styles */
+        .article-content h1, .article-content h2, .article-content h3, .article-content h4 {
+            font-family: 'Bree Serif', serif;
+            color: #0A2F51;
+        }
+        .article-content h2 {
+            font-size: 1.5rem; /* 24px */
+            line-height: 2rem; /* 32px */
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .article-content h3 {
+            font-size: 1.25rem; /* 20px */
+            line-height: 1.75rem; /* 28px */
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        .article-content h4 {
+            font-size: 1.125rem; /* 18px */
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .article-content p, .article-content li {
+            margin-bottom: 1.25rem;
+            line-height: 1.75;
+            color: #4B5563; /* gulf-stream-gray */
+        }
+        .article-content ul { list-style-type: disc; padding-left: 1.5rem; }
+        .article-content a {
+            color: #00BBD6;
+            text-decoration: underline;
+            transition: color 0.2s;
+        }
+        .article-content a:hover {
+            color: #008f9e;
+        }
+        /* Responsive Table Container */
+        .table-container {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            border: 1px solid #E5E7EB;
+            border-radius: 0.5rem;
+            margin: 2rem 0;
+        }
+        .article-content table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9em;
+            min-width: 600px;
+        }
+        .article-content th, .article-content td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            white-space: normal;
+        }
+        .article-content th {
+            background-color: #f2f2f2;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="hero-bg sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo SVG -->
+            <a href="https://presensea.github.io" class="flex items-center space-x-3">
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" class="h-8 w-auto" role="img" aria-labelledby="logo-title" style="enable-background:new 0 0 72.61 60.79" viewBox="0 0 72.6 60.8">
+                    <title id="logo-title">PRESENSEA Project Logo</title>
+                    <path d="m30 47-3-1C9 34 25 6 44 15l2 1h1c9 8 0 23-11 19l-2-1c-2-3 1-7 4-6h1c4 3 8-3 3-6-12-6-22 10-11 18l3 1c19 8 34-20 16-31l-3-1C19-4-2 37 24 52l3 2c5 2 8-4 3-7z" style="fill:#00bbd6"/>
+                </svg>
+                <span class="font-bree text-2xl tracking-wide text-white">PRESENSEA</span>
+            </a>
+            <div class="flex items-center space-x-8">
+                <nav class="hidden md:flex space-x-8 text-white">
+                    <a href="https://presensea.github.io#about" class="hover:text-cyan-300 transition-colors">Home</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <article class="bg-white py-12 sm:py-16">
+            <div class="container mx-auto max-w-3xl px-6 lg:px-8">
+                <div class="text-center">
+                    <p class="font-semibold accent-teal">Project Insights</p>
+                    <h1 class="mt-2 text-3xl font-bold tracking-tight sm:text-4xl font-bree">{TITLE}</h1>
+                    <div class="mt-6 flex items-center justify-center gap-x-4 text-xs">
+                        <time datetime="{ISO_DATE}" class="text-gray-500">{CURRENT_DATE}</time>
+                        <span class="text-gray-500">by {AUTHOR_NAME}</span>
+                    </div>
+                </div>
+
+                <div class="mt-10 article-content">
+                    {HTML_BODY}
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="hero-bg py-10 px-6">
+        <div class="container mx-auto text-center text-gray-300">
+            <p>&copy; 2025 PRESENSEA Project | Tallinn University of Technology</p>
+            <p class="text-sm mt-2">This project has received funding from the Estonian Research Council under the Mobilitas Pluss programme (Grant no. MOB3JD1212).</p>
+        </div>
+    </footer>
+
+</body>
+</html>
