@@ -188,15 +188,15 @@
                     <h4 id="key-questions">How to Choose Underwater Pressure Sensors: Key Questions for Accurate Data Collection</h4>
                     <p>The choice is obviously defined by specific application, in research it can be very different. But at this point let’s ask the right questions.</p>
                     <ul>
-                        <li><strong>What is the data?</strong> Hydrostatic that is dependent on the depth. Hydrodynamic – small fluctuations of the pressure that may come from moving pressure media (or vessel itself). Acoustic pressure is a whole another application which we will not consider in this post.</li>
+                        <li><strong>What is the data?</strong> Hydrostatic that is dependent on the depth. Hydrodynamic – small fluctuations of the pressure</li>
                         <li><strong>What are the environment requirements?</strong> Freshwater or saltwater? Will it face mechanical vibrations, EMI/RFI interference, or the wrath of Neptune himself?</li>
                         <li><strong>What are the design requirements?</strong> how the sensor will be sealed? Will you use digital or analog signals? What connector works best?</li>
                     </ul>
 
                     <h3 id="what-to-measure">What data do you want to measure?</h3>
-                    <p>While there is a lot of different sources for underwater pressure, there are always two components. Hydrostatic that is dependent on the depth. Hydrodynamic – small fluctuations of the pressure that may come from moving pressure media (or vessel itself). Acoustic pressure is a whole another source which we will not consider in this post.</p>
+                    <p>While there is a lot of different applications for underwater pressure sensors, there are always two components. Hydrostatic that is dependent on the depth. Hydrodynamic – small fluctuations of the pressure that may come from moving pressure media (or vessel itself). Acoustic pressure is a whole another source which we will not consider in this post.</p>
                     <p>When it comes to how we measure, we can measure absolute pressure (relative to perfect vacuum), gauge (relative to some value e.g. ambient atmospheric pressure) and differential (difference between pressure in two points). For underwater environment, make sure that gauge sensors have properly sealed gauge port.</p>
-                    <p>Many sensors types are prone to temperature errors so many add temperature measurement and compensation [1]. Think of integration of additional sensors (e.g. conductivity or full AHRS) if needed.</p>
+                    <p>Most physical sensors are prone to temperature errors so manufacturers add temperature measurement and compensation [1]. Think of integration of additional sensors (e.g. conductivity or full AHRS) if needed.</p>
                     <p>How accurate and frequent we want the data to be?</p>
 
                     <h3 id="sensor-types">Sensor Types Compared: Piezoresistive, Capacitive, and Fiber-Optic for Underwater Use</h3>
@@ -253,10 +253,12 @@
                     </div>
 
                     <h3 id="environmental-challenges">Environmental Challenges: Corrosion, Biofouling, and Pressure Protection for Sensors</h3>
-                    <p>Underwater environment is harsh. While some sensors offer waterproof capabilities out of the box, for critical applications, long-term deployments or deep ocean, any sensor may need pressure housing, oil filling or other types of encapsulation.</p>
-                    <p>Even if you need a non-critical and short term deployment, you still need to consider a design that will stand corrosion (especially in salty water) and leaking. When it comes to long term, the design should withstand not only pressure, but also biofouling and internal condensation. Organic materials of sensor membranes and sealing after long exposure may start leaking or giving wrong results.</p>
-                    <p><strong>Pressure equalization</strong>. Even for small depth air-tight seals when exposed to temperature and pressure change may be stressed and leaking. Consider pressure compensation elements (vent holes) for critical designs.</p>
-                    <p><strong>Corrosion</strong> and biofouling in salty water is particularly aggressive. Choose stainless steel alloys for sensor housing, and titanium for extra-long term and harsh conditions (or chlorine water) [2]. Protect connections (e.g. o-rings) using specialized polymer compounds (e.g. PVDF or PTFE), for extra protection using welded seals and all-metal design.</p>
+                    While some sensors tout waterproofing straight out of the box, critical applications—deep-sea deployments or long-term monitoring—demand extra armor. Think of deploying a sensor like launching a ship: even for a short voyage, a sturdy hull (pressure housing, oil filling, or encapsulation) is non-negotiable to resist leaks and corrosion. For extended missions, the stakes rise: constant pressure, biofouling (algae and barnacles turning your sensor into prime real estate), and internal condensation threaten organic materials in seals and membranes. Over time, these stressors degrade components, risking leaks and data loss.
+
+<p>Even at shallow depths, airtight seals can buckle under temperature or pressure shifts. Incorporate pressure compensation elements (e.g., vent holes) to avoid catastrophic leaks.</p> 
+
+<p> Opt for stainless steel alloys (for moderate deployments) or titanium (for extreme longevity or clorine water) in housings. Pair with polymer compounds like PVDF or PTFE for o-rings or cable connections, or go all-stainless with welded seals to repel corrosion and biofouling.</p>
+                   
                     
                     <h4 id="sealing-techniques">Sealing Techniques: Protecting Underwater Sensors from Leaks and Condensation</h4>
                     <p>When safeguarding underwater sensors, conformal coatings like brush-on or sprayed acrylic or silicone offer a lightweight, removable shield for short-term deployments—a flexible solution for prototyping or temporary setups. For more permanent installations, epoxy or parylene encapsulation acts as a "suit of armor," providing robust, long-term defense against moisture and corrosion. However, always verify material compatibility : Ensure seals and coatings withstand curing temperatures, solvents, or mechanical stress during assembly. For rapid prototyping, consider unconventional methods like sealing sensors in balloons—a low-cost, DIY approach highlighted in projects like <a href="https://seagrant.mit.edu/seaperch2-pressure/" target="_blank">MIT SeaPerch’s</a> pressure-testing guide. Balancing protection, durability, and ease of implementation ensures your sensor survives both lab trials and real-world depths.</p>
