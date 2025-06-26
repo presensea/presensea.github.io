@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Guide to Open Distributed Acoustic Sensing (DAS) Datasets - PRESENSEA Project</title>
+    
+    <!-- SEO Meta Tags for Blog Post -->
+    <meta name="description" content="A guide to open Distributed Acoustic Sensing (DAS) datasets, explaining the technology and listing key resources for underwater and terrestrial applications.">
+    <meta name="keywords" content="DAS, Distributed Acoustic Sensing, open data, dataset, seismology, oceanography, marine technology, PRESENSEA, TalTech, blog">
+    <meta name="author" content="PRESENSEA Project, PRESENSEA Project">
+
+    <!-- Simple private analytics -->
+    <script data-goatcounter="https://presensea.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2025-06-26T12:26:00+03:00" />
+    <meta property="article:author" content="PRESENSEA Project" />
+    <meta property="og:title" content="A Guide to Open Distributed Acoustic Sensing (DAS) Datasets - PRESENSEA Project">
+    <meta property="og:description" content="A guide to open Distributed Acoustic Sensing (DAS) datasets, explaining the technology and listing key resources for underwater and terrestrial applications.">
+    
+    <!-- Scripts and Styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FAF8F7; /* sandy-shore */
+            color: #0A2F51; /* deep-sea-blue */
+        }
+        .font-bree {
+            font-family: 'Bree Serif', serif;
+        }
+        .hero-bg {
+            background-color: #0A2F51; /* deep-sea-blue */
+            color: #FAF8F7; /* sandy-shore */
+        }
+        .accent-teal {
+            color: #00BBD6; /* ocean-teal */
+        }
+        /* Article styles */
+        .article-content h1, .article-content h2, .article-content h3, .article-content h4 {
+            font-family: 'Bree Serif', serif;
+            color: #0A2F51;
+        }
+        .article-content h2 {
+            font-size: 1.5rem; /* 24px */
+            line-height: 2rem; /* 32px */
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #E5E7EB;
+            padding-bottom: 0.5rem;
+        }
+        .article-content h3 {
+            font-size: 1.25rem; /* 20px */
+            line-height: 1.75rem; /* 28px */
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        .article-content h4 {
+            font-size: 1.125rem; /* 18px */
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .article-content p, .article-content li {
+            margin-bottom: 1.25rem;
+            line-height: 1.75;
+            color: #4B5563; /* gulf-stream-gray */
+        }
+        .article-content ul { list-style-type: disc; padding-left: 1.5rem; }
+        .article-content a {
+            color: #00BBD6;
+            text-decoration: underline;
+            transition: color 0.2s;
+        }
+        .article-content a:hover {
+            color: #008f9e;
+        }
+        /* Responsive Table Container */
+        .table-container {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            border: 1px solid #E5E7EB;
+            border-radius: 0.5rem;
+            margin: 2rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .article-content table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9em;
+            min-width: 600px;
+        }
+        .article-content th, .article-content td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #E5E7EB;
+            white-space: normal;
+        }
+        .article-content th {
+            background-color: #F9FAFB;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .article-content tr:last-child td {
+            border-bottom: none;
+        }
+        .article-content tr:hover {
+            background-color: #F9FAFB;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="hero-bg sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo SVG -->
+            <a href="https://presensea.github.io" class="flex items-center space-x-3">
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" class="h-8 w-auto" role="img" aria-labelledby="logo-title" style="enable-background:new 0 0 72.61 60.79" viewBox="0 0 72.6 60.8">
+                    <title id="logo-title">PRESENSEA Project Logo</title>
+                    <path d="m30 47-3-1C9 34 25 6 44 15l2 1h1c9 8 0 23-11 19l-2-1c-2-3 1-7 4-6h1c4 3 8-3 3-6-12-6-22 10-11 18l3 1c19 8 34-20 16-31l-3-1C19-4-2 37 24 52l3 2c5 2 8-4 3-7z" style="fill:#00bbd6"/>
+                </svg>
+                <span class="font-bree text-2xl tracking-wide text-white">PRESENSEA</span>
+            </a>
+            <div class="flex items-center space-x-8">
+                <nav class="hidden md:flex space-x-8 text-white">
+                    <a href="https://presensea.github.io#about" class="hover:text-cyan-300 transition-colors">Home</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <article class="bg-white py-12 sm:py-16">
+            <div class="container mx-auto max-w-3xl px-6 lg:px-8">
+                <div class="text-center">
+                    <p class="font-semibold accent-teal">Project Insights</p>
+                    <h1 class="mt-2 text-3xl font-bold tracking-tight sm:text-4xl font-bree">A Guide to Open Distributed Acoustic Sensing (DAS) Datasets</h1>
+                    <div class="mt-6 flex items-center justify-center gap-x-4 text-xs">
+                        <time datetime="2025-06-26T12:26:01.378939+03:00" class="text-gray-500">June 26, 2025</time>
+                        <span class="text-gray-500">by Elizaveta Dubrovinskaya / PRESENSEA Project</span>
+                    </div>
+                </div>
+
+                <div class="mt-10 article-content">
+                    <p>Distributed Acoustic Sensing (DAS) is a technology that transforms a standard fiber optic cable into a dense array of thousands of individual vibration sensors.</p>
+<p>Imagine a long glass fiber. A special device called an interrogator sends pulses of laser light down this fiber. As the light travels, tiny natural imperfections in the glass scatter a small amount of light back towards the interrogator. When the fiber is perfectly still, this pattern of backscattered light is stable.</p>
+<p>However, if the fiber is stretched or compressed at any point—even by a microscopic amount—it changes the timing and phase of the light that is scattered back from that point. The interrogator measures these changes with extreme precision.</p>
+<h3>What is the Connection to Pressure Sensing?</h3>
+<p>DAS measures strain, not pressure. It can only detect if the fiber itself is being stretched or squeezed.
+Pressure waves cause strain. A pressure wave, like a seismic wave from an earthquake or a sound wave from a whale traveling through the ground or water, causes the surrounding material (rock, soil, water) to compress and expand.
+The strain is transferred to the cable. If the fiber optic cable is well-coupled to its environment (e.g., buried in the seafloor), the compression and expansion of the surrounding material will squeeze and stretch the cable along with it.
+Therefore, DAS senses a pressure wave by measuring its effect—the strain it induces on the fiber optic cable. Scientists can then analyze this strain data to infer the properties of the original pressure wave, effectively using the entire fiber optic cable as a long, continuous line of pressure sensors.</p>
+<h2>Underwater  DAS datasets.</h2>
+<p>This document provides a curated list of publicly available Distributed Acoustic Sensing (DAS) datasets from various projects around the world. These datasets are invaluable resources for research in seismology, oceanography, urban monitoring, geohazards, and more.</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Summary</th>
+<th>Access Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>OOI Regional Cabled Array (Oregon, USA, 2021)</strong></td>
+<td>A landmark subsea dataset rich with signals from earthquakes, whale vocalizations, and ship traffic. A key resource for marine seismology and bioacoustics.</td>
+<td><a href="http://piweb.ooirsn.uw.edu/das/">Link</a></td>
+</tr>
+<tr>
+<td><strong>Offshore Sicily (Italy, 2020)</strong></td>
+<td>A key European subsea dataset for studying microseisms, ship noise, and marine life in the Mediterranean. Available via the PubDAS repository.</td>
+<td><a href="https://app.globus.org/file-manager?origin_id=706e304c-5def-11ec-9b5c-f9dfb1abb183&amp;origin_path=%2FValencia%2F">Link</a></td>
+</tr>
+<tr>
+<td><strong>DAS4Microseism (Svalbard, Norway, 2020)</strong></td>
+<td>A 42-day dataset focused on recording microseismicity in the Arctic, providing valuable data for cryoseismology and polar research.</td>
+<td><a href="https://doi.org/10.18710/VPRD2H">doi: 10.18710/VPRD2H</a> <a href="https://dataverse.no/dataset.xhtml?persistentId=doi:10.18710/VPRD2H">mirror</a></td>
+</tr>
+<tr>
+<td><strong>DAS4Whale (Svalbard, Norway, 2020)</strong></td>
+<td>A 2-day dataset specifically capturing baleen whale vocalizations in the Arctic, useful for marine bioacoustics and passive acoustic monitoring.</td>
+<td><a href="https://doi.org/10.5281/zenodo.5823343">doi: 10.5281/zenodo.5823343</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2>Non-underwater  DAS datasets</h2>
+<p>While there is a limited amount of opened data for underwater DAS datasets, few of others may contain both underwater and landline cables.</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Summary</th>
+<th>Access Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Utah FORGE Project (Utah, USA, 2019, 2022+)</strong></td>
+<td>Extensive data from deep boreholes monitoring microseismicity during hydraulic stimulation for geothermal energy research. Multiple datasets are available.</td>
+<td><a href="https://gdr.openei.org/search?q=distributed%20acoustic%20sensing">Link</a></td>
+</tr>
+<tr>
+<td><strong>PoroTomo Project (Nevada, USA, 2016)</strong></td>
+<td>Data from horizontal and vertical DAS arrays at a geothermal field, including recordings of controlled explosions and natural seismic events.</td>
+<td><a href="https://gdr.openei.org/submissions/980">Link</a></td>
+</tr>
+<tr>
+<td><strong>Ridgecrest Earthquake Sequence (California, USA, 2019)</strong></td>
+<td>High-resolution aftershock data from the 2019 M7.1 earthquake recorded on dark fiber. A key resource for earthquake physics and machine learning.</td>
+<td><a href="https://huggingface.co/datasets/AI4EPS/quakeflow_das">Link</a></td>
+</tr>
+<tr>
+<td><strong>SISSLE Experiment (New Zealand, 2023)</strong></td>
+<td>Uses a fiber optic cable along a highway to monitor the Alpine Fault, one of the world's major plate boundaries, to characterize its structure and seismicity.</td>
+<td><a href="https://datacommons.anu.edu.au/DataCommons/rest/display/anudc:6317">Link</a></td>
+</tr>
+<tr>
+<td><strong>Rock-Slope Failure Monitoring (Switzerland, 2023)</strong></td>
+<td>Combines DAS and radar data to monitor rock collapses. A unique resource for developing algorithms to detect landslide precursors.</td>
+<td><a href="https://data.europa.eu/data/datasets/8ece0152-55ca-4547-8faf-99bfa56f6b03-envidat?locale=en">Link</a></td>
+</tr>
+<tr>
+<td><strong>Event Classification (Czech Republic, 2021-2023)</strong></td>
+<td>A dataset designed for machine learning with thousands of labeled events (cars, construction, footsteps) for urban and security applications.</td>
+<td><a href="https://springernature.figshare.com/articles/dataset/Comprehensive_Dataset_for_Event_Classification_Using_Distributed_Acoustic_Sensing_DAS_Systems/27004732?file=52736258">Link</a></td>
+</tr>
+<tr>
+<td><strong>Fairbanks Permafrost Experiment (Alaska, USA, 2017)</strong></td>
+<td>A dataset monitoring permafrost thaw during a controlled heating experiment using a grid of fiber cables. Includes active source (vibrator) and passive data.</td>
+<td><a href="https://app.globus.org/file-manager?origin_id=706e304c-5def-11ec-9b5c-f9dfb1abb183&amp;origin_path=%2FFairbanks%2F">Link</a></td>
+</tr>
+<tr>
+<td><strong>FOSSA (Sacramento, California, USA, 2017-2018)</strong></td>
+<td>Data from a 27 km section of dark telecommunications fiber used to monitor regional seismicity and characterize near-surface structures using ambient noise.</td>
+<td><a href="https://app.globus.org/file-manager?origin_id=706e304c-5def-11ec-9b5c-f9dfb1abb183&amp;origin_path=%2FFOSSA%2F">Link</a></td>
+</tr>
+<tr>
+<td><strong>LaFarge-Conco Mine (Illinois, USA, 2017)</strong></td>
+<td>Data from a limestone mine using a ~1.1 km fiber optic loop to record seismic signals from active sources (weight drops) and mine blasts.</td>
+<td><a href="https://app.globus.org/file-manager?origin_id=706e304c-5def-11ec-9b5c-f9dfb1abb183&amp;origin_path=%2FLaFarge%2F">Link</a></td>
+</tr>
+<tr>
+<td><strong>Stanford Campus Arrays (California, USA, 2016-2020)</strong></td>
+<td>Several datasets from fiber optic cables on and around the Stanford campus used for urban monitoring, earthquake detection, and infrastructure studies.</td>
+<td><a href="https://app.globus.org/file-manager?origin_id=706e304c-5def-11ec-9b5c-f9dfb1abb183&amp;origin_path=%2FStanford-1-Campus%2F&amp;two_pane=false">Link</a></td>
+</tr>
+<tr>
+<td><strong>Garner Valley (California, USA, 2013)</strong></td>
+<td>Data from a well-instrumented test site, used for numerous studies comparing DAS performance to traditional seismometers. Includes active source data.</td>
+<td><a href="https://doi.org/10.15121/1261941">doi: 10.15121/1261941</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Links are accessible as of 26.06.2025. For some repositories you may need to register an account (e.g. Globus).</p>
+<p><em>Credit: A significant portion of this list was compiled from the paper "PubDAS: A PUBlic Distributed Acoustic Sensing Datasets Repository for Geosciences" by Spica et al. (2023), Seismological Research Letters.</em></p>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="hero-bg py-10 px-6">
+        <div class="container mx-auto text-center text-gray-300">
+            <p>&copy; 2025 PRESENSEA Project | Tallinn University of Technology</p>
+            <p class="text-sm mt-2">This project has received funding from the Estonian Research Council under the Mobilitas Pluss programme (Grant no. MOB3JD1212).</p>
+        </div>
+    </footer>
+
+</body>
+</html>
