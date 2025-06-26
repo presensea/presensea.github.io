@@ -28,6 +28,48 @@ This document provides a curated list of publicly available Distributed Acoustic
 | **DAS4Whale (Svalbard, Norway, 2020)**               | A 2-day dataset specifically capturing baleen whale vocalizations in the Arctic, useful for marine bioacoustics and passive acoustic monitoring.          | [DOI: 10.5281/zenodo.5823343](https://doi.org/10.5281/zenodo.5823343)                                                                       |
 | **Global DAS Month (Worldwide, February 2023)**       | Participating systems represent a variety of manufacturers, a range of recording parameters, and varying cable emplacement settings (e.g., shallow burial, borehole, subaqueous, and dark fiber). |  [Globus Link](https://app.globus.org/file-manager?origin_id=706e304c-5def-11ec-9b5c-f9dfb1abb183&origin_path=%2FDAS-Month-02.2023%2F) |
 
+
+# Subaqueous and Near-Aquatic DAS Deployments (Global DAS Month – Feb 2023)
+
+Here is a deeper look at Global DAS Month data:
+
+| **Site / Project**        | **Location**               | **Environment**          | **Cable Type**           | **Potential Applications**                                           |
+|--------------------------|----------------------------|--------------------------|---------------------------|----------------------------------------------------------------------|
+| **ETH Zurich – Istanbul**| Istanbul, Turkey           | Sea shore                | Nearshore DAS             | Local seismicity, port activity, bioacoustics                       |
+| **ETH Zurich – Limmat**  | Zurich, Switzerland        | River bank               | Urban/riverbank fiber     | Urban hydrodynamics, flood risk, infrastructure monitoring          |
+| **IMS – Gran Canaria**   | Canary Islands, Spain      | Coastal, marine          | Subaqueous                | Whale vocalizations, surf zone processes, vessel noise              |
+| **JAMSTEC – Muroto**     | Muroto, Japan              | Deep-sea cable           | Ocean-bottom cable        | Seafloor instability, submarine landslides, acoustic tomography     |
+| **NTNU**                 | Trondheim, Norway          | Fjord/marine             | Coastal submerged cable   | Fjord circulation, ice-related noise, ecological interactions       |
+| **Sandia – Alaska**      | Alaska, USA                | Coastal subarctic        | Subsea/permafrost edge    | Sea ice–ocean interaction, seasonal freeze-thaw monitoring          |
+| **SusTech – XFJ**        | Shenzhen, China            | Estuary or shallow bay   | Coastal telecom fiber     | Estuarine dynamics, sediment plumes, anthropogenic noise detection  |
+| **Tampnet**              | North Sea (offshore oil)   | Open sea                 | Submarine telecom cable   | Whale migration, shipping activity, offshore infrastructure health  |
+
+---
+
+## Classification by Application Domains
+
+### 🌊 Oceanographic Monitoring
+- JAMSTEC – internal waves, plume dynamics
+- NTNU – fjord circulation, salinity layers
+- SusTech – estuarine hydrodynamics
+
+### 🐋 Bioacoustics & Marine Life
+- IMS Gran Canaria – cetaceans, fish schools
+- Tampnet – whale migration corridors
+- ETH Istanbul – shallow bioacoustic monitoring
+
+### ❄️ Ice & Climate
+- Sandia – sea ice edge detection
+- NTNU – sub-Arctic fjord ice conditions
+
+### 🚢 Anthropogenic Impact & Hazards
+- Tampnet – shipping noise, oil infrastructure risk
+- ETH Limmat – urban infrastructure sensing
+- JAMSTEC – submarine seismic events and cable stress
+
+---
+
+
 ## Non-underwater DAS Datasets 
 
 While there is a limited amount of open data for underwater DAS datasets, some of the following may contain both underwater and landline cables.
