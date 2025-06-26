@@ -363,43 +363,61 @@
             </div>
         </section>
 
-        <!-- Blog Section -->
-        <section id="blog" class="py-20 px-6">
-            <div class="container mx-auto">
-                <div class="text-center mb-12">
-                    <h2 class="font-bree text-3xl md:text-4xl font-semibold inline-block" data-translate="blogTitle">Project Updates</h2>
-                    <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto" data-translate="blogSubtitle">Follow our journey as we deploy, test, and share our findings.</p>
+       <!-- Blog Section -->
+<section id="blog" class="py-20 px-6 bg-gray-50">
+    <div class="container mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="font-bree text-3xl md:text-4xl font-semibold inline-block" data-translate="blogTitle">Project Updates</h2>
+            <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto" data-translate="blogSubtitle">Follow our journey as we deploy, test, and share our findings.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            
+            <!--  Blog Post -->
+            <div class="card bg-white border border-gray-200 rounded-lg overflow-hidden flex flex-col shadow-lg transition-transform transform hover:-translate-y-1">
+                <div class="p-8 flex-grow">
+                    <p class="text-sm text-gray-500 mb-2">June 26, 2025</p>
+                    <h3 class="text-2xl font-semibold mb-3">A Guide to Open DAS Datasets</h3>
+                    <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                        A guide to open Distributed Acoustic Sensing (DAS) datasets, explaining the technology and listing key resources for underwater and terrestrial applications.
+                    </p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                    <!-- New Blog Post -->
-                    <div class="card rounded-lg overflow-hidden flex flex-col">
-                        <div class="p-8 flex-grow">
-                            <p class="text-sm text-gray-500 mb-2">June 12, 2025</p>
-                            <h3 class="text-2xl font-semibold mb-3">Feeling the Pressure? A Guide to Underwater Sensors</h3>
-                            <p class="text-gray-600 mb-4">
-                                A practical guide to selecting, waterproofing, and deploying low-cost COTS pressure sensors for underwater applications, from DIY projects to professional research.
-                            </p>
-                        </div>
-                        <div class="p-8 pt-0">
-                             <a href="blog/002-choosing-sensor.html" class="font-semibold accent-teal hover:underline">Read More &rarr;</a>
-                        </div>
-                    </div>
-                    <!-- Existing Blog Post -->
-                    <div class="card rounded-lg overflow-hidden flex flex-col">
-                        <div class="p-8 flex-grow">
-                            <p class="text-sm text-gray-500 mb-2">June 9, 2025</p>
-                            <h3 class="text-2xl font-semibold mb-3" data-translate="blogPostTitle">The Baltic Cocktail Party: Stirred by science, served with smarts</h3>
-                            <p class="text-gray-600 mb-4" data-translate="blogPostSnippet">
-                                Welcome to the Baltic Cocktail Party — where the guests are often invisible, and the real conversations happen under pressure. This isn’t your average party. Picture an underwater world buzzing with activity: ships passing overhead like party guests, currents swirling like shaken drinks, and hidden signals mixing together like overlapping voices in a crowded room. Now imagine trying to pick out just one voice — or one signal — from all the noise. That’s the “cocktail party effect,” but this time, it’s happening beneath the waves.
-                            </p>
-                        </div>
-                         <div class="p-8 pt-0">
-                            <a href="blog/baltic-cocktail-party.html" class="font-semibold accent-teal hover:underline" data-translate="readMore">Read More &rarr;</a>
-                        </div>
-                    </div>
+                <div class="p-8 pt-0 mt-auto">
+                    <a href="/blog/003-DAS-datasets.html" class="font-semibold accent-teal hover:underline">Read More &rarr;</a>
                 </div>
             </div>
-        </section>
+
+            <!--  Blog Post -->
+            <div class="card bg-white border border-gray-200 rounded-lg overflow-hidden flex flex-col shadow-lg transition-transform transform hover:-translate-y-1">
+                <div class="p-8 flex-grow">
+                    <p class="text-sm text-gray-500 mb-2">June 12, 2025</p>
+                    <h3 class="text-2xl font-semibold mb-3">Feeling the Pressure? A Guide to Underwater Sensors</h3>
+                    <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                        A practical guide to selecting, waterproofing, and deploying low-cost COTS pressure sensors for underwater applications, from DIY projects to professional research.
+                    </p>
+                </div>
+                <div class="p-8 pt-0 mt-auto">
+                     <a href="blog/002-choosing-sensor.html" class="font-semibold accent-teal hover:underline">Read More &rarr;</a>
+                </div>
+            </div>
+
+            <!--  Blog Post -->
+            <div class="card bg-white border border-gray-200 rounded-lg overflow-hidden flex flex-col shadow-lg transition-transform transform hover:-translate-y-1">
+                <div class="p-8 flex-grow">
+                    <p class="text-sm text-gray-500 mb-2">June 9, 2025</p>
+                    <h3 class="text-2xl font-semibold mb-3" data-translate="blogPostTitle">The Baltic Cocktail Party: Stirred by science, served with smarts</h3>
+                    <p class="text-gray-600 mb-4 text-sm leading-relaxed" data-translate="blogPostSnippet">
+                        Welcome to the Baltic Cocktail Party — where the guests are often invisible, and the real conversations happen under pressure. This isn’t your average party...
+                    </p>
+                </div>
+                 <div class="p-8 pt-0 mt-auto">
+                    <a href="blog/baltic-cocktail-party.html" class="font-semibold accent-teal hover:underline" data-translate="readMore">Read More &rarr;</a>
+                 </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 
     </main>
 
