@@ -39,7 +39,7 @@ Here is a deeper look at Global DAS Month data:
 | **ETH Zurich – Limmat**  | Zurich, Switzerland        | River bank               | Urban/riverbank fiber     | Urban hydrodynamics, flood risk, infrastructure monitoring          |
 | **IMS – Gran Canaria**   | Canary Islands, Spain      | Coastal, marine          | Subaqueous                | Whale vocalizations, surf zone processes, vessel noise              |
 | **JAMSTEC – Muroto**     | Muroto, Japan              | Deep-sea cable           | Ocean-bottom cable        | Seafloor instability, submarine landslides, acoustic tomography     |
-| **NTNU**                 | Trondheim, Norway          | Fjord/marine             | Coastal submerged cable   | Fjord circulation, ice-related noise, ecological interactions       |
+| **NTNU**                 | Svalbard, Norway          | Fjord/marine             | Coastal submerged cable   | Fjord circulation, ice-related noise, ecological interactions       |
 | **Sandia – Alaska**      | Alaska, USA                | Coastal subarctic        | Subsea/permafrost edge    | Sea ice–ocean interaction, seasonal freeze-thaw monitoring          |
 | **SusTech – XFJ**        | Shenzhen, China            | Estuary or shallow bay   | Coastal telecom fiber     | Estuarine dynamics, sediment plumes, anthropogenic noise detection  |
 | **Tampnet**              | North Sea (offshore oil)   | Open sea                 | Submarine telecom cable   | Whale migration, shipping activity, offshore infrastructure health  |
