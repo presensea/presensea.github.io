@@ -22,13 +22,14 @@ The core challenge we address is the "cocktail party problem" of the sea: the un
 
 ---
 
-## Current Status (as of June 2025)
+## Current Status (as of July 2025)
 
 The project has just started! We are in the initial phase, laying the groundwork for the exciting research ahead.
 
 * **🔜 Work Package 1: Dataset** - Upcoming
-    * We are currently preparing for our first data collection campaigns in the Baltic Sea.
-    * This involves adjusting the existing sensor array to meet the project's specific needs.
+    * We are currently preparing for our first data collection campaigns
+    * We are collecting and analyzing existing datasets in the lab 
+    * Adjusting the existing sensor array and searching for possible electronic components to meet the project's specific needs 
 
 * **🗓️ Work Package 2: Modeling** - Planned
     * Initial physical models will be developed in parallel with data collection.
