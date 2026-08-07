@@ -58,36 +58,76 @@ def create_html_from_markdown(md_file_path, template_path, output_html_path, aut
             markdown_content = f.read()
         print(f"Successfully read content from '{md_file_path}'.")
 
+        # --- 1b. Parse Front Matter if present ---
+        metadata = {}
+        front_matter_match = re.match(r'^---\s*\n(.*?)\n---\s*\n', markdown_content, re.DOTALL)
+        if front_matter_match:
+            front_matter_text = front_matter_match.group(1)
+            # Remove front matter from content
+            markdown_content = markdown_content[front_matter_match.end():]
+            # Simple YAML-like parser
+            for line in front_matter_text.split('\n'):
+                if ':' in line:
+                    key, val = line.split(':', 1)
+                    metadata[key.strip().lower()] = val.strip().strip('"').strip("'")
+            print("Parsed front matter successfully.")
+
         # --- 2. Read the HTML template file ---
         with open(template_path, 'r', encoding='utf-8') as f:
             html_template = f.read()
         print(f"Successfully read template from '{template_path}'.")
 
-        # --- 3. Extract the title from the first H1 header ---
-        title_match = re.search(r'^#\s(.+)', markdown_content, re.MULTILINE)
-        if title_match:
-            title = title_match.group(1).strip()
-            # Remove the H1 from the body content so it's not duplicated
-            body_content_md = markdown_content.replace(title_match.group(0), '', 1)
+        # --- 3. Extract title from front matter or first H1 header ---
+        title = metadata.get('title')
+        if not title:
+            title_match = re.search(r'^#\s(.+)', markdown_content, re.MULTILINE)
+            if title_match:
+                title = title_match.group(1).strip()
+                # Remove the H1 from the body content so it's not duplicated
+                body_content_md = markdown_content.replace(title_match.group(0), '', 1)
+            else:
+                title = "PreSenSea"
+                body_content_md = markdown_content
+                print("No H1 header found. Using default title 'PreSenSea'.")
         else:
-            title = "PreSenSea"
-            body_content_md = markdown_content
-            print("No H1 header found. Using default title 'PreSenSea'.")
+            # If title is in front matter, remove any duplicate H1 header from body
+            title_match = re.search(r'^#\s(.+)', markdown_content, re.MULTILINE)
+            if title_match:
+                body_content_md = markdown_content.replace(title_match.group(0), '', 1)
+            else:
+                body_content_md = markdown_content
 
         # --- 4. Convert Markdown body to HTML ---
         html_body = markdown.markdown(body_content_md, extensions=['fenced_code', 'tables'])
         print("Markdown content converted to HTML successfully.")
 
-        # --- 5. Get the current date for display ---
-        current_date_display = datetime.now().strftime("%B %d, %Y")
-        iso_date = datetime.now().isoformat()
+        # --- 5. Determine the date (use front matter date if available) ---
+        post_date = datetime.now()
+        if 'date' in metadata:
+            try:
+                # Support YYYY-MM-DD
+                post_date = datetime.strptime(metadata['date'], "%Y-%m-%d")
+            except ValueError:
+                pass
+        
+        current_date_display = post_date.strftime("%B %d, %Y")
+        iso_date = post_date.isoformat()
+        
+        # Override author if present in metadata
+        display_author = metadata.get('author', author_name)
+
+        # --- 5b. Determine description and keywords ---
+        meta_desc = metadata.get('description', "Discover PRESENSEA, a research project developing innovative underwater monitoring solutions.")
+        meta_keys = metadata.get('keywords', "PRESENSEA, underwater monitoring, pressure sensors, Baltic Sea, oceanography, marine technology")
 
         # --- 6. Replace placeholders in the template ---
         final_html = html_template.replace('{TITLE}', title)
-        final_html = final_html.replace('{AUTHOR_NAME}', author_name)
+        final_html = final_html.replace('{AUTHOR_NAME}', display_author)
         final_html = final_html.replace('{CURRENT_DATE}', current_date_display)
         final_html = final_html.replace('{ISO_DATE}', iso_date)
         final_html = final_html.replace('{HTML_BODY}', html_body)
+        final_html = final_html.replace('{META_DESCRIPTION}', meta_desc)
+        final_html = final_html.replace('{META_KEYWORDS}', meta_keys)
 
         # --- 7. Write the final HTML to the output file ---
         with open(output_html_path, 'w', encoding='utf-8') as f:

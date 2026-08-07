@@ -1,3 +1,11 @@
+---
+title: "A Guide to Open Distributed Acoustic Sensing (DAS) Datasets"
+description: "A comprehensive guide to open Distributed Acoustic Sensing (DAS) datasets, explaining the technology and listing key resources for underwater and terrestrial applications."
+keywords: "Distributed Acoustic Sensing, DAS, fiber optic sensing, subsea cables, oceanography, bioacoustics, marine life, earthquakes, open data, geosciences, global DAS month"
+date: "2025-06-26"
+author: "Elizaveta Dubrovinskaya"
+---
+
 # A Guide to Open Distributed Acoustic Sensing (DAS) Datasets
 
 Distributed Acoustic Sensing (DAS) is a technology that transforms a standard fiber optic cable into a dense array of thousands of individual vibration sensors.

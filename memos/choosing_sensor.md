@@ -1,3 +1,11 @@
+---
+title: "Feeling the Pressure? A Deep Dive into Low-Cost Underwater Sensors"
+description: "A practical guide to selecting, waterproofing, and deploying low-cost COTS pressure sensors for underwater applications."
+keywords: "underwater pressure sensor, COTS sensors, MEMS, piezoresistive, capacitive, waterproofing, conformal coating, potting, oceanography, marine technology, PRESENSEA, TalTech, blog"
+date: "2025-06-12"
+author: "Elizaveta Dubrovinskaya"
+---
+
 # Feeling the Pressure? A Deep Dive into Low-Cost Underwater Sensors
 
 Make vs. Buy: Cost-Effective Underwater Pressure Sensors for DIY & Research Projects
