@@ -162,6 +162,7 @@
                     <a href="#sensors" class="hover:text-cyan-300 transition-colors" data-translate="navSensors">Sensors</a>
                     <a href="#objectives" class="hover:text-cyan-300 transition-colors" data-translate="navObjectives">Objectives</a>
                     <a href="#team" class="hover:text-cyan-300 transition-colors" data-translate="navTeam">Team</a>
+                    <a href="#publications" class="hover:text-cyan-300 transition-colors" data-translate="navPublications">Publications</a>
                     <a href="#blog" class="hover:text-cyan-300 transition-colors" data-translate="navBlog">Blog</a>
                     <a href="#funding" class="hover:text-cyan-300 transition-colors" data-translate="navFunding">Funding</a>
                 </nav>
@@ -364,8 +365,68 @@
             </div>
         </section>
 
-       <!-- Blog Section -->
-<section id="blog" class="py-20 px-6 bg-gray-50">
+        <!-- Recent Publications Section -->
+        <section id="publications" class="py-20 px-6 bg-gray-50">
+            <div class="container mx-auto max-w-6xl">
+                <div class="text-center mb-12">
+                    <h2 class="font-bree text-3xl md:text-4xl font-semibold inline-block" data-translate="pubTitle">Recent Publications</h2>
+                    <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto" data-translate="pubSubtitle">Peer-reviewed conference papers, preprints, and submitted manuscripts from PRESENSEA.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Publication 1: Ecological Informatics / SSRN -->
+                    <div class="card bg-white border border-gray-200 rounded-lg p-8 flex flex-col shadow-lg">
+                        <div class="flex-grow">
+                            <p class="text-xs font-semibold accent-teal uppercase tracking-wide mb-2" data-translate="pub1Badge">Journal Submission &amp; Preprint &middot; 2026</p>
+                            <h3 class="text-xl font-semibold mb-2 text-[#0A2F51]">Detection of Atlantic Cod Vocalizations in Underwater Passive Acoustic Monitoring Data under Label Scarcity</h3>
+                            <p class="text-sm text-gray-500 mb-3">Elizaveta Dubrovinskaya, Anna Bass, Maarja Kruusmaa</p>
+                            <p class="text-xs font-medium text-gray-700 mb-3" data-translate="pub1Venue">Submitted to <em>Ecological Informatics</em> &middot; SSRN Preprint (doi:10.2139/ssrn.7524699)</p>
+                            <p class="text-sm text-gray-600 leading-relaxed" data-translate="pub1Desc">
+                                Evaluates frozen audio foundation models (including BEATs and SurfPerch) and window-duration alignment for retrieving and probing rare Atlantic cod grunts under severe label scarcity.
+                            </p>
+                        </div>
+                        <div class="pt-6 mt-auto">
+                            <a href="https://doi.org/10.2139/ssrn.7524699" target="_blank" rel="noopener noreferrer" class="font-semibold accent-teal hover:underline" data-translate="pub1Link">Read Preprint (SSRN) &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Publication 2: BNAM 2026 -->
+                    <div class="card bg-white border border-gray-200 rounded-lg p-8 flex flex-col shadow-lg">
+                        <div class="flex-grow">
+                            <p class="text-xs font-semibold accent-teal uppercase tracking-wide mb-2" data-translate="pub2Badge">Conference Paper &middot; May 2026</p>
+                            <h3 class="text-xl font-semibold mb-2 text-[#0A2F51]">Bio-inspired Synthetic Cod Grunts Generator and Detection Performance Evaluation on Passive Acoustic Monitoring Data</h3>
+                            <p class="text-sm text-gray-500 mb-3">Elizaveta Dubrovinskaya, Maarja Kruusmaa</p>
+                            <p class="text-xs font-medium text-gray-700 mb-3" data-translate="pub2Venue"><em>Baltic-Nordic Acoustic Meeting (BNAM 2026)</em>, Gothenburg, Sweden</p>
+                            <p class="text-sm text-gray-600 leading-relaxed" data-translate="pub2Desc">
+                                Replaces site-specific empirical matched-filter templates with a biophysical parametric pulse-train cod grunt generator calibrated on NOAA SanctSound recordings for cross-deployment generalization.
+                            </p>
+                        </div>
+                        <div class="pt-6 mt-auto">
+                            <a href="https://www.akustiska-sallskapet.org/wp-content/uploads/BNAM_Proceedings/Bio_Acoustics/BNAM_2026_paper_62.pdf" target="_blank" rel="noopener noreferrer" class="font-semibold accent-teal hover:underline" data-translate="pub2Link">Read PDF (BNAM 2026) &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Publication 3: OFC 2027 -->
+                    <div class="card bg-white border border-gray-200 rounded-lg p-8 flex flex-col shadow-lg">
+                        <div class="flex-grow">
+                            <p class="text-xs font-semibold accent-teal uppercase tracking-wide mb-2" data-translate="pub3Badge">Conference Submission &middot; OFC 2027</p>
+                            <h3 class="text-xl font-semibold mb-2 text-[#0A2F51]">Long-Period Water Waves Sensed by a 6-km Shallow Submarine Telecom Cable in the Baltic Sea</h3>
+                            <p class="text-sm text-gray-500 mb-3">Elizaveta Dubrovinskaya, Bauyrzhan Zhakanov, Laura Piho, Kaida Kaeval</p>
+                            <p class="text-xs font-medium text-gray-700 mb-3" data-translate="pub3Venue"><em>Optical Fiber Communication Conference (OFC 2027)</em></p>
+                            <p class="text-sm text-gray-600 leading-relaxed" data-translate="pub3Desc">
+                                Analyzes phase-sensitive OTDR submarine cable measurements across the shallow ice-covered Suur V&auml;in strait, resolving 8&ndash;14 s water waves, ferry signatures, and arrival angles.
+                            </p>
+                        </div>
+                        <div class="pt-6 mt-auto">
+                            <span class="text-sm font-semibold text-gray-500" data-translate="pub3Status">Submitted &middot; Under Review</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       <!-- Blog / Project Updates Section -->
+<section id="blog" class="py-20 px-6 bg-white">
     <div class="container mx-auto">
         <div class="text-center mb-12">
             <h2 class="font-bree text-3xl md:text-4xl font-semibold inline-block" data-translate="blogTitle">Project Updates</h2>
@@ -415,30 +476,57 @@
                  </div>
             </div>
 
-        </div>
-
-        <!-- Open-Source Tool Callout: das-audit -->
-        <div class="mt-12 max-w-4xl mx-auto">
-            <div class="card bg-white border border-gray-200 rounded-lg p-8 shadow-lg flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-                <div>
-                    <p class="text-sm font-semibold accent-teal uppercase tracking-wide mb-1" data-translate="dasAuditBadge">Open-Source Software</p>
-                    <h3 class="font-bree text-2xl font-semibold mb-2" data-translate="dasAuditTitle">das-audit: DAS Data Quality Audit Tool</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed" data-translate="dasAuditDesc">
+            <!-- Update Card 4: das-audit Open-Source Tool -->
+            <div class="card bg-white border border-gray-200 rounded-lg overflow-hidden flex flex-col shadow-lg transition-transform transform hover:-translate-y-1">
+                <div class="p-8 flex-grow">
+                    <p class="text-sm text-gray-500 mb-2" data-translate="dasAuditBadge">Open-Source Software &middot; 2026</p>
+                    <h3 class="text-2xl font-semibold mb-3" data-translate="dasAuditTitle">das-audit: DAS Data Quality Audit Tool</h3>
+                    <p class="text-gray-600 mb-4 text-sm leading-relaxed" data-translate="dasAuditDesc">
                         A lightweight, low-RAM Python CLI and interactive Plotly HTML dashboard for automated quality assessment of Distributed Acoustic Sensing (DAS) datasets (.ds, .sd, .zarr, .h5), covering metadata validation, spectral baselines, coupling coherence, f-k aliasing, and ship-wake analysis.
                     </p>
                 </div>
-                <div class="flex-shrink-0">
-                    <a href="https://github.com/presensea/DAS" target="_blank" rel="noopener noreferrer" class="inline-block bg-[#0A2F51] text-white font-semibold px-5 py-3 rounded-lg hover:bg-[#00BBD6] hover:text-[#0A2F51] transition-colors whitespace-nowrap" data-translate="dasAuditLink">
-                        View on GitHub &rarr;
-                    </a>
+                <div class="p-8 pt-0 mt-auto">
+                    <a href="https://github.com/presensea/DAS" target="_blank" rel="noopener noreferrer" class="font-semibold accent-teal hover:underline" data-translate="dasAuditLink">View on GitHub &rarr;</a>
                 </div>
             </div>
+
+            <!-- Update Card 5: MSc Thesis — Anna Bass -->
+            <div class="card bg-white border border-gray-200 rounded-lg overflow-hidden flex flex-col shadow-lg transition-transform transform hover:-translate-y-1">
+                <div class="p-8 flex-grow">
+                    <p class="text-sm text-gray-500 mb-2" data-translate="thesis1Badge">MSc Thesis &middot; June 2026</p>
+                    <h3 class="text-2xl font-semibold mb-3">Detection of Atlantic Cod Vocalizations under Label Scarcity</h3>
+                    <p class="text-gray-600 mb-4 text-sm leading-relaxed" data-translate="thesis1Desc">
+                        Master's thesis by Anna Bass (TalTech, supervised by Elizaveta Dubrovinskaya). Investigates SurfPerch foundation model embeddings, similarity retrieval, clustering, and 1-s tiled window alignment for Atlantic cod grunt detection.
+                    </p>
+                </div>
+                <div class="p-8 pt-0 mt-auto flex flex-wrap gap-x-5 gap-y-2">
+                    <a href="https://doi.org/10.2139/ssrn.7524699" target="_blank" rel="noopener noreferrer" class="font-semibold accent-teal hover:underline" data-translate="thesis1Link1">Preprint (SSRN) &rarr;</a>
+                    <a href="https://www.etis.ee/CV/Elizaveta_Dubrovinskaya/eng/" target="_blank" rel="noopener noreferrer" class="font-semibold accent-teal hover:underline" data-translate="thesis1Link2">ETIS Record &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Update Card 6: BSc Thesis — Alina Murtazina & Sofia Zolina -->
+            <div class="card bg-white border border-gray-200 rounded-lg overflow-hidden flex flex-col shadow-lg transition-transform transform hover:-translate-y-1">
+                <div class="p-8 flex-grow">
+                    <p class="text-sm text-gray-500 mb-2" data-translate="thesis2Badge">BSc Thesis &middot; June 2026</p>
+                    <h3 class="text-2xl font-semibold mb-3">Multiscale Underwater Acoustic Event Analysis &amp; Visualization</h3>
+                    <p class="text-gray-600 mb-4 text-sm leading-relaxed" data-translate="thesis2Desc">
+                        Bachelor's thesis by Alina Murtazina &amp; Sofia Zolina (TalTech, supervised by Elizaveta Dubrovinskaya). Delivers an interactive multiscale visualization and candidate-event analysis system for synchronized DAS and hydrophone arrays.
+                    </p>
+                </div>
+                <div class="p-8 pt-0 mt-auto flex flex-wrap gap-x-5 gap-y-2">
+                    <a href="https://digikogu.taltech.ee/en/Item/16b3d887-aede-4ce1-9f33-5197866f4dfd" target="_blank" rel="noopener noreferrer" class="font-semibold accent-teal hover:underline" data-translate="thesis2Link1">TalTech Digikogu &rarr;</a>
+                    <a href="https://prodbymedea.github.io/multiscale-underwater-acoustic-event-analysis/" target="_blank" rel="noopener noreferrer" class="font-semibold accent-teal hover:underline" data-translate="thesis2Link2">Live Viewer &rarr;</a>
+                    <a href="https://github.com/prodbymedea/multiscale-underwater-acoustic-event-analysis" target="_blank" rel="noopener noreferrer" class="font-semibold accent-teal hover:underline" data-translate="thesis2Link3">GitHub &rarr;</a>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
 
         <!-- Project Information & Funding Section -->
-        <section id="funding" class="py-20 px-6 bg-white">
+        <section id="funding" class="py-20 px-6 bg-gray-50">
             <div class="container mx-auto max-w-5xl">
                 <div class="text-center mb-12">
                     <h2 class="font-bree text-3xl md:text-4xl font-semibold inline-block" data-translate="fundingTitle">Project Information &amp; Funding</h2>
@@ -537,6 +625,7 @@
             navSensors: { en: 'Sensors', et: 'Andurid', ru: 'Датчики' },
             navObjectives: { en: 'Objectives', et: 'Eesmärgid', ru: 'Цели' },
             navTeam: { en: 'Team', et: 'Meeskond', ru: 'Команда' },
+            navPublications: { en: 'Publications', et: 'Publikatsioonid', ru: 'Публикации' },
             navBlog: { en: 'Blog', et: 'Blogi', ru: 'Блог' },
             navFunding: { en: 'Funding', et: 'Rahastus', ru: 'Финансирование' },
             heroTitle: { en: "Listening to the Sea's Whisper.", et: 'Kuulates mere sosinat.', ru: 'Слушая шепот моря.' },
@@ -581,12 +670,54 @@
             teamMember2Desc: { en: 'Leading the Centre for Biorobotics with vast experience in marine robotics and hydrodynamic sensors.', et: 'Juhtides Biorobootika Keskust, omades laialdast kogemust mererobootikas ja hüdrodünaamilistes andurites.', ru: 'Руководит Центром биоробототехники, обладая обширным опытом в морской робототехнике и гидродинамических датчиках.' },
             hostedAt: { en: 'Hosted at the', et: 'Asutus', ru: 'Проект базируется в' },
             hostInstitution: { en: 'Centre for Biorobotics, Tallinn University of Technology', et: 'Biorobootika Keskus, Tallinna Tehnikaülikool', ru: 'Центр биоробототехники, Таллиннский технический университет' },
+            pubTitle: { en: 'Recent Publications', et: 'Viimased publikatsioonid', ru: 'Недавние публикации' },
+            pubSubtitle: {
+                en: 'Peer-reviewed conference papers, preprints, and submitted manuscripts from PRESENSEA.',
+                et: 'PRESENSEA projekti eelretsenseeritud konverentsiartiklid, eeltrükid ja esitatud käsikirjad.',
+                ru: 'Рецензируемые материалы конференций, препринты и поданные рукописи проекта PRESENSEA.'
+            },
+            pub1Badge: { en: 'Journal Submission &amp; Preprint &middot; 2026', et: 'Ajakirja käsikiri ja eeltrükk &middot; 2026', ru: 'Статья в журнал и препринт &middot; 2026' },
+            pub1Venue: {
+                en: 'Submitted to <em>Ecological Informatics</em> &middot; SSRN Preprint (doi:10.2139/ssrn.7524699)',
+                et: 'Esitatud ajakirjale <em>Ecological Informatics</em> &middot; SSRN eeltrükk (doi:10.2139/ssrn.7524699)',
+                ru: 'Подана в <em>Ecological Informatics</em> &middot; препринт SSRN (doi:10.2139/ssrn.7524699)'
+            },
+            pub1Desc: {
+                en: 'Evaluates frozen audio foundation models (including BEATs and SurfPerch) and window-duration alignment for retrieving and probing rare Atlantic cod grunts under severe label scarcity.',
+                et: 'Hindab eelkoolitatud helimudeleid (sealhulgas BEATs ja SurfPerch) ning analüüsiakna pikkuse sobitamist haruldaste tursa häälitsuste tuvastamisel märgendite nappusel.',
+                ru: 'Оценивает предобученные аудиомодели (включая BEATs и SurfPerch) и согласование длины окна анализа для поиска и классификации редких звуков атлантической трески при дефиците разметки.'
+            },
+            pub1Link: { en: 'Read Preprint (SSRN) &rarr;', et: 'Loe eeltrükki (SSRN) &rarr;', ru: 'Читать препринт (SSRN) &rarr;' },
+            pub2Badge: { en: 'Conference Paper &middot; May 2026', et: 'Konverentsiartikkel &middot; mai 2026', ru: 'Статья конференции &middot; май 2026' },
+            pub2Venue: {
+                en: '<em>Baltic-Nordic Acoustic Meeting (BNAM 2026)</em>, Gothenburg, Sweden',
+                et: '<em>Baltic-Nordic Acoustic Meeting (BNAM 2026)</em>, Göteborg, Rootsi',
+                ru: '<em>Baltic-Nordic Acoustic Meeting (BNAM 2026)</em>, Гётеборг, Швеция'
+            },
+            pub2Desc: {
+                en: 'Replaces site-specific empirical matched-filter templates with a biophysical parametric pulse-train cod grunt generator calibrated on NOAA SanctSound recordings for cross-deployment generalization.',
+                et: 'Asendab asukohaspetsiifilised empiirilised mallid biofüüsikalise parameetrilise tursahäälitsuste generaatoriga, mis on kalibreeritud NOAA SanctSoundi salvestistel parema üldistatavuse saavutamiseks.',
+                ru: 'Заменяет привязанные к конкретной станции эмпирические шаблоны биофизическим параметрическим генератором импульсных последовательностей, откалиброванным на записях NOAA SanctSound.'
+            },
+            pub2Link: { en: 'Read PDF (BNAM 2026) &rarr;', et: 'Loe PDF-i (BNAM 2026) &rarr;', ru: 'Открыть PDF (BNAM 2026) &rarr;' },
+            pub3Badge: { en: 'Conference Submission &middot; OFC 2027', et: 'Konverentsikäsikiri &middot; OFC 2027', ru: 'Заявка на конференцию &middot; OFC 2027' },
+            pub3Venue: {
+                en: '<em>Optical Fiber Communication Conference (OFC 2027)</em>',
+                et: '<em>Optical Fiber Communication Conference (OFC 2027)</em>',
+                ru: '<em>Optical Fiber Communication Conference (OFC 2027)</em>'
+            },
+            pub3Desc: {
+                en: 'Analyzes phase-sensitive OTDR submarine cable measurements across the shallow ice-covered Suur V&auml;in strait, resolving 8&ndash;14 s water waves, ferry signatures, and arrival angles.',
+                et: 'Analüüsib faasitundlikke OTDR-mõõtmisi madalas jääkattega Suure Väina merekaablil, eristades 8&ndash;14 s veelaineid, parvlaevade signatuure ja saabumisnurki.',
+                ru: 'Анализирует фазочувствительные OTDR-измерения на мелководном подводном кабеле в проливе Суур-Вяйн под ледовым покровом, выделяя волны с периодом 8–14 с, сигнатуры паромов и углы прихода.'
+            },
+            pub3Status: { en: 'Submitted &middot; Under Review', et: 'Esitatud &middot; Retsenseerimisel', ru: 'Подана &middot; На рецензии' },
             blogTitle: { en: 'Project Updates', et: 'Projekti uuendused', ru: 'Новости проекта' },
             blogSubtitle: { en: 'Follow our journey as we deploy, test, and share our findings.', et: 'Jälgige meie teekonda, kui me paigaldame, testime ja jagame oma tulemusi.', ru: 'Следите за нашим путешествием, в ходе которого мы устанавливаем, тестируем и делимся результатами.' },
             blogPostTitle: { en: 'The Baltic Cocktail Party: Stirred by science, served with smarts', et: 'Läänemere kokteilipidu: teaduse poolt segatud, nutikalt serveeritud', ru: 'Балтийская коктейльная вечеринка: смешано наукой, подано с умом' },
             blogPostSnippet: { en: "Welcome to the Baltic Cocktail Party — where the guests are often invisible, and the real conversations happen under pressure. This isn’t your average party. Picture an underwater world buzzing with activity: ships passing overhead like party guests, currents swirling like shaken drinks, and hidden signals mixing together like overlapping voices in a crowded room. Now imagine trying to pick out just one voice — or one signal — from all the noise. That’s the “cocktail party effect,” but this time, it’s happening beneath the waves.", et: "Tere tulemast Läänemere kokteilipeole – kus külalised on sageli nähtamatud ja tõelised vestlused toimuvad pinge all. See ei ole tavaline pidu. Kujutage ette veealust maailma, mis kihab tegevusest: laevad mööduvad pea kohal nagu peokülalised, hoovused keerlevad nagu loksutatud joogid ja varjatud signaalid segunevad nagu kattuvad hääled rahvarohkes toas. Nüüd kujutage ette, et proovite kogu mürast välja valida vaid ühe hääle – või ühe signaali. See ongi „kokteilipeo efekt“, kuid seekord toimub see lainete all.", ru: "Представьте себе шумную вечеринку. Гости болтают, бокалы звенят, кто-то смеётся — и вы пытаетесь услышать, что говорит человек прямо перед вами. Это классический 'эффект коктейльной вечеринки'. Только теперь действие происходит не в ресторане, а на дне Балтийского моря. Здесь тоже толпа: над головой проходят корабли, внизу закручиваются течения, где-то вдалеке — гидрофоны улавливают эхо жизни. И среди всего этого хаоса учёные пытаются услышать то, что может остаться незамеченным: сигнал тревоги от экосистемы или след загрязнения, оставленный судном в ночи." },
             readMore: { en: 'Read More &rarr;', et: 'Loe edasi &rarr;', ru: 'Читать далее &rarr;' },
-            dasAuditBadge: { en: 'Open-Source Software', et: 'Avatud lähtekoodiga tarkvara', ru: 'Открытое ПО' },
+            dasAuditBadge: { en: 'Open-Source Software &middot; 2026', et: 'Avatud lähtekoodiga tarkvara &middot; 2026', ru: 'Открытое ПО &middot; 2026' },
             dasAuditTitle: { en: 'das-audit: DAS Data Quality Audit Tool', et: 'das-audit: DAS-andmete kvaliteedikontrolli tööriist', ru: 'das-audit: инструмент контроля качества данных DAS' },
             dasAuditDesc: {
                 en: 'A lightweight, low-RAM Python CLI and interactive Plotly HTML dashboard for automated quality assessment of Distributed Acoustic Sensing (DAS) datasets (.ds, .sd, .zarr, .h5), covering metadata validation, spectral baselines, coupling coherence, f-k aliasing, and ship-wake analysis.',
@@ -594,6 +725,23 @@
                 ru: 'Лёгкий Python CLI-инструмент с низким потреблением памяти и интерактивным HTML-отчётом Plotly для автоматической проверки качества данных распределённого акустического зондирования (DAS: .ds, .sd, .zarr, .h5) — от проверки метаданных и спектрального фона до когерентности, f-k алиасинга и анализа кильватерных волн.'
             },
             dasAuditLink: { en: 'View on GitHub &rarr;', et: 'Vaata GitHubis &rarr;', ru: 'Открыть на GitHub &rarr;' },
+            thesis1Badge: { en: 'MSc Thesis &middot; June 2026', et: 'Magistritöö &middot; juuni 2026', ru: 'Магистерская диссертация &middot; июнь 2026' },
+            thesis1Desc: {
+                en: "Master's thesis by Anna Bass (TalTech, supervised by Elizaveta Dubrovinskaya). Investigates SurfPerch foundation model embeddings, similarity retrieval, clustering, and 1-s tiled window alignment for Atlantic cod grunt detection.",
+                et: 'Anna Bassi magistritöö (TalTech, juhendaja Elizaveta Dubrovinskaya). Uurib SurfPerchi baasmudeli vektorruume, sarnasusotsingut, klasterdamist ja 1-sekundilisi analüüsiaknaid Atlandi tursa häälitsuste tuvastamiseks.',
+                ru: 'Магистерская диссертация Анны Басс (TalTech, науч. рук. Елизавета Дубровинская). Исследует эмбеддинги базовой модели SurfPerch, поиск по сходству, кластеризацию и 1-секундные окна для детекции звуков трески.'
+            },
+            thesis1Link1: { en: 'Preprint (SSRN) &rarr;', et: 'Eeltrükk (SSRN) &rarr;', ru: 'Препринт (SSRN) &rarr;' },
+            thesis1Link2: { en: 'ETIS Record &rarr;', et: 'ETIS kirje &rarr;', ru: 'Профиль ETIS &rarr;' },
+            thesis2Badge: { en: 'BSc Thesis &middot; June 2026', et: 'Bakalaureusetöö &middot; juuni 2026', ru: 'Бакалаврская работа &middot; июнь 2026' },
+            thesis2Desc: {
+                en: "Bachelor's thesis by Alina Murtazina &amp; Sofia Zolina (TalTech, supervised by Elizaveta Dubrovinskaya). Delivers an interactive multiscale visualization and candidate-event analysis system for synchronized DAS and hydrophone arrays.",
+                et: 'Alina Murtazina ja Sofia Zolina bakalaureusetöö (TalTech, juhendaja Elizaveta Dubrovinskaya). Loob interaktiivse mitmetasandilise visualiseerimis- ja sündmuste analüüsisüsteemi sünkroniseeritud DAS- ja hüdrofonimassiividele.',
+                ru: 'Бакалаврская работа Алины Муртазиной и Софии Золиной (TalTech, науч. рук. Елизавета Дубровинская). Представляет интерактивную систему многомасштабной визуализации и анализа событий для синхронизированных данных DAS и гидрофонов.'
+            },
+            thesis2Link1: { en: 'TalTech Digikogu &rarr;', et: 'TalTechi Digikogu &rarr;', ru: 'TalTech Digikogu &rarr;' },
+            thesis2Link2: { en: 'Live Viewer &rarr;', et: 'Veebivaatur &rarr;', ru: 'Веб-просмотр &rarr;' },
+            thesis2Link3: { en: 'GitHub &rarr;', et: 'GitHub &rarr;', ru: 'GitHub &rarr;' },
             fundingTitle: { en: 'Project Information &amp; Funding', et: 'Projekti andmed ja rahastus', ru: 'Информация о проекте и финансирование' },
             fundingSubtitle: { en: 'MOB3JD1212 — Pressure Sensor Based Sea Monitoring', et: 'MOB3JD1212 — Rõhuanduril põhinev mereseire', ru: 'MOB3JD1212 — Мониторинг моря на основе датчиков давления' },
             fundingDescLabel: { en: 'Project description', et: 'Projekti kirjeldus', ru: 'Описание проекта' },
