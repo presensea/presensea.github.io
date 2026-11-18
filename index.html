@@ -163,6 +163,7 @@
                     <a href="#objectives" class="hover:text-cyan-300 transition-colors" data-translate="navObjectives">Objectives</a>
                     <a href="#team" class="hover:text-cyan-300 transition-colors" data-translate="navTeam">Team</a>
                     <a href="#blog" class="hover:text-cyan-300 transition-colors" data-translate="navBlog">Blog</a>
+                    <a href="#funding" class="hover:text-cyan-300 transition-colors" data-translate="navFunding">Funding</a>
                 </nav>
                 <!-- Language Switcher -->
                 <div class="lang-switcher flex space-x-2 text-sm text-white">
@@ -415,9 +416,79 @@
             </div>
 
         </div>
+
+        <!-- Open-Source Tool Callout: das-audit -->
+        <div class="mt-12 max-w-4xl mx-auto">
+            <div class="card bg-white border border-gray-200 rounded-lg p-8 shadow-lg flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                <div>
+                    <p class="text-sm font-semibold accent-teal uppercase tracking-wide mb-1" data-translate="dasAuditBadge">Open-Source Software</p>
+                    <h3 class="font-bree text-2xl font-semibold mb-2" data-translate="dasAuditTitle">das-audit: DAS Data Quality Audit Tool</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed" data-translate="dasAuditDesc">
+                        A lightweight, low-RAM Python CLI and interactive Plotly HTML dashboard for automated quality assessment of Distributed Acoustic Sensing (DAS) datasets (.ds, .sd, .zarr, .h5), covering metadata validation, spectral baselines, coupling coherence, f-k aliasing, and ship-wake analysis.
+                    </p>
+                </div>
+                <div class="flex-shrink-0">
+                    <a href="https://github.com/presensea/DAS" target="_blank" rel="noopener noreferrer" class="inline-block bg-[#0A2F51] text-white font-semibold px-5 py-3 rounded-lg hover:bg-[#00BBD6] hover:text-[#0A2F51] transition-colors whitespace-nowrap" data-translate="dasAuditLink">
+                        View on GitHub &rarr;
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
+        <!-- Project Information & Funding Section -->
+        <section id="funding" class="py-20 px-6 bg-white">
+            <div class="container mx-auto max-w-5xl">
+                <div class="text-center mb-12">
+                    <h2 class="font-bree text-3xl md:text-4xl font-semibold inline-block" data-translate="fundingTitle">Project Information &amp; Funding</h2>
+                    <p class="text-lg text-gray-600 mt-4 max-w-3xl mx-auto font-semibold" data-translate="fundingSubtitle">MOB3JD1212 — Pressure Sensor Based Sea Monitoring</p>
+                </div>
+
+                <div class="card rounded-xl p-8 md:p-10 shadow-sm">
+                    <div class="space-y-6 text-gray-700 leading-relaxed">
+                        <div>
+                            <h3 class="font-bree text-xl font-semibold text-[#0A2F51] mb-2" data-translate="fundingDescLabel">Project description</h3>
+                            <p data-translate="fundingDescText">
+                                PRESENSEA (PREssure SENsor based SEA monitoring) is an interdisciplinary research project developing passive, non-invasive underwater monitoring methods based on pressure sensor arrays. While satellites and surface radar observe the sea surface, many environmental and human-induced dynamics—including waves, currents, moving vessels, underwater construction, and wastewater discharge—occur beneath it. In coastal waters, weak signals from distant targets are masked by stronger hydrodynamic disturbances, creating an underwater "cocktail party problem." Combining signal processing, machine learning, and hydrodynamic hardware from TalTech's Centre for Biorobotics, PRESENSEA separates and tracks individual pressure sources in real-world marine environments.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="font-bree text-xl font-semibold text-[#0A2F51] mb-2" data-translate="fundingObjLabel">Project objective</h3>
+                            <p data-translate="fundingObjText">
+                                The main objective of PRESENSEA is to develop and validate a real-time algorithm library for underwater source separation, detection, and localization tailored to the physics of pressure signal propagation in water. The project collects multi-condition field datasets using an autonomous, telemetric pressure sensor array, builds coupled physical simulation and experimental emulation models of hydrodynamic signals, and validates the algorithms on low-cost computational platforms in at least two distinct sea environments.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="font-bree text-xl font-semibold text-[#0A2F51] mb-2" data-translate="fundingResLabel">Project result</h3>
+                            <p data-translate="fundingResText">
+                                PRESENSEA delivers an autonomous, non-invasive pressure sensor monitoring prototype alongside a documented, real-time algorithm library for source separation, vessel tracking, and sea-state estimation on low-cost hardware. The project produces open-access, FAIR-compliant experimental and modelled datasets in standard marine formats, separating natural hydrodynamic flows from ship-induced wake waves to support coastal engineering, maritime safety, and marine environmental monitoring in line with the EU Mission "Restore our Ocean and Waters."
+                            </p>
+                        </div>
+
+                        <div class="pt-2 flex flex-col sm:flex-row sm:items-baseline sm:gap-3">
+                            <h3 class="font-bree text-xl font-semibold text-[#0A2F51]" data-translate="fundingAmountLabel">Project grant amount:</h3>
+                            <p class="text-xl font-semibold text-[#0A2F51]">€ 124 675,20</p>
+                        </div>
+                        <p class="text-sm text-gray-500 !mt-1" data-translate="fundingPeriodNote">
+                            Funding programme: Mobilitas 3.0 / Mobilitas Pluss (Estonian Research Council, Grant no. MOB3JD1212, 01.12.2023 – 30.04.2027), co-funded by the European Union.
+                        </p>
+                    </div>
+
+                    <!-- Official Funder Logos (ETAG & EU) -->
+                    <div class="border-t border-gray-200 mt-8 pt-8 flex flex-wrap items-center justify-center gap-10 md:gap-16">
+                        <a href="https://etag.ee/en/" target="_blank" rel="noopener noreferrer" aria-label="Estonian Research Council (ETAG)">
+                            <img src="assets/etag-logo-color.webp" alt="Estonian Research Council (ETAG) Logo" class="h-14 md:h-16 w-auto object-contain">
+                        </a>
+                        <a href="https://etag.ee/en/funding/programmes/mobilitas-3-0/" target="_blank" rel="noopener noreferrer" aria-label="Co-funded by the European Union">
+                            <img id="eu-cofunded-logo" src="assets/eu-cofunded-eng.webp" alt="Co-funded by the European Union — Investing in your future" class="h-16 md:h-20 w-auto object-contain">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
 
@@ -425,8 +496,8 @@
     <footer class="hero-bg py-10 px-6">
         <div class="container mx-auto text-center text-gray-300">
             <!-- Final code comment: Just keep swimming -->
-            <p data-translate="copyright">&copy; 2025 PRESENSEA Project | Tallinn University of Technology</p>
-            <p class="text-sm mt-2" data-translate="fundingInfo">This project has received funding from the Estonian Research Council under the Mobilitas Pluss programme (Grant no. MOB3JD1212).</p>
+            <p data-translate="copyright">&copy; 2026 PRESENSEA Project | Tallinn University of Technology</p>
+            <p class="text-sm mt-2" data-translate="fundingInfo">This project has received funding from the Estonian Research Council under the Mobilitas Pluss programme (Grant no. MOB3JD1212) and is co-funded by the European Union.</p>
         </div>
     </footer>
 
@@ -467,6 +538,7 @@
             navObjectives: { en: 'Objectives', et: 'Eesmärgid', ru: 'Цели' },
             navTeam: { en: 'Team', et: 'Meeskond', ru: 'Команда' },
             navBlog: { en: 'Blog', et: 'Blogi', ru: 'Блог' },
+            navFunding: { en: 'Funding', et: 'Rahastus', ru: 'Финансирование' },
             heroTitle: { en: "Listening to the Sea's Whisper.", et: 'Kuulates mere sosinat.', ru: 'Слушая шепот моря.' },
             heroSubtitle: { en: 'Innovative underwater monitoring using pressure sensors to untangle the sounds of the sea and protect our aquatic world.', et: 'Uuenduslik veealune seire rõhuandurite abil, et harutada lahti merehelid ja kaitsta meie veemaailma.', ru: 'Новые технологии мониторинга на основе датчиков давления: cлушаем море и помогаем сохранить водные экосистемы.' },
             aboutTitle: { en: 'The Cocktail Party Problem of the Sea', et: 'Mere kokteilipeo probleem', ru: 'Проблема морской коктейльной вечеринки' },
@@ -514,8 +586,42 @@
             blogPostTitle: { en: 'The Baltic Cocktail Party: Stirred by science, served with smarts', et: 'Läänemere kokteilipidu: teaduse poolt segatud, nutikalt serveeritud', ru: 'Балтийская коктейльная вечеринка: смешано наукой, подано с умом' },
             blogPostSnippet: { en: "Welcome to the Baltic Cocktail Party — where the guests are often invisible, and the real conversations happen under pressure. This isn’t your average party. Picture an underwater world buzzing with activity: ships passing overhead like party guests, currents swirling like shaken drinks, and hidden signals mixing together like overlapping voices in a crowded room. Now imagine trying to pick out just one voice — or one signal — from all the noise. That’s the “cocktail party effect,” but this time, it’s happening beneath the waves.", et: "Tere tulemast Läänemere kokteilipeole – kus külalised on sageli nähtamatud ja tõelised vestlused toimuvad pinge all. See ei ole tavaline pidu. Kujutage ette veealust maailma, mis kihab tegevusest: laevad mööduvad pea kohal nagu peokülalised, hoovused keerlevad nagu loksutatud joogid ja varjatud signaalid segunevad nagu kattuvad hääled rahvarohkes toas. Nüüd kujutage ette, et proovite kogu mürast välja valida vaid ühe hääle – või ühe signaali. See ongi „kokteilipeo efekt“, kuid seekord toimub see lainete all.", ru: "Представьте себе шумную вечеринку. Гости болтают, бокалы звенят, кто-то смеётся — и вы пытаетесь услышать, что говорит человек прямо перед вами. Это классический 'эффект коктейльной вечеринки'. Только теперь действие происходит не в ресторане, а на дне Балтийского моря. Здесь тоже толпа: над головой проходят корабли, внизу закручиваются течения, где-то вдалеке — гидрофоны улавливают эхо жизни. И среди всего этого хаоса учёные пытаются услышать то, что может остаться незамеченным: сигнал тревоги от экосистемы или след загрязнения, оставленный судном в ночи." },
             readMore: { en: 'Read More &rarr;', et: 'Loe edasi &rarr;', ru: 'Читать далее &rarr;' },
-            copyright: { en: '&copy; 2025 PRESENSEA Project | Tallinn University of Technology', et: '&copy; 2025 PRESENSEA Projekt | Tallinna Tehnikaülikool', ru: '&copy; 2025 Проект PRESENSEA | Таллиннский технический университет' },
-            fundingInfo: { en: 'This project has received funding from the Estonian Research Council under the Mobilitas Pluss programme (Grant no. MOB3JD1212).', et: 'Seda projekti on rahastanud Eesti Teadusagentuur Mobilitas Pluss programmi raames (Grant nr MOB3JD1212).', ru: 'Этот проект получил финансирование от Эстонского исследовательского совета в рамках программы Mobilitas Pluss (грант № MOB3JD1212).' },
+            dasAuditBadge: { en: 'Open-Source Software', et: 'Avatud lähtekoodiga tarkvara', ru: 'Открытое ПО' },
+            dasAuditTitle: { en: 'das-audit: DAS Data Quality Audit Tool', et: 'das-audit: DAS-andmete kvaliteedikontrolli tööriist', ru: 'das-audit: инструмент контроля качества данных DAS' },
+            dasAuditDesc: {
+                en: 'A lightweight, low-RAM Python CLI and interactive Plotly HTML dashboard for automated quality assessment of Distributed Acoustic Sensing (DAS) datasets (.ds, .sd, .zarr, .h5), covering metadata validation, spectral baselines, coupling coherence, f-k aliasing, and ship-wake analysis.',
+                et: 'Kerge ja vähese mälukasutusega Pythoni käsureatööriist ning interaktiivne Plotly HTML-töölaud hajusa akustilise seire (DAS) andmestike (.ds, .sd, .zarr, .h5) automaatseks kvaliteedikontrolliks, hõlmates metaandmeid, spektraalset baasjoont, sidestuskoherentsust, f-k aliast ja laevajälgede analüüsi.',
+                ru: 'Лёгкий Python CLI-инструмент с низким потреблением памяти и интерактивным HTML-отчётом Plotly для автоматической проверки качества данных распределённого акустического зондирования (DAS: .ds, .sd, .zarr, .h5) — от проверки метаданных и спектрального фона до когерентности, f-k алиасинга и анализа кильватерных волн.'
+            },
+            dasAuditLink: { en: 'View on GitHub &rarr;', et: 'Vaata GitHubis &rarr;', ru: 'Открыть на GitHub &rarr;' },
+            fundingTitle: { en: 'Project Information &amp; Funding', et: 'Projekti andmed ja rahastus', ru: 'Информация о проекте и финансирование' },
+            fundingSubtitle: { en: 'MOB3JD1212 — Pressure Sensor Based Sea Monitoring', et: 'MOB3JD1212 — Rõhuanduril põhinev mereseire', ru: 'MOB3JD1212 — Мониторинг моря на основе датчиков давления' },
+            fundingDescLabel: { en: 'Project description', et: 'Projekti kirjeldus', ru: 'Описание проекта' },
+            fundingDescText: {
+                en: 'PRESENSEA (PREssure SENsor based SEA monitoring) is an interdisciplinary research project developing passive, non-invasive underwater monitoring methods based on pressure sensor arrays. While satellites and surface radar observe the sea surface, many environmental and human-induced dynamics—including waves, currents, moving vessels, underwater construction, and wastewater discharge—occur beneath it. In coastal waters, weak signals from distant targets are masked by stronger hydrodynamic disturbances, creating an underwater "cocktail party problem." Combining signal processing, machine learning, and hydrodynamic hardware from TalTech\'s Centre for Biorobotics, PRESENSEA separates and tracks individual pressure sources in real-world marine environments.',
+                et: 'PRESENSEA (PREssure SENsor based SEA monitoring) on interdistsiplinaarne teadusprojekt, mis arendab passiivseid ja mitteinvasiivseid veealuse seire meetodeid rõhuandurite massiivide abil. Kui satelliidid ja pinnaradarid jälgivad merepinda, siis suur osa looduslikest ja inimtekkelistest protsessidest – sealhulgas lained, hoovused, liikuvad laevad, veealused ehitustööd ja heitvee väljalaskmine – toimuvad veepinna all. Rannikuvetes varjutavad tugevad hüdrodünaamilised häiringud kaugemate sihtmärkide nõrku signaale, tekitades veealuse "kokteilipeo probleemi". Ühendades signaalitöötluse, masinõppe ja TalTechi Biorobootika Keskuse hüdrodünaamilise riistvara, eraldab ja jälgib PRESENSEA üksikuid rõhuallikaid reaalsetes mereoludes.',
+                ru: 'PRESENSEA (PREssure SENsor based SEA monitoring) — междисциплинарный исследовательский проект, разрабатывающий пассивные и неинвазивные методы подводного мониторинга на основе массивов датчиков давления. Спутники и береговые радары наблюдают за поверхностью моря, однако многие природные и антропогенные процессы — волны, течения, движение судов, подводное строительство и сброс сточных вод — происходят под водой. В прибрежных водах слабые сигналы удалённых объектов маскируются сильными гидродинамическими возмущениями, создавая подводную «проблему коктейльной вечеринки». Объединяя методы обработки сигналов, машинного обучения и гидродинамические датчики Центра биоробототехники TalTech, PRESENSEA разделяет и отслеживает отдельные источники давления в реальной морской среде.'
+            },
+            fundingObjLabel: { en: 'Project objective', et: 'Projekti eesmärk', ru: 'Цель проекта' },
+            fundingObjText: {
+                en: 'The main objective of PRESENSEA is to develop and validate a real-time algorithm library for underwater source separation, detection, and localization tailored to the physics of pressure signal propagation in water. The project collects multi-condition field datasets using an autonomous, telemetric pressure sensor array, builds coupled physical simulation and experimental emulation models of hydrodynamic signals, and validates the algorithms on low-cost computational platforms in at least two distinct sea environments.',
+                et: 'PRESENSEA peamine eesmärk on arendada ja valideerida reaalajas töötavate algoritmide teek veealuste allikate eraldamiseks, tuvastamiseks ja lokaliseerimiseks, võttes arvesse rõhusignaalide levimise füüsikat vees. Projekt kogub mitmesugustes mereoludes väliandmestikke autonoomse telemeetrilise rõhuandurite massiiviga, loob hüdrodünaamiliste signaalide füüsikalisi simulatsiooni- ja katseandmetel põhinevaid emulatsioonimudeleid ning valideerib algoritmid soodsatel arvutusplatvormidel vähemalt kahes erinevas merekeskkonnas.',
+                ru: 'Основная цель PRESENSEA — разработать и проверить библиотеку алгоритмов реального времени для разделения, обнаружения и локализации подводных источников с учётом физики распространения сигналов давления в воде. В рамках проекта собираются натурные наборы данных в различных морских условиях с помощью автономного телеметрического массива датчиков давления, создаются физические и экспериментальные модели гидродинамических сигналов, а разработанные алгоритмы проходят проверку на недорогих вычислительных платформах как минимум в двух различных морских средах.'
+            },
+            fundingResLabel: { en: 'Project result', et: 'Projekti tulemus', ru: 'Результаты проекта' },
+            fundingResText: {
+                en: 'PRESENSEA delivers an autonomous, non-invasive pressure sensor monitoring prototype alongside a documented, real-time algorithm library for source separation, vessel tracking, and sea-state estimation on low-cost hardware. The project produces open-access, FAIR-compliant experimental and modelled datasets in standard marine formats, separating natural hydrodynamic flows from ship-induced wake waves to support coastal engineering, maritime safety, and marine environmental monitoring in line with the EU Mission "Restore our Ocean and Waters."',
+                et: 'PRESENSEA loob autonoomse ja mitteinvasiivse rõhuandurite seireprototüübi koos dokumenteeritud reaalajas töötava algoritmiteegiga allikate eraldamiseks, laevade jälgimiseks ja mereolude hindamiseks soodsal riistvaral. Projekti käigus valmivad avatud juurdepääsuga FAIR-põhimõtetele vastavad katse- ja mudelandmestikud standardsetes mereandmete vormingutes, eraldades looduslikud hüdrodünaamilised voolud laevatekitatud lainejälgedest rannikutehnika, meresõiduohutuse ja merekeskkonna seire toetamiseks kooskõlas ELi missiooniga "Taastame oma ookeani ja veed".',
+                ru: 'Проект PRESENSEA создаст автономный неинвазивный прототип мониторинга на базе датчиков давления и документированную библиотеку алгоритмов реального времени для разделения источников, отслеживания судов и оценки состояния моря на доступном оборудовании. Будут опубликованы открытые экспериментальные и модельные наборы данных в соответствии с принципами FAIR и морскими стандартами, позволяющие отделять естественные гидродинамические потоки от кильватерных волн судов для задач береговой инженерии, морской безопасности и экологического мониторинга в рамках миссии ЕС «Восстановление нашего океана и вод».'
+            },
+            fundingAmountLabel: { en: 'Project grant amount:', et: 'Projekti toetuse summa:', ru: 'Сумма гранта проекта:' },
+            fundingPeriodNote: {
+                en: 'Funding programme: Mobilitas 3.0 / Mobilitas Pluss (Estonian Research Council, Grant no. MOB3JD1212, 01.12.2023 – 30.04.2027), co-funded by the European Union.',
+                et: 'Rahastusmeede: Mobilitas 3.0 / Mobilitas Pluss (Eesti Teadusagentuur, grant nr MOB3JD1212, 01.12.2023 – 30.04.2027), kaasrahastanud Euroopa Liit.',
+                ru: 'Программа финансирования: Mobilitas 3.0 / Mobilitas Pluss (Эстонский исследовательский совет, грант № MOB3JD1212, 01.12.2023 – 30.04.2027), при софинансировании Европейского союза.'
+            },
+            copyright: { en: '&copy; 2026 PRESENSEA Project | Tallinn University of Technology', et: '&copy; 2026 PRESENSEA Projekt | Tallinna Tehnikaülikool', ru: '&copy; 2026 Проект PRESENSEA | Таллиннский технический университет' },
+            fundingInfo: { en: 'This project has received funding from the Estonian Research Council under the Mobilitas Pluss programme (Grant no. MOB3JD1212) and is co-funded by the European Union.', et: 'Seda projekti on rahastanud Eesti Teadusagentuur Mobilitas Pluss programmi raames (Grant nr MOB3JD1212) ning kaasrahastanud Euroopa Liit.', ru: 'Этот проект получил финансирование от Эстонского исследовательского совета в рамках программы Mobilitas Pluss (грант № MOB3JD1212) при софинансировании Европейского союза.' },
         };
 
         // --- Language Switching Logic ---
@@ -523,6 +629,7 @@
             const langSwitcher = document.querySelector('.lang-switcher');
             const langLinks = langSwitcher.querySelectorAll('a[data-lang]');
             const metaDescription = document.getElementById('meta-description');
+            const euLogo = document.getElementById('eu-cofunded-logo');
             
             const changeLanguage = (lang) => {
                 // Set active class on the switcher
@@ -540,6 +647,11 @@
                         element.innerHTML = translations[key][lang];
                     }
                 });
+
+                // Switch EU co-funded logo variant for Estonian vs English/Russian
+                if (euLogo) {
+                    euLogo.src = lang === 'et' ? 'assets/eu-cofunded-est.webp' : 'assets/eu-cofunded-eng.webp';
+                }
                 
                 // Update meta description
                 if(translations.metaDescription[lang]) {
